@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DemoController {
+class ExamplesController {
   function ping(Request $request) {
     return "pong";
   }

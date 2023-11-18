@@ -8,10 +8,10 @@ Route::get('/', function () {
   return 'laravel';
 });
 
-Route::get('/demo/ping', [DemoController::class, 'ping']);
-Route::post('/demo/echo', [DemoController::class, 'echo']);
-Route::post('/demo/reverse', [DemoController::class, 'reverse']);
-Route::post('/demo/sum', [DemoController::class, 'sum']);
+Route::get('/examples/ping', [ExamplesController::class, 'ping']);
+Route::post('/examples/echo', [ExamplesController::class, 'echo']);
+Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);
+Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 
 Route::put('/tasks', [TasksController::class, 'reset']);
 Route::get('/tasks', [TasksController::class, 'index']);

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "serve": "php artisan serve",
+    "seed": "touch ./database/database.sqlite && php artisan migrate:fresh --seed",
+    "refresh": "php artisan cache:clear && composer dump-autoload"
+  },
+  "devDependencies": {
+    "prettier": "3.1.0"
+  }
+}

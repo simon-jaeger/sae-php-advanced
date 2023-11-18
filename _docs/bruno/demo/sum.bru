@@ -1,0 +1,17 @@
+meta {
+  name: sum
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/demo/sum
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "input": [1 ,2 ,3]
+  }
+}

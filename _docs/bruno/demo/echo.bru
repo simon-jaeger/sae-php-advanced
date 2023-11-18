@@ -1,0 +1,17 @@
+meta {
+  name: echo
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/demo/echo
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "input": "hello"
+  }
+}

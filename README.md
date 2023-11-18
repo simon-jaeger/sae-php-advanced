@@ -6,18 +6,17 @@
 
 ```bash
 composer install
-npm install
-
-npm run seed
-npm run serve
+touch ./database/database.sqlite
+php artisan serve
 ```
 
 ## project structure
 
-- app/: business logic
+- _docs/: documentation
+- app/: application code
 - bootstrap/: laravel initialization
 - config/:  laravel settings
-- database/: sqlite database file and migrations
+- database/: sqlite database file
 - node_modules/: 3rd party dependencies (npm)
 - public:/ non-private files
 - routes:/ api endpoints

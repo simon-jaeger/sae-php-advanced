@@ -1,0 +1,17 @@
+meta {
+  name: reverse
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/demo/reverse
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "input": "hello"
+  }
+}

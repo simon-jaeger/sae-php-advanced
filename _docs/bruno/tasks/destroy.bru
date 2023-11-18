@@ -1,0 +1,17 @@
+meta {
+  name: destroy
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/tasks
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 0
+  }
+}

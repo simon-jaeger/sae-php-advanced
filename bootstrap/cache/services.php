@@ -31,10 +31,12 @@
     27 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     28 => 'Termwind\\Laravel\\TermwindServiceProvider',
     29 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    30 => 'Config\\Providers\\AppServiceProvider',
-    31 => 'Config\\Providers\\AuthServiceProvider',
-    32 => 'Config\\Providers\\EventServiceProvider',
-    33 => 'Config\\Providers\\RouteServiceProvider',
+    30 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
+    31 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
+    32 => 'Config\\Providers\\AppServiceProvider',
+    33 => 'Config\\Providers\\AuthServiceProvider',
+    34 => 'Config\\Providers\\EventServiceProvider',
+    35 => 'Config\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -53,10 +55,12 @@
     12 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     13 => 'Termwind\\Laravel\\TermwindServiceProvider',
     14 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    15 => 'Config\\Providers\\AppServiceProvider',
-    16 => 'Config\\Providers\\AuthServiceProvider',
-    17 => 'Config\\Providers\\EventServiceProvider',
-    18 => 'Config\\Providers\\RouteServiceProvider',
+    15 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
+    16 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
+    17 => 'Config\\Providers\\AppServiceProvider',
+    18 => 'Config\\Providers\\AuthServiceProvider',
+    19 => 'Config\\Providers\\EventServiceProvider',
+    20 => 'Config\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

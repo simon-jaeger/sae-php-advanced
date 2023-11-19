@@ -3,22 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
 
 class TasksController {
   function reset() {
-    Task::createTable();
+    Task::setup();
     return [];
   }
 
-  function index(Request $request) {
+  function index() {
     return Task::all();
   }
 
   function create(Request $request) {
     $name = $request->input('name');
-    $task = Task::create(['name' => $name]);
+    $task = new Task();
+    $task->name = $name;
+    $task->save();
     return $task;
   }
 

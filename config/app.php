@@ -163,10 +163,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Config\Providers\AppServiceProvider::class,
+        Config\Providers\AuthServiceProvider::class,
+        Config\Providers\EventServiceProvider::class,
+        Config\Providers\RouteServiceProvider::class,
     ])->toArray(),
 
     /*

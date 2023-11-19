@@ -36,6 +36,11 @@
     }
   },
   "scripts": {
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "touch storage/database.sqlite && php -d max_execution_time=0 artisan serve"
+    ],
+    "refresh": "php artisan cache:clear && composer dump-autoload",
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan package:discover --ansi"

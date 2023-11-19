@@ -1,21 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
 
 class TasksController {
-  function reset() {
-    Task::setup();
-    return [];
-  }
-
   function index() {
     return Task::all();
   }
 
   function create(Request $request) {
+    $request->validate(Task::validationRules());
     $name = $request->input('name');
     $task = new Task();
     $task->name = $name;

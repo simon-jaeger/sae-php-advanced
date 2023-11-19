@@ -24,19 +24,17 @@
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
-    23 => 'Laravel\\Sail\\SailServiceProvider',
-    24 => 'Laravel\\Sanctum\\SanctumServiceProvider',
-    25 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    26 => 'Carbon\\Laravel\\ServiceProvider',
-    27 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    28 => 'Termwind\\Laravel\\TermwindServiceProvider',
-    29 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    30 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
-    31 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
-    32 => 'Config\\Providers\\AppServiceProvider',
-    33 => 'Config\\Providers\\AuthServiceProvider',
-    34 => 'Config\\Providers\\EventServiceProvider',
-    35 => 'Config\\Providers\\RouteServiceProvider',
+    23 => 'Laravel\\Sanctum\\SanctumServiceProvider',
+    24 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    25 => 'Carbon\\Laravel\\ServiceProvider',
+    26 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    27 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    28 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    29 => 'WendellAdriel\\Lift\\Providers\\LiftServiceProvider',
+    30 => 'Config\\Providers\\AppServiceProvider',
+    31 => 'Config\\Providers\\AuthServiceProvider',
+    32 => 'Config\\Providers\\EventServiceProvider',
+    33 => 'Config\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -55,12 +53,11 @@
     12 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     13 => 'Termwind\\Laravel\\TermwindServiceProvider',
     14 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    15 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
-    16 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
-    17 => 'Config\\Providers\\AppServiceProvider',
-    18 => 'Config\\Providers\\AuthServiceProvider',
-    19 => 'Config\\Providers\\EventServiceProvider',
-    20 => 'Config\\Providers\\RouteServiceProvider',
+    15 => 'WendellAdriel\\Lift\\Providers\\LiftServiceProvider',
+    16 => 'Config\\Providers\\AppServiceProvider',
+    17 => 'Config\\Providers\\AuthServiceProvider',
+    18 => 'Config\\Providers\\EventServiceProvider',
+    19 => 'Config\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
@@ -204,8 +201,6 @@
     'Illuminate\\Contracts\\Validation\\UncompromisedVerifier' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.ide-helper.generate' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
     'command.ide-helper.models' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
-    'Laravel\\Sail\\Console\\InstallCommand' => 'Laravel\\Sail\\SailServiceProvider',
-    'Laravel\\Sail\\Console\\PublishCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
   ),
   'when' => 
@@ -247,9 +242,6 @@
     array (
     ),
     'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider' => 
-    array (
-    ),
-    'Laravel\\Sail\\SailServiceProvider' => 
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 

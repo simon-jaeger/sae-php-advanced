@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
-use Schema;
-use Illuminate\Database\Schema\Blueprint;
+use Config\Base\Model;
+use WendellAdriel\Lift\Attributes\Rules;
+use WendellAdriel\Lift\Attributes\Events\Listener;
 
 class Task extends Model {
-  static function setup() {
-    if (Schema::hasTable('tasks')) Schema::drop('tasks');
-    Schema::create('tasks', function (Blueprint $table) {
-      $table->id();
-      $table->string('name');
-    });
+  public int $id;
+
+  #[Rules(['required', 'string'])]
+  public string $name;
+
+  #[Listener]
+  function onCreated(Task $task) {
+    \Log::info("task created: {$task->name}");
   }
 }

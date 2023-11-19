@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "serve": "php artisan serve",
+    "seed": "touch ./database/database.sqlite && php artisan migrate:fresh --seed"
+  },
+  "// how-to-run-scripts": "https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_run-npm-scripts-as-tasks-from-the-explorer"
+}

@@ -6,13 +6,6 @@
       0 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
     ),
   ),
-  'laravel/sail' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Sail\\SailServiceProvider',
-    ),
-  ),
   'laravel/sanctum' => 
   array (
     'providers' => 
@@ -59,18 +52,11 @@
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
-  'vicgutt/laravel-auto-model-cast' => 
+  'wendelladriel/laravel-lift' => 
   array (
     'providers' => 
     array (
-      0 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
-    ),
-  ),
-  'vicgutt/laravel-inspect-db' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
+      0 => 'WendellAdriel\\Lift\\Providers\\LiftServiceProvider',
     ),
   ),
 );

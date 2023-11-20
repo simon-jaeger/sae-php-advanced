@@ -8,6 +8,9 @@
 # install dependencies
 composer install
 
+# (re-)create database
+npm run seed
+
 # start server
-composer run-script serve
+npm run serve
 ```

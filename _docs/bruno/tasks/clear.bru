@@ -4,14 +4,8 @@ meta {
   seq: 4
 }
 
-delete {
-  url: {{baseUrl}}/tasks/clear
-  body: json
+get {
+  url: {{baseUrl}}/tasks
+  body: none
   auth: none
-}
-
-body:json {
-  {
-    "id": 1
-  }
 }

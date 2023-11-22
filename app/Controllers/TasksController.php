@@ -4,15 +4,13 @@ namespace App\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
-use Spatie\RouteDiscovery\Attributes\Route;
 
 class TasksController {
-  function list() {
+  function index() {
     return Task::all();
   }
 
-  #[Route(method: 'post')]
-  function create(Request $request) {
+  function store(Request $request) {
     $request->validate(Task::validationRules());
     $name = $request->input('name');
     $task = new Task();
@@ -21,15 +19,13 @@ class TasksController {
     return Task::all();
   }
 
-  #[Route(method: 'delete')]
-  function remove(Request $request) {
+  function destroy(Request $request) {
     $id = $request->input('id');
     $task = Task::find($id);
     if ($task) $task->delete();
     return Task::all();
   }
 
-  #[Route(method: 'delete')]
   function clear(Request $request) {
     Task::truncate();
     return Task::all();

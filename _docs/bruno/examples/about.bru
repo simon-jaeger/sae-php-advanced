@@ -1,18 +1,13 @@
 meta {
-  name: sum
+  name: about
   type: http
-  seq: 4
+  seq: 5
 }
 
 get {
-  url: {{baseUrl}}/examples/sum?a=2&b=3
+  url: {{baseUrl}}/examples/about
   body: none
   auth: none
-}
-
-query {
-  a: 2
-  b: 3
 }
 
 body:json {

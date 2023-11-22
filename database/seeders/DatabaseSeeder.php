@@ -9,10 +9,10 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {
   function run() {
-    for ($i = 1; $i <= 3; $i++) {
-      $task = new Task();
-      $task->name = "task #$i";
-      $task->save();
-    }
+//    for ($i = 1; $i <= 3; $i++) {
+//      $task = new Task();
+//      $task->name = "task #$i";
+//      $task->save();
+//    }
   }
 }

@@ -12,8 +12,20 @@
 */
 
 $app = new Illuminate\Foundation\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
+  $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class CustomHttpKernel extends HttpKernel {
+  protected $middleware = [
+    \Illuminate\Http\Middleware\HandleCors::class,
+    \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+    \Illuminate\Foundation\Http\Middleware\TrimStrings::class,
+    \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+    \Config\Middleware\SetDefaultHeaders::class,
+  ];
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +39,8 @@ $app = new Illuminate\Foundation\Application(
 */
 
 $app->singleton(
-    Illuminate\Contracts\Http\Kernel::class,
-    App\Http\Kernel::class
+  Illuminate\Contracts\Http\Kernel::class,
+  CustomHttpKernel::class
 );
 
 $app->singleton(
@@ -37,8 +49,8 @@ $app->singleton(
 );
 
 $app->singleton(
-    Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Illuminate\Foundation\Exceptions\Handler::class
+  Illuminate\Contracts\Debug\ExceptionHandler::class,
+  Illuminate\Foundation\Exceptions\Handler::class
 );
 
 /*

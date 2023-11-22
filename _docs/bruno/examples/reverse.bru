@@ -4,10 +4,14 @@ meta {
   seq: 3
 }
 
-post {
-  url: {{baseUrl}}/examples/reverse
-  body: json
+get {
+  url: {{baseUrl}}/examples/reverse?input=hello
+  body: none
   auth: none
+}
+
+query {
+  input: hello
 }
 
 body:json {

@@ -1,17 +1,17 @@
 meta {
-  name: destroy
+  name: remove
   type: http
-  seq: 4
+  seq: 3
 }
 
 delete {
-  url: {{baseUrl}}/tasks
+  url: {{baseUrl}}/tasks/remove
   body: json
   auth: none
 }
 
 body:json {
   {
-    "id": 1
+    "id": 0
   }
 }

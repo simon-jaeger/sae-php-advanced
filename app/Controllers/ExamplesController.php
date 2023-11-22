@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ExamplesController {
   function ping(Request $request) {
-    return "pong";
+    return 'pong';
   }
 
   function echo(Request $request) {
@@ -20,7 +20,18 @@ class ExamplesController {
   }
 
   function sum(Request $request) {
-    $input = $request->input('input');
-    return array_sum($input);
+    $a = $request->input('a');
+    $b = $request->input('b');
+    return $a + $b;
+  }
+
+  function about(Request $request) {
+    return [
+      'laravel' => \App::version(),
+      'php' => phpversion(),
+      'ini' => php_ini_loaded_file(),
+      'client' => $request->getClientIp(),
+      'server' => $request->getHost() . ':' . $request->getPort(),
+    ];
   }
 }

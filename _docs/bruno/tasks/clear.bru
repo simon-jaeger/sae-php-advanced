@@ -1,0 +1,17 @@
+meta {
+  name: clear
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/tasks/clear
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

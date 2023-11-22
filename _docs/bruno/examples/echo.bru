@@ -4,10 +4,14 @@ meta {
   seq: 2
 }
 
-post {
-  url: {{baseUrl}}/examples/echo
-  body: json
+get {
+  url: {{baseUrl}}/examples/echo?input=hello
+  body: none
   auth: none
+}
+
+query {
+  input: hello
 }
 
 body:json {

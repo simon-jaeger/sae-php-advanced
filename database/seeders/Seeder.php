@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Task;
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeder as BaseSeeder;
 
 // faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
 
-class DatabaseSeeder extends Seeder {
+class Seeder extends BaseSeeder {
   function run() {
 //    for ($i = 1; $i <= 3; $i++) {
 //      $task = new Task();

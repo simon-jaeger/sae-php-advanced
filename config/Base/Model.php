@@ -5,7 +5,6 @@ namespace Config\Base;
 use Illuminate\Database\Eloquent\Model as BaseModel;
 use WendellAdriel\Lift\Lift;
 
-
 /**
  * @mixin \Eloquent
  */

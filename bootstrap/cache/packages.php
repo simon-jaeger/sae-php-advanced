@@ -52,13 +52,6 @@
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
-  'spatie/laravel-route-discovery' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Spatie\\RouteDiscovery\\RouteDiscoveryServiceProvider',
-    ),
-  ),
   'wendelladriel/laravel-lift' => 
   array (
     'providers' => 

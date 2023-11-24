@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -15,7 +19,22 @@ $app = new Illuminate\Foundation\Application(
   $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+class DefaultHeaders {
+  public function handle(Request $request, Closure $next): Response {
+    // default request headers
+    if (!$request->header('X-Requested-With'))
+      $request->headers->set('X-Requested-With', 'XMLHttpRequest');
+    if (!$request->header('Content-Type'))
+      $request->headers->set('Content-Type', 'application/json');
+
+    // default response headers
+    $response = $next($request);
+    if ($response->headers->get('Content-Type') === 'text/html; charset=UTF-8')
+      $response->headers->set('Content-Type', 'text/plain');
+
+    return $response;
+  }
+}
 
 class CustomHttpKernel extends HttpKernel {
   protected $middleware = [
@@ -23,7 +42,7 @@ class CustomHttpKernel extends HttpKernel {
     \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
     \Illuminate\Foundation\Http\Middleware\TrimStrings::class,
     \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-    \Config\Middleware\SetDefaultHeaders::class,
+    DefaultHeaders::class,
   ];
 }
 

@@ -1,17 +1,13 @@
 meta {
   name: echo
   type: http
-  seq: 2
+  seq: 3
 }
 
-get {
-  url: {{baseUrl}}/examples/echo?input=hello
-  body: none
+post {
+  url: {{baseUrl}}/examples/echo
+  body: json
   auth: none
-}
-
-query {
-  input: hello
 }
 
 body:json {

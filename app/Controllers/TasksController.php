@@ -10,13 +10,23 @@ class TasksController {
     return Task::all();
   }
 
-  function store(Request $request) {
+  function create(Request $request) {
     $request->validate(Task::validationRules());
     $name = $request->input('name');
     $task = new Task();
     $task->name = $name;
     $task->save();
     return Task::all();
+  }
+
+  function update(Request $request) {
+    $request->validate(Task::validationRules());
+    $id = $request->input('id');
+    $name = $request->input('name');
+    $task = Task::find($id);
+    $task->name = $name;
+    $task->save();
+    return $task;
   }
 
   function destroy(Request $request) {
@@ -26,7 +36,7 @@ class TasksController {
     return Task::all();
   }
 
-  function clear(Request $request) {
+  function truncate(Request $request) {
     Task::truncate();
     return Task::all();
   }

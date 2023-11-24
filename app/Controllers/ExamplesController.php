@@ -9,6 +9,16 @@ class ExamplesController {
     return 'pong';
   }
 
+  function about(Request $request) {
+    return [
+      'laravel' => \App::version(),
+      'php' => phpversion(),
+      'ini' => php_ini_loaded_file(),
+      'client' => $request->getClientIp(),
+      'server' => $request->getHost() . ':' . $request->getPort(),
+    ];
+  }
+
   function echo(Request $request) {
     $input = $request->input('input');
     return $input;
@@ -20,18 +30,7 @@ class ExamplesController {
   }
 
   function sum(Request $request) {
-    $a = $request->input('a');
-    $b = $request->input('b');
-    return $a + $b;
-  }
-
-  function about(Request $request) {
-    return [
-      'laravel' => \App::version(),
-      'php' => phpversion(),
-      'ini' => php_ini_loaded_file(),
-      'client' => $request->getClientIp(),
-      'server' => $request->getHost() . ':' . $request->getPort(),
-    ];
+    $input = $request->input('input');
+    return array_sum($input);
   }
 }

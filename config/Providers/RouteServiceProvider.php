@@ -17,9 +17,8 @@ class RouteServiceProvider extends ServiceProvider {
     });
 
     $this->routes(function () {
-      Route::get('/', function () {
-        return 'laravel';
-      });
+      Route::group([], base_path('app/Routes/api.php'));
+//      Route::middleware('api')->group(base_path('app/Routes/api.php'));
     });
   }
 }

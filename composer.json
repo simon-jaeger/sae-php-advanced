@@ -37,7 +37,7 @@
   "scripts": {
     "refresh": "php artisan cache:clear && composer dump-autoload",
     "ide-helper": [
-      "php artisan ide-helper:generate && php artisan ide-helper:models --nowrite"
+      "php artisan ide-helper:generate"
     ],
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

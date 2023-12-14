@@ -44,6 +44,10 @@ class CustomHttpKernel extends HttpKernel {
     \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     DefaultHeaders::class,
   ];
+
+  protected $middlewareAliases = [
+    'auth' => Illuminate\Auth\Middleware\Authenticate::class,
+  ];
 }
 
 /*

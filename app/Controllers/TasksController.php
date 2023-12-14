@@ -11,7 +11,6 @@ class TasksController {
   }
 
   function create(Request $request) {
-    $request->validate(Task::validationRules());
     $name = $request->input('name');
     $task = new Task();
     $task->name = $name;
@@ -20,7 +19,6 @@ class TasksController {
   }
 
   function update(Request $request) {
-    $request->validate(Task::validationRules());
     $id = $request->input('id');
     $name = $request->input('name');
     $task = Task::find($id);

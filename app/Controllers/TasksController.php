@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Task;
 use Illuminate\Http\Request;
 
+// very basic crud example
 class TasksController {
   function index() {
     return Task::all();

@@ -12,7 +12,7 @@ class DatabaseSeeder extends BaseSeeder {
   function run() {
     User::create([
       'email' => 'alpha@mailinator.com',
-      'password' => 'pw',
+      'password' => 'password',
     ]);
   }
 }

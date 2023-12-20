@@ -52,11 +52,4 @@
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
-  'wendelladriel/laravel-lift' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'WendellAdriel\\Lift\\Providers\\LiftServiceProvider',
-    ),
-  ),
 );

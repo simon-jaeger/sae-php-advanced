@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Illuminate\Http\Request;
 
+// intro to controllers and the http cycle
 class ExamplesController {
   function ping(Request $request) {
     return 'pong';

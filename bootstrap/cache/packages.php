@@ -52,4 +52,18 @@
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
+  'vicgutt/laravel-auto-model-cast' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'VicGutt\\AutoModelCast\\AutoModelCastServiceProvider',
+    ),
+  ),
+  'vicgutt/laravel-inspect-db' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'VicGutt\\InspectDb\\InspectDbServiceProvider',
+    ),
+  ),
 );

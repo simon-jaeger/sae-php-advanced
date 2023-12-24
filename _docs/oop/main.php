@@ -1,12 +1,11 @@
 <?php
 
-require './Examples/Circle.php';
-require './Examples/Coin.php';
 require './Examples/Book.php';
+require './Examples/Circle.php';
+require './Examples/Dice.php';
 require './Examples/Rectangle.php';
 
 //$book = new Book(3);
-//var_dump($book->page);
 //$book->next();
 //$book->next();
 //$book->next();
@@ -19,13 +18,9 @@ require './Examples/Rectangle.php';
 //  $circle->area(),
 //);
 
-//$coin = new Coin();
-//$coin->flip();
-//var_dump($coin->isHeads);
-//$coin->flip();
-//var_dump($coin->isHeads);
-//$coin->flip();
-//var_dump($coin->isHeads);
+//$d20 = new Dice(20);
+//$d20->roll();
+//var_dump($d20->value);
 
 //$rect = new Rectangle(5, 5);
 //var_dump(

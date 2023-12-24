@@ -1,6 +1,5 @@
 <?php
 
-namespace _docs\_oop\Examples;
 class Rectangle {
   public int $width;
   public int $height;

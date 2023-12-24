@@ -27,7 +27,7 @@ npm run serve
 - ........................................
 - object oriented programming
 - modeling the real world
-- T: model a few real world objects
+- T: model a few more real world objects
 - ........................................
 - architecture and frameworks
 - laravel: setup
@@ -36,7 +36,7 @@ npm run serve
 - T: install and explore laravel (https://laravel.com)
 - ........................................
 - api: headless backend
-- api client (usebruno.com)
+- api client (https://usebruno.com)
 - router
 - controllers
 - http exchange (request, response)
@@ -53,12 +53,16 @@ npm run serve
 - hashing
 - lifecycle hooks
 - authentication
-- T: implement the missing endpoints
-- T: add more secure validation rules to the password
+- middleware
+- T: add endpoints to update and delete the user
+- T: add more validation rules to the password
 - ........................................
-- relationships (users have chirps)
+- relationships
+- tweets (1:n)
+- likes (n:m)
 - seeding
-- T: seed a rich example scenario of users and tweets.
+- T: seed a rich example scenario of users, tweets and likes.
+- T: use a deleted lifecycle hook to clean up the user's relationships
 - ........................................
 - sorting
 - filtering
@@ -66,7 +70,7 @@ npm run serve
 - T: ...
 - ........................................
 - file system
-- file uploads (avatars, media, ...)
+- file uploads
 - T: ...
 - ........................................
 - T: work on your own project

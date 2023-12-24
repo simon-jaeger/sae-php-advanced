@@ -6,7 +6,7 @@ use Config\Base\Model;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
- * @property string $id
+ * @property int $id
  * @property string $email
  * @property string $password
  */

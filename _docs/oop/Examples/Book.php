@@ -1,6 +1,5 @@
 <?php
 
-namespace _docs\_oop\Examples;
 class Book {
   public int $page = 0;
   public int $total;

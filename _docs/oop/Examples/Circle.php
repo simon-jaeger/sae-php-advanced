@@ -1,6 +1,5 @@
 <?php
 
-namespace _docs\_oop\Examples;
 class Circle {
   public int $radius = 0;
 

@@ -1,0 +1,28 @@
+<?php
+
+namespace _docs\_oop\Examples;
+class Rectangle {
+  public int $width;
+  public int $height;
+
+  function __construct($width, $height) {
+    $this->width = $width;
+    $this->height = $height;
+  }
+
+  function circumference() {
+    return 2 * $this->width + 2 * $this->height;
+  }
+
+  function area() {
+    return $this->width * $this->height;
+  }
+
+  function diagonal() {
+    return sqrt($this->width ** 2 + $this->height ** 2);
+  }
+
+  function isSquare() {
+    return $this->width === $this->height;
+  }
+}

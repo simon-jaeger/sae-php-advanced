@@ -13,7 +13,7 @@ class UserController {
 
   function create(Request $request) {
     $payload = $request->validate([
-      'email' => ['required'],
+      'email' => ['required', 'email'],
       'password' => ['required', 'min:8'],
     ]);
     return User::create($payload);
@@ -22,7 +22,7 @@ class UserController {
   function update(Request $request) {
     $user = \Auth::user();
     $payload = $request->validate([
-      'email' => ['sometimes'],
+      'email' => ['sometimes', 'email'],
       'password' => ['sometimes', 'min:8'],
     ]);
     $user->update($payload);

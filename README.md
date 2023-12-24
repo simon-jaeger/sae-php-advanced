@@ -23,43 +23,57 @@ npm run serve
 - os package manager (brew.sh / scoop.sh)
 - php cli
 - composer
-- laravel: setup
+- T: using bash, create a folder with a main.php file and run it
 - ........................................
 - object oriented programming
+- modeling the real world
+- T: model a few real world objects
+- ........................................
 - architecture and frameworks
+- laravel: setup
 - laravel: overview
+- namespaces and use
+- T: install and explore laravel (https://laravel.com)
 - ........................................
 - api: headless backend
 - api client (usebruno.com)
 - router
 - controllers
-- http cycle (request, response)
+- http exchange (request, response)
+- T: implement the missing example endpoints
 - ........................................
-- sqlite
 - models
 - migrations
+- sqlite (http://tinyurl.com/mrx23v34)
 - crud
+- T: add another crud entity
 - ........................................
 - users
 - validation
 - hashing
-- lifecycle events
+- lifecycle hooks
 - authentication
+- T: implement the missing endpoints
+- T: add more secure validation rules to the password
 - ........................................
+- relationships (users have chirps)
 - seeding
-- relationships
+- T: seed a rich example scenario of users and tweets.
 - ........................................
 - sorting
 - filtering
 - searching
+- T: ...
 - ........................................
 - file system
-- file uploads
+- file uploads (avatars, media, ...)
+- T: ...
 - ........................................
+- T: work on your own project
 
 ## ideas
 
-- LaraTasks: tasks crud
+- LaraTodo: todo app
 - LaraLinks: shortlinks crud and redirects
 - LaraQuiz: check answers (hidden)
 - LaraGame: text games, casino, rpg, ..

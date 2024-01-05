@@ -13,6 +13,7 @@ Route::get('/examples/about', [ExamplesController::class, 'about']);
 Route::post('/examples/echo', [ExamplesController::class, 'echo']);
 Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);
 Route::post('/examples/sum', [ExamplesController::class, 'sum']);
+Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 
 Route::get('/tasks', [TasksController::class, 'index']);
 Route::post('/tasks', [TasksController::class, 'create']);
@@ -27,3 +28,7 @@ Route::delete('/user', [UserController::class, 'destroy'])->middleware('auth:san
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+Route::get('/tweets', [TweetsController::class, 'index']);
+Route::post('/tweets', [TweetsController::class, 'create'])->middleware('auth:sanctum');
+Route::delete('/tweets', [TweetsController::class, 'destroy'])->middleware('auth:sanctum');

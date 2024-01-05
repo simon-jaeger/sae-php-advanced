@@ -34,4 +34,13 @@ class ExamplesController {
     $input = $request->input('input');
     return array_sum($input);
   }
+
+  function temperature(Request $request) {
+    $celsius = $request->input('celsius');
+    return [
+      'celsius' => $celsius,
+      'kelvin' => $celsius + 273.15,
+      'fahrenheit' => ($celsius * 9 / 5) + 32,
+    ];
+  }
 }

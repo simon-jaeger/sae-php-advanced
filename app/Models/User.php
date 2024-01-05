@@ -13,7 +13,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Model {
   use HasApiTokens;
 
-  static function booted() {
+  protected static function booted(): void {
     static::saving(function (User $user) {
       if ($user->isDirty('password'))
         $user->password = \Hash::make($user->password);

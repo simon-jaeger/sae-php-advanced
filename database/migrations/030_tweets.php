@@ -5,15 +5,15 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-  function up(): void {
-    Schema::create('users', function (Blueprint $table) {
+  function up() {
+    Schema::create('tweets', function (Blueprint $table) {
       $table->id();
-      $table->string('email');
-      $table->string('password');
+      $table->string('text');
+      $table->foreignId('user_id');
     });
   }
 
-  function down(): void {
-    Schema::dropIfExists('users');
+  function down() {
+    Schema::dropIfExists('tweets');
   }
 };

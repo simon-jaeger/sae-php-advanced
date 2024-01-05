@@ -27,7 +27,7 @@ npm run serve
 - ........................................
 - object oriented programming
 - modeling the real world
-- T: model a few more real world objects
+- T: model  more real world objects
 - ........................................
 - architecture and frameworks
 - laravel: setup
@@ -62,8 +62,10 @@ npm run serve
 - likes (n:m)
 - seeding
 - T: seed a rich example scenario of users, tweets and likes.
-- T: use a deleted lifecycle hook to clean up the user's relationships
+- T: use a deleted lifecycle hooks to remove related models
+- T: add dislikes
 - ........................................
+- timestamps (tweet->created_at)
 - sorting
 - filtering
 - searching
@@ -71,6 +73,7 @@ npm run serve
 - ........................................
 - file system
 - file uploads
+- avatars (1:1)
 - T: ...
 - ........................................
 - T: work on your own project

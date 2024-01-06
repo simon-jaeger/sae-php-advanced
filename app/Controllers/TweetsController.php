@@ -6,25 +6,26 @@ use App\Models\Tweet;
 use Illuminate\Http\Request;
 
 class TweetsController {
-  function index() {
-    return Tweet::all();
+  function index(Request $request) {
+    $query = Tweet::query();
+    $query->withCount('likes');
+
+    $userId = $request->input('user_id');
+    if ($userId) $query->where('user_id', $userId);
+
+    return $query->get();
   }
 
   function create(Request $request) {
-    $userId = \Auth::user()->id;
     $payload = $request->validate([
       'text' => ['required', 'min:3', 'max: 255']
     ]);
-    return Tweet::create([
-      'user_id' => $userId,
-      ...$payload,
-    ]);
+    return \Auth::user()->tweets()->create($payload);
   }
 
   function destroy(Request $request) {
-    $userId = \Auth::user()->id;
     $id = $request->input('id');
-    $tweet = Tweet::where('user_id', $userId)->findOrFail($id);
+    $tweet = \Auth::user()->tweets()->findOrFail($id);
     $tweet->delete();
     return $tweet;
   }

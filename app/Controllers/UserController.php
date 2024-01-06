@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-// user crud with validation and shortcut methods
 class UserController {
   function show(Request $request) {
     return \Auth::user();

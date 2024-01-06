@@ -13,7 +13,15 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Model {
   use HasApiTokens;
 
-  protected static function booted(): void {
+  function tweets() {
+    return $this->hasMany(Tweet::class);
+  }
+
+  function likes() {
+    return $this->hasMany(Like::class);
+  }
+
+  static function booted() {
     static::saving(function (User $user) {
       if ($user->isDirty('password'))
         $user->password = \Hash::make($user->password);

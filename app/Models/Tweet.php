@@ -10,4 +10,7 @@ use Config\Base\Model;
  * @property int $user_id
  */
 class Tweet extends Model {
+  function likes() {
+    return $this->hasMany(Like::class);
+  }
 }

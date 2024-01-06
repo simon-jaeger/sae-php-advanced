@@ -32,3 +32,7 @@ Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('auth
 Route::get('/tweets', [TweetsController::class, 'index']);
 Route::post('/tweets', [TweetsController::class, 'create'])->middleware('auth:sanctum');
 Route::delete('/tweets', [TweetsController::class, 'destroy'])->middleware('auth:sanctum');
+
+Route::get('/likes', [LikesController::class, 'index']);
+Route::post('/likes', [LikesController::class, 'create'])->middleware('auth:sanctum');
+Route::delete('/likes', [LikesController::class, 'destroy'])->middleware('auth:sanctum');

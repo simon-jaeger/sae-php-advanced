@@ -11,5 +11,6 @@ class Model extends BaseModel {
   protected $guarded = ['id'];
   protected $hidden = ['pivot', 'password'];
 
-  public $timestamps = false;
+  const UPDATED_AT = null;
+  const CREATED_AT = null;
 }

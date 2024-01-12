@@ -13,6 +13,10 @@ class TweetsController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
+    $orderBy = $request->input('orderBy');
+    $orderDir = $request->input('orderDir', 'asc');
+    if ($orderBy) $query->orderBy($orderBy, $orderDir);
+
     return $query->get();
   }
 

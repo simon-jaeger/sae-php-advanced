@@ -61,14 +61,18 @@ npm run serve
 - tweets (1:n)
 - likes (n:m)
 - seeding
+- delete cascades
 - faker (https://fakerphp.github.io/formatters/numbers-and-strings)
 - T: seed a rich example scenario of users, tweets and likes.
 - T: add dislikes
 - ........................................
 - timestamps (tweet->created_at)
-- sorting
 - filtering
-- searching
+- sorting
+- T: ...
+- ........................................
+- admin actions
+- impersonate
 - T: ...
 - ........................................
 - file system

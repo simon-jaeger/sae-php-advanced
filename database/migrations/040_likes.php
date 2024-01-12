@@ -8,8 +8,8 @@ return new class extends Migration {
   function up() {
     Schema::create('likes', function (Blueprint $table) {
       $table->id();
-      $table->foreignId('user_id');
-      $table->foreignId('tweet_id');
+      $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+      $table->foreignId('tweet_id')->constrained()->cascadeOnDelete();
     });
   }
 

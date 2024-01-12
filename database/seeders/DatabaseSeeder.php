@@ -28,6 +28,13 @@ class DatabaseSeeder extends BaseSeeder {
       'password' => 'password',
     ]);
 
+//    for ($i = 0; $i < 10; $i++) {
+//      User::create([
+//        'email' => fake()->email(),
+//        'password' => 'password',
+//      ]);
+//    }
+
     // tweets
     ////////////////////////////////////////////////////////////////////////////
     Tweet::create([
@@ -36,26 +43,37 @@ class DatabaseSeeder extends BaseSeeder {
     ]);
 
     Tweet::create([
-      'text' => 'the second tweet',
+      'text' => 'my second tweet',
       'user_id' => 1,
     ]);
 
-    Tweet::create([
-      'text' => 'tweet by user #2',
-      'user_id' => 2,
-    ]);
+//    for ($i = 0; $i < 20; $i++) {
+//      Tweet::create([
+//        'text' => fake()->sentence,
+//        'user_id' => fake()->numberBetween(2, User::all()->count()),
+//      ]);
+//    }
 
     // likes
     ////////////////////////////////////////////////////////////////////////////
     Like::create([
-      'user_id' => 2,
+      'user_id' => 1,
       'tweet_id' => 1,
     ]);
 
     Like::create([
-      'user_id' => 3,
-      'tweet_id' => 1,
+      'user_id' => 1,
+      'tweet_id' => 2,
     ]);
+
+//    foreach (User::all() as $user) {
+//      foreach (Tweet::inRandomOrder()->limit(10)->get() as $tweet) {
+//        Like::create([
+//          'user_id' => $user->id,
+//          'tweet_id' => $tweet->id,
+//        ]);
+//      }
+//    }
 
   }
 }

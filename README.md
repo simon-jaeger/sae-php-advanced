@@ -61,8 +61,8 @@ npm run serve
 - tweets (1:n)
 - likes (n:m)
 - seeding
+- faker (https://fakerphp.github.io/formatters/numbers-and-strings)
 - T: seed a rich example scenario of users, tweets and likes.
-- T: use a deleted lifecycle hooks to remove related models
 - T: add dislikes
 - ........................................
 - timestamps (tweet->created_at)

@@ -27,20 +27,29 @@ npm run serve
 - ........................................
 - object oriented programming
 - modeling the real world
+- R: https://daylerees.com/php-pandas-classes
+- R: https://daylerees.com/php-pandas-inheritance/
+- R: https://daylerees.com/php-pandas-scope/
 - T: model  more real world objects
 - ........................................
+- statics
+- namespaces
 - architecture and frameworks
+- R: https://daylerees.com/php-pandas-statics/
+- R: https://daylerees.com/php-pandas-namespaces/
+- ........................................
 - laravel: setup
 - laravel: overview
-- namespaces and use
-- T: install and explore laravel (https://laravel.com)
+- R: https://laravel.com
+- T: install laravel
 - ........................................
 - api: headless backend
 - api client (https://usebruno.com)
 - router
 - controllers
-- http exchange (request, response)
+- http exchange (request, response, status)
 - T: implement the missing example endpoints
+- R: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 - ........................................
 - models
 - migrations
@@ -61,9 +70,9 @@ npm run serve
 - tweets (1:n)
 - likes (n:m)
 - seeding
-- delete cascades
 - faker (https://fakerphp.github.io/formatters/numbers-and-strings)
 - T: seed a rich example scenario of users, tweets and likes.
+- T: add delete hooks for cleanup
 - T: add dislikes
 - ........................................
 - timestamps (tweet->created_at)

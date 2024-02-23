@@ -1,22 +1,17 @@
 meta {
   name: create
   type: http
-  seq: 2
+  seq: 4
 }
 
 post {
-  url: {{baseUrl}}/user
+  url: {{baseUrl}}/examples/echo
   body: json
   auth: none
 }
 
 body:json {
   {
-    "email": "neo@mailinator.com",
-    "password": "password"
+    "input": "hello"
   }
-}
-
-vars:post-response {
-  token: res.body.token
 }

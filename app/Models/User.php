@@ -9,16 +9,13 @@ use Laravel\Sanctum\HasApiTokens;
  * @property int $id
  * @property string $email
  * @property string $password
+ * @property string $avatar
  */
 class User extends Model {
   use HasApiTokens;
 
   function tweets() {
     return $this->hasMany(Tweet::class);
-  }
-
-  function likes() {
-    return $this->hasMany(Like::class);
   }
 
   static function booted() {

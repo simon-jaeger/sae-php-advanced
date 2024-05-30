@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Storage;
 
 class UserController {
   function show(Request $request) {
@@ -31,6 +32,19 @@ class UserController {
   function destroy(Request $request) {
     $user = \Auth::user();
     $user->delete();
+    return $user;
+  }
+
+  function avatar(Request $request) {
+    $user = \Auth::user();
+    $request->validate([
+      'avatar' => ['sometimes', 'image', 'max:2048'],
+    ]);
+    if (Storage::exists($user->avatar))
+      Storage::delete($user->avatar);
+    $file = $request->file('avatar');
+    $user->avatar = Storage::putFile('avatars', $file);
+    $user->save();
     return $user;
   }
 }

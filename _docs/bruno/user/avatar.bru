@@ -1,0 +1,19 @@
+meta {
+  name: avatar
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/user/avatar
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  avatar: @file(/Users/simon/home/google-drive/media/images/fire-emblem/Anna1.png)
+}

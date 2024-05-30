@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class TweetsController {
   function index(Request $request) {
     $query = Tweet::query();
-    $query->withCount('likes');
 
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);

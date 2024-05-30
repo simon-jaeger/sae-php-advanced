@@ -55,37 +55,34 @@ npm run serve
 - migrations
 - sqlite (http://tinyurl.com/mrx23v34)
 - crud
-- T: add another crud entity
+- T: add more simple fields to your user (string, number, boolean)
 - ........................................
-- users
 - validation
-- hashing
+- password hashing
 - lifecycle hooks
 - authentication
 - middleware
-- T: add endpoints to update and delete the user
 - T: add more validation rules to the password
 - ........................................
+- file system
+- file uploads
+- user avatar
+- T: ...
+- ........................................
 - relationships
-- tweets (1:n)
-- likes (n:m)
+- tweets? (1:n)
+- ??? (n:m)
 - seeding
 - faker (https://fakerphp.github.io/formatters/numbers-and-strings)
-- T: seed a rich example scenario of users, tweets and likes.
+- T: extend the database seeder
 - T: add delete hooks for cleanup
-- T: add dislikes
 - ........................................
-- timestamps (tweet->created_at)
 - filtering
 - sorting
 - T: ...
 - ........................................
 - admin actions
 - impersonate
-- T: ...
-- ........................................
-- file system
-- file uploads
 - T: ...
 - ........................................
 - T: work on your own project

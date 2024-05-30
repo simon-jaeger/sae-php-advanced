@@ -6,13 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
   function up() {
-    Schema::create('uploads', function (Blueprint $table) {
+    Schema::create('users', function (Blueprint $table) {
       $table->id();
-      $table->string('file');
+      $table->string('email');
+      $table->string('password');
+      $table->string('avatar')->nullable();
+      $table->timestamps();
     });
   }
 
   function down() {
-    Schema::dropIfExists('uploads');
+    Schema::dropIfExists('users');
   }
 };

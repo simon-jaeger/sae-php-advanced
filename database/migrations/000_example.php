@@ -8,6 +8,7 @@ return new class extends Migration {
   function up() {
   //  Schema::create('table', function (Blueprint $table) {
   //    $table->id();
+  //    $table->timestamps();
   //  });
   }
 

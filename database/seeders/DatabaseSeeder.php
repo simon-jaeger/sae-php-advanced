@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Like;
 use App\Models\Tweet;
 use App\Models\User;
-use Illuminate\Database\Seeder as BaseSeeder;
+use Illuminate\Database\Seeder;
 
 // faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
 
-class DatabaseSeeder extends BaseSeeder {
+class DatabaseSeeder extends Seeder {
   function run() {
     // users
     ////////////////////////////////////////////////////////////////////////////
@@ -27,43 +26,10 @@ class DatabaseSeeder extends BaseSeeder {
 
     // tweets
     ////////////////////////////////////////////////////////////////////////////
-//    Tweet::create([
-//      'text' => 'my first tweet',
-//      'user_id' => 1,
-//    ]);
-//
-//    Tweet::create([
-//      'text' => 'my second tweet',
-//      'user_id' => 1,
-//    ]);
-//
-//    Tweet::create([
-//      'text' => 'my third tweet',
-//      'user_id' => 1,
-//    ]);
-
-    for ($i = 0; $i < 30; $i++) {
-      Tweet::create([
-        'text' => fake()->sentence,
-        'user_id' => fake()->numberBetween(1, User::all()->count()),
-      ]);
-    }
-
-    // likes
-    ////////////////////////////////////////////////////////////////////////////
-//    Like::create([
-//      'user_id' => 1,
-//      'tweet_id' => 1,
-//    ]);
-
-    foreach (User::all() as $user) {
-      foreach (Tweet::inRandomOrder()->limit(10)->get() as $tweet) {
-        Like::create([
-          'user_id' => $user->id,
-          'tweet_id' => $tweet->id,
-        ]);
-      }
-    }
+    Tweet::create([
+      'text' => 'alpha',
+      'user_id' => 1,
+    ]);
 
   }
 }

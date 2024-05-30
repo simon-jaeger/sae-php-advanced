@@ -15,27 +15,20 @@ Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);
 Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 
-Route::get('/tasks', [TasksController::class, 'index']);
-Route::post('/tasks', [TasksController::class, 'create']);
-Route::patch('/tasks', [TasksController::class, 'update']);
-Route::delete('/tasks', [TasksController::class, 'destroy']);
-Route::delete('/tasks/truncate', [TasksController::class, 'truncate']);
-
-Route::get('/user', [UserController::class, 'show'])->middleware('auth:sanctum');
 Route::post('/user', [UserController::class, 'create']);
-Route::patch('/user', [UserController::class, 'update'])->middleware('auth:sanctum');
-Route::delete('/user', [UserController::class, 'destroy'])->middleware('auth:sanctum');
 
 Route::post('/auth/login', [AuthController::class, 'login']);
-Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 Route::get('/tweets', [TweetsController::class, 'index']);
-Route::post('/tweets', [TweetsController::class, 'create'])->middleware('auth:sanctum');
-Route::delete('/tweets', [TweetsController::class, 'destroy'])->middleware('auth:sanctum');
 
-Route::get('/likes', [LikesController::class, 'index']);
-Route::post('/likes', [LikesController::class, 'create'])->middleware('auth:sanctum');
-Route::delete('/likes', [LikesController::class, 'destroy'])->middleware('auth:sanctum');
+Route::middleware(['auth:sanctum'])->group(function () {
+  Route::get('/user', [UserController::class, 'show']);
+  Route::patch('/user', [UserController::class, 'update']);
+  Route::delete('/user', [UserController::class, 'destroy']);
+  Route::post('/user/avatar', [UserController::class, 'avatar']);
 
-Route::get('/uploads', [UploadsController::class, 'index'])->middleware('auth:sanctum');
-Route::post('/uploads', [UploadsController::class, 'create'])->middleware('auth:sanctum');
+  Route::post('/auth/logout', [AuthController::class, 'logout']);
+
+  Route::post('/tweets', [TweetsController::class, 'create']);
+  Route::delete('/tweets', [TweetsController::class, 'destroy']);
+});

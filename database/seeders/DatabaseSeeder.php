@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Tweet;
+use App\Models\Article;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -10,6 +10,27 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {
   function run() {
+    // articles
+    ////////////////////////////////////////////////////////////////////////////
+    Article::create([
+      'title' => 'alpha',
+      'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      'user_id' => 1,
+    ]);
+
+    Article::create([
+      'title' => 'bravo',
+      'content' => 'ipsum dolor sit amet, consectetur adipiscing elit.',
+      'user_id' => 1,
+    ]);
+
+    Article::create([
+      'title' => 'charlie',
+      'content' => 'dolor sit amet, consectetur adipiscing elit.',
+      'user_id' => 1,
+    ]);
+
+
     // users
     ////////////////////////////////////////////////////////////////////////////
     User::create([
@@ -23,13 +44,6 @@ class DatabaseSeeder extends Seeder {
         'password' => 'password',
       ]);
     }
-
-    // tweets
-    ////////////////////////////////////////////////////////////////////////////
-    Tweet::create([
-      'text' => 'alpha',
-      'user_id' => 1,
-    ]);
 
   }
 }

@@ -23,66 +23,74 @@ npm run serve
 - os package manager (brew.sh / scoop.sh)
 - php cli
 - composer
-- T: using bash, create a folder with a main.php file and run it
+- T: using bash, create a folder with a php file and run it
 - ........................................
 - object oriented programming
-- modeling the real world
+- example Circle class
 - R: https://daylerees.com/php-pandas-classes
-- R: https://daylerees.com/php-pandas-inheritance/
-- R: https://daylerees.com/php-pandas-scope/
-- T: model  more real world objects
+- T: Rectrangle class
+- ........................................
+- modeling the real world
+- example Coin class
+- T: Dice class etc.
+- ........................................
+- architecture and frameworks
+- laravel: overview and installation
+- hello world
+- R: https://laravel.com
 - ........................................
 - statics
 - namespaces
-- architecture and frameworks
 - R: https://daylerees.com/php-pandas-statics/
 - R: https://daylerees.com/php-pandas-namespaces/
 - ........................................
-- laravel: setup
-- laravel: overview
-- R: https://laravel.com
-- T: install laravel
-- ........................................
 - api: headless backend
-- api client (https://usebruno.com)
+- https://usebruno.com
 - router
 - controllers
 - http exchange (request, response, status)
 - T: implement the missing example endpoints
 - R: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 - ........................................
-- models
+- models (Article.php)
 - migrations
-- sqlite (http://tinyurl.com/mrx23v34)
 - crud
-- T: add more simple fields to your user (string, number, boolean)
+- https://tableplus.com
+- T: add `content` to articles
 - ........................................
+- users
 - validation
 - password hashing
 - lifecycle hooks
 - authentication
 - middleware
-- T: add more validation rules to the password
+- T: add more password rules
+- T: validate email not already taken
+- ........................................
+- relationships
+- articles n:1 user
+- T: add comments (n:1 article, n:1 user)
+- ........................................
+- seeding
+- https://fakerphp.github.io
+- T: seed comments
+- ........................................
+- filter
+- search
+- sort
+- paginate
+- T: add filter etc. to comments
 - ........................................
 - file system
 - file uploads
 - user avatar
-- T: ...
+- T: add `image` to articles
 - ........................................
-- relationships
-- tweets? (1:n)
-- ??? (n:m)
-- seeding
-- faker (https://fakerphp.github.io/formatters/numbers-and-strings)
-- T: extend the database seeder
-- T: add delete hooks for cleanup
-- ........................................
-- filtering
-- sorting
-- T: ...
-- ........................................
+- advanded
 - admin actions
 - impersonate
+- n:m relationships (tags)
+- delete hooks for cleanup
+- frontend js (fetch)
 - T: ...
-- ........................................
 - T: work on your own project

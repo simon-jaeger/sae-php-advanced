@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/tweets
+  url: {{baseUrl}}/articles
   body: json
   auth: bearer
 }
@@ -16,6 +16,7 @@ auth:bearer {
 
 body:json {
   {
-    "text": "it works"
+    "title": "laravel",
+    "content": "a php framework"
   }
 }

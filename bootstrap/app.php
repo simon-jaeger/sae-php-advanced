@@ -29,7 +29,7 @@ class DefaultHeaders {
 
     // default response headers
     $response = $next($request);
-    if ($response->headers->get('Content-Type') === 'text/html; charset=UTF-8')
+    if ($response->headers->get('Content-Type') === 'text/html; charset=UTF-8' && !str_starts_with($response->getContent(), '<'))
       $response->headers->set('Content-Type', 'text/plain');
 
     return $response;

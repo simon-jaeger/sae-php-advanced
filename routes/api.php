@@ -16,10 +16,8 @@ Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 
 Route::post('/user', [UserController::class, 'create']);
-
 Route::post('/auth/login', [AuthController::class, 'login']);
-
-Route::get('/tweets', [TweetsController::class, 'index']);
+Route::get('/articles', [ArticlesController::class, 'index']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, 'show']);
@@ -29,6 +27,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
   Route::post('/auth/logout', [AuthController::class, 'logout']);
 
-  Route::post('/tweets', [TweetsController::class, 'create']);
-  Route::delete('/tweets', [TweetsController::class, 'destroy']);
+  Route::post('/articles', [ArticlesController::class, 'create']);
+  Route::delete('/articles', [ArticlesController::class, 'destroy']);
 });

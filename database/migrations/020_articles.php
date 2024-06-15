@@ -6,15 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
   function up() {
-    Schema::create('tweets', function (Blueprint $table) {
+    Schema::create('articles', function (Blueprint $table) {
       $table->id();
-      $table->string('text');
+      $table->string('title');
+      $table->string('content');
       $table->foreignId('user_id');
       $table->timestamps();
     });
   }
 
   function down() {
-    Schema::dropIfExists('tweets');
+    Schema::dropIfExists('articles');
   }
 };

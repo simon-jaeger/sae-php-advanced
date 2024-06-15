@@ -14,8 +14,8 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Model {
   use HasApiTokens;
 
-  function tweets() {
-    return $this->hasMany(Tweet::class);
+  function articles() {
+    return $this->hasMany(Article::class);
   }
 
   static function booted() {

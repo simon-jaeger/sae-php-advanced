@@ -1,14 +1,10 @@
 <?php
 
-echo '<style>body { background: #111; color: #ddd; font-family: monospace; white-space: pre; }</style>';
-
-function display($value) {
-  echo "\n";
-  print_r(json_encode($value, JSON_PRETTY_PRINT));
-  echo "\n";
+function print_v($value) {
+  print_r("\n" . json_encode($value, JSON_PRETTY_PRINT) . "\n");
 }
 
-/////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 class Circle {
   var int $radius;
@@ -26,10 +22,12 @@ class Circle {
   }
 }
 
-// $circle = new Circle(4);
-// display($circle);
-// display($circle->circumference());
-// display($circle->area());
+$circle = new Circle(4);
+print_v($circle);
+print_v($circle->circumference());
+print_v($circle->area());
+
+////////////////////////////////////////////////////////////////////////////////
 
 class Rectangle {
   var int $width;
@@ -57,12 +55,14 @@ class Rectangle {
   }
 }
 
-// $rectangle = new Rectangle(5, 10);
-// display($rectangle);
-// display($rectangle->circumference());
-// display($rectangle->area());
-// display($rectangle->diagonal());
-// display($rectangle->isSquare());
+$rectangle = new Rectangle(5, 10);
+print_v($rectangle);
+print_v($rectangle->circumference());
+print_v($rectangle->area());
+print_v($rectangle->diagonal());
+print_v($rectangle->isSquare());
+
+////////////////////////////////////////////////////////////////////////////////
 
 class Coin {
   var bool $isHeads = false;
@@ -72,11 +72,13 @@ class Coin {
   }
 }
 
-// $coin = new Coin();
-// for ($i = 0; $i < 10; $i++) {
-//  $coin->flip();
-//  display($coin->isHeads);
-// }
+$coin = new Coin();
+for ($i = 0; $i < 10; $i++) {
+  $coin->flip();
+  print_v($coin->isHeads);
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 class Dice {
   var int $value = 1;
@@ -91,8 +93,10 @@ class Dice {
   }
 }
 
-// $dice = new Dice(20);
-// for ($i = 0; $i < 10; $i++) {
-//   $dice->roll();
-//   display($dice->value);
-// }
+$dice = new Dice(20);
+for ($i = 0; $i < 10; $i++) {
+  $dice->roll();
+  print_v($dice->value);
+}
+
+////////////////////////////////////////////////////////////////////////////////

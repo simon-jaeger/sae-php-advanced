@@ -38,9 +38,21 @@ class ArticlesController {
     // return $article;
     $payload = $request->validate([
       'title' => ['required', 'min:1', 'max: 200'],
-      'content' => ['required', 'min:1', 'max: 100000'],
+      'content' => ['required', 'min:1', 'max: 60000'],
     ]);
     return \Auth::user()->articles()->create($payload);
+  }
+
+  function update(Request $request) {
+    $id = $request->input('id');
+    $article = \Auth::user()->articles()->findOrFail($id);
+    $payload = $request->validate([
+      'title' => ['sometimes', 'min:1', 'max: 200'],
+      'content' => ['sometimes', 'min:1', 'max: 60000'],
+    ]);
+    $article->fill($payload);
+    $article->save();
+    return $article;
   }
 
   function destroy(Request $request) {

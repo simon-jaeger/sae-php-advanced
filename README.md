@@ -23,7 +23,7 @@ npm run serve
 - os package manager (brew.sh / scoop.sh)
 - php cli
 - composer
-- T: using bash, create a folder with a php file and run it
+- T: use bash to: create a folder, create a php file, run it
 - ........................................
 - object oriented programming
 - example Circle class

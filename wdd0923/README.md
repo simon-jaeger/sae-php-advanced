@@ -21,28 +21,27 @@ npm run serve
 
 - bash
 - os package manager (brew.sh / scoop.sh)
-- php cli
-- composer
-- T: use bash to: create a folder, create a php file, run it
+- php (v8.3+)
+- composer (v2.7+)
+- T: use bash to create a folder, create a php file, run it
 - ........................................
 - object oriented programming
 - example Circle class
 - R: https://daylerees.com/php-pandas-classes
-- T: Rectrangle class
+- T: Rectrangle class etc.
 - ........................................
 - modeling the real world
 - example Coin class
 - T: Dice class etc.
 - ........................................
+- statics
+- R: https://daylerees.com/php-pandas-statics/
+- T: Color static class
+- ........................................
 - architecture and frameworks
 - laravel: overview and installation
 - hello world
 - R: https://laravel.com
-- ........................................
-- statics
-- namespaces
-- R: https://daylerees.com/php-pandas-statics/
-- R: https://daylerees.com/php-pandas-namespaces/
 - ........................................
 - api: headless backend
 - https://usebruno.com
@@ -87,11 +86,13 @@ npm run serve
 - user avatar
 - T: add `image` to articles
 - ........................................
+- n:m relationships (tags)
+- ........................................
+- frontend example (js fetch)
+- ........................................
 - advanded
 - admin actions
 - impersonate
-- n:m relationships (tags)
 - delete hooks for cleanup
-- frontend js (fetch)
 - T: ...
 - T: work on your own project

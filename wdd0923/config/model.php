@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model as BaseModel;
  * @property string $updated_at
  */
 class Model extends BaseModel {
-  protected $guarded = ['id'];
-  protected $hidden = ['pivot', 'password'];
+  protected $guarded = [];
+  protected $hidden = ['password', 'pivot'];
 }
+

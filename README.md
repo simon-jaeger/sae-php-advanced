@@ -21,8 +21,8 @@ npm run serve
 
 - bash
 - os package manager (brew.sh / scoop.sh)
-- php (v8.3+)
-- composer (v2.7+)
+- php (v8.2+)
+- composer (v2.6+)
 - T: use bash to create a folder, create a php file, run it
 - ........................................
 - object oriented programming
@@ -48,8 +48,8 @@ npm run serve
 - router
 - controllers
 - http exchange (request, response, status)
+- R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - T: implement the missing example endpoints
-- R: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 - ........................................
 - demo project: blogging platform (medium, hashnode, ...)
 - models (Article.php)
@@ -86,11 +86,9 @@ npm run serve
 - user avatar
 - T: add `image` to articles
 - ........................................
-- n:m relationships (tags)
+- frontend example (js fetch etc.)
 - ........................................
-- frontend example (js fetch)
-- ........................................
-- advanded
+- advanded features
 - admin actions
 - impersonate
 - delete hooks for cleanup

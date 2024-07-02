@@ -22,7 +22,7 @@ class ArticlesController {
     $orderBy = $request->input('orderBy', 'created_at');
     $orderDir = $request->input('orderDir', 'asc');
     $query->orderBy($orderBy, $orderDir);
-
+    
     // paginate
     $limit = $request->input('limit');
     $offset = $request->input('offset');

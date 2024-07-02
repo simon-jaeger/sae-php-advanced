@@ -23,6 +23,8 @@ npm run serve
 - os package manager (brew.sh / scoop.sh)
 - php (v8.2+)
 - composer (v2.6+)
+- phpstorm or...
+- ...vscode with [intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 - T: use bash to create a folder, create a php file, run it
 - ........................................
 - object oriented programming

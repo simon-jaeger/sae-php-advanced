@@ -70,7 +70,7 @@ class Coin {
   public bool $isHeads = false;
 
   function flip() {
-    $this->isHeads = rand(0, 1) < 0.5;
+    $this->isHeads = random_int(0, 1) === 1;
   }
 }
 
@@ -114,15 +114,29 @@ class Task {
     return $task;
   }
 
+  static function first() {
+    $index = 0;
+    return self::$all[$index];
+  }
+
+  static function last() {
+    $index = array_key_last(self::$all);
+    return self::$all[$index];
+  }
+
   public string $text;
   public bool $done = false;
   public string $created_at;
 }
 
-// $task1 = Task::make('learn php');
-// $task2 = Task::make('learn oop');
-// $task3 = Task::make('learn laravel');
-// display(Task::$all);
+$t1 = Task::make('learn oop');
+$t2 = Task::make('learn php');
+$t3 = Task::make('learn mvc');
+$t4 = Task::make('learn laravel');
+
+display(Task::$all);
+display(Task::first());
+display(Task::last());
 
 ////////////////////////////////////////////////////////////////////////////////
 

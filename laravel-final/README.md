@@ -101,3 +101,5 @@ npm run serve
 - delete hooks for cleanup
 - T: ...
 - T: work on your own project
+- T: progress presentations
+

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
 use Illuminate\Database\Seeder;
 use App\Models\Article;
 use App\Models\User;
@@ -10,6 +11,20 @@ use App\Models\User;
 
 class DatabaseSeeder extends Seeder {
   function run() {
+    // users
+    ////////////////////////////////////////////////////////////////////////////
+    User::create([
+      'email' => 'alpha@mailinator.com',
+      'password' => 'password',
+    ]);
+
+    for ($i = 0; $i < 9; $i++) {
+      User::create([
+        'email' => fake()->email(),
+        'password' => 'password',
+      ]);
+    }
+
     // articles
     ////////////////////////////////////////////////////////////////////////////
     Article::create([
@@ -30,19 +45,25 @@ class DatabaseSeeder extends Seeder {
       'user_id' => 1,
     ]);
 
-    // users
-    ////////////////////////////////////////////////////////////////////////////
-    User::create([
-      'email' => 'alpha@mailinator.com',
-      'password' => 'password',
+    // comments
+    ////////////////////////////////////////////////////////////////////////////////
+    Comment::create([
+      'text' => 'awesome article',
+      'article_id' => 1,
+      'user_id' => 2,
     ]);
 
-    for ($i = 0; $i < 9; $i++) {
-      User::create([
-        'email' => fake()->email(),
-        'password' => 'password',
-      ]);
-    }
+    Comment::create([
+      'text' => 'best article',
+      'article_id' => 1,
+      'user_id' => 3,
+    ]);
+
+    Comment::create([
+      'text' => 'cool article',
+      'article_id' => 1,
+      'user_id' => 4,
+    ]);
 
   }
 }

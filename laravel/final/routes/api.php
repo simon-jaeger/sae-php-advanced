@@ -10,6 +10,14 @@ Route::get('/ping', function () {
   return 'pong';
 });
 
+Route::get('/tasks', function () {
+  return [
+    'learn laravel',
+    'create app',
+    'make money',
+  ];
+});
+
 Route::get('/examples/about', [ExamplesController::class, 'about']);
 Route::post('/examples/echo', [ExamplesController::class, 'echo']);
 Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);

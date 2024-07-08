@@ -40,22 +40,22 @@ npm run serve
 - R: https://daylerees.com/php-pandas-statics/
 - T: Color static class
 - ........................................
-- laravel: overview
+- laravel: what is a framework?
 - laravel: installation
+- laravel: directory structure and namespaces
 - R: https://laravel.com
 - ........................................
-- architecture and frameworks
-- namespaces
-- R: https://daylerees.com/php-pandas-namespaces/
-- ........................................
-- api: headless backend
-- https://usebruno.com
-- GET /api/ping
+- headless architecture
+- backend server api
+- frontend client spa
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
+- R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+- R: https://javascript.info/fetch
 - ........................................
 - router
 - controllers
 - http exchange (request, response, status)
+- https://usebruno.com
 - T: implement the missing example endpoints
 - ........................................
 - demo project: blogging platform (medium, hashnode, ...)

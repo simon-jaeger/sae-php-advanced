@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body {
+      background: black;
+      color: #ccc;
+      font-family: system-ui;
+    }
+  </style>
+  <script>
+    async function load() {
+      const response = await fetch('http://localhost:8000/api/tasks')
+      const todos = await response.json()
+      document.getElementById('list').innerHTML =
+        todos.map((x) => `<li>${x}</li>`).join('')
+    }
+
+    window.addEventListener('DOMContentLoaded', load)
+  </script>
+</head>
+
+<body>
+  <h1>tasks</h1>
+  <button onclick="load()">reload</button>
+  <ul id="list"></ul>
+</body>
+</html>

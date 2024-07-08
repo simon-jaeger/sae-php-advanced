@@ -25,7 +25,7 @@ class User extends Model {
   }
 
   static function booted() {
-    static::saving(function (User $user) {
+    self::saving(function (User $user) {
       if ($user->isDirty('password')) {
         $plain = $user->getAttribute('password');
         $user->setAttribute('password', \Hash::make($plain));

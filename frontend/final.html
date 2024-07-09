@@ -14,6 +14,7 @@
     async function load() {
       const response = await fetch('http://localhost:8000/api/todos')
       const todos = await response.json()
+      console.log(todos)
       document.getElementById('list').innerHTML =
         todos.map((x) => `<li>${x}</li>`).join('')
     }
@@ -22,7 +23,14 @@
       const todo = document.getElementById('input').value
       await fetch('http://localhost:8000/api/todos', {
         method: 'POST',
-        body: JSON.stringify({todo})
+        body: JSON.stringify({todo}),
+      })
+      load()
+    }
+
+    async function destroy() {
+      await fetch('http://localhost:8000/api/todos', {
+        method: 'DELETE',
       })
       load()
     }
@@ -35,6 +43,7 @@
   <h1>tasks</h1>
   <input id="input">
   <button onclick="add()">add</button>
+  <button onclick="destroy()">delete all</button>
   <ul id="list"></ul>
 </body>
 </html>

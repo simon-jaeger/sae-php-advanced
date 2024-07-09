@@ -28,6 +28,13 @@
       load()
     }
 
+    async function destroy() {
+      await fetch('http://localhost:8000/api/todos', {
+        method: 'DELETE',
+      })
+      load()
+    }
+
     window.addEventListener('DOMContentLoaded', load)
   </script>
 </head>
@@ -35,7 +42,8 @@
 <body>
   <h1>tasks</h1>
   <input id="input">
-  <button type="button" onclick="add()">add</button>
+  <button onclick="add()">add</button>
+  <button onclick="destroy()">delete all</button>
   <ul id="list"></ul>
 </body>
 </html>

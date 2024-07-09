@@ -4,7 +4,7 @@ function display($value) {
   print(json_encode($value, JSON_PRETTY_PRINT) . PHP_EOL);
 }
 
-display(['string', 123, true]);
+// display(['string', 123, true]);
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -134,20 +134,19 @@ $t2 = Task::make('learn php');
 $t3 = Task::make('learn mvc');
 $t4 = Task::make('learn laravel');
 
-display(Task::$all);
-display(Task::first());
-display(Task::last());
+// display(Task::$all);
+// display(Task::first());
+// display(Task::last());
 
 ////////////////////////////////////////////////////////////////////////////////
 
 class Color {
   static function random() {
-    return '#' . str_pad(dechex(mt_rand(0, 0xffffff)), 6, '0', 0);
+    return sprintf("#%06x", random_int(0, 0xffffff));
   }
 
   static function fromRgb($r, $g, $b) {
-    $t = fn($x) => str_pad(dechex($x), 2, '0', 0);
-    return '#' . $t($r) . $t($g) . $t($b);
+    return sprintf("#%02x%02x%02x", $r, $g, $b);
   }
 
   static function isGray(string $color) {
@@ -157,13 +156,11 @@ class Color {
     return $red === $blue && $blue === $green;
   }
 
-  // invert('#00bbff')
   static function invert(string $color) {
-    $red = hexdec(substr($color, 1, 2)); // '00' --> 0xff
-    $green = hexdec(substr($color, 3, 2)); // 'bb' --> 0x44
-    $blue = hexdec(substr($color, 5, 2));// 'ff' --> 0x00
-    $t = fn($x) => str_pad(dechex(0xff - $x), 2, '0', 0);
-    return '#' . $t($red) . $t($green) . $t($blue);
+    $red = hexdec(substr($color, 1, 2));
+    $green = hexdec(substr($color, 3, 2));
+    $blue = hexdec(substr($color, 5, 2));
+    return self::fromRgb(255 - $red, 255 - $green, 255 - $blue);
   }
 }
 

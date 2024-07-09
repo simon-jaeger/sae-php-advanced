@@ -45,9 +45,9 @@ npm run serve
 - laravel: directory structure and namespaces
 - R: https://laravel.com
 - ........................................
-- headless architecture
+- headless architecture / separation of concerns
 - backend server api
-- frontend client spa
+- frontend client gui
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch

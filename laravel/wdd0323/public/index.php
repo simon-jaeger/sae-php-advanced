@@ -9,12 +9,6 @@ if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php'
   require $maintenance;
 }
 
-// Load homepage if root request
-if ($_SERVER['REQUEST_URI'] === '/') {
-  include('index.html');
-  exit;
-}
-
 // Register the Composer autoloader...
 require __DIR__ . '/../vendor/autoload.php';
 

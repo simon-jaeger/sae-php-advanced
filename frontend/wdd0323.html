@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body {
+      background: black;
+      color: #ccc;
+      font-family: system-ui;
+    }
+  </style>
+  <script>
+    async function load() {
+      const response = await fetch('http://localhost:8000/api/todos')
+      const todos = await response.json()
+      console.log(todos)
+      document.getElementById('list').innerHTML =
+        todos.map((x) => `<li>${x}</li>`).join('')
+    }
+
+    async function add() {
+      const todo = document.getElementById('input').value
+      await fetch('http://localhost:8000/api/todos', {
+        method: 'POST',
+        body: JSON.stringify({todo}),
+      })
+      load()
+    }
+
+    window.addEventListener('DOMContentLoaded', load)
+  </script>
+</head>
+
+<body>
+  <h1>tasks</h1>
+  <input id="input">
+  <button type="button" onclick="add()">add</button>
+  <ul id="list"></ul>
+</body>
+</html>

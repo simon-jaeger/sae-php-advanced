@@ -51,6 +51,8 @@ npm run serve
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
+- T: add an api endpoint DELETE /todos that deletes all todos, use it in the gui
+- T: make the gui prettier
 - ........................................
 - router
 - controllers
@@ -101,8 +103,6 @@ npm run serve
 - file uploads
 - user avatar
 - T: add `image` to articles
-- ........................................
-- frontend example (js fetch etc.)
 - ........................................
 - advanded features
 - admin actions

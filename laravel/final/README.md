@@ -103,11 +103,8 @@ npm run serve
 - user avatar
 - T: add `image` to articles
 - ........................................
-- advanded features
-- admin actions
-- impersonate
-- delete hooks for cleanup
-- T: ...
-- T: work on your own project
-- T: progress presentations
+- advanded features: admin actions, impersonate, ...
+- ...
+- T: workshop
+- T: presentations
 

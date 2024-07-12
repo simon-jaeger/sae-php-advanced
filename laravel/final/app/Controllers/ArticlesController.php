@@ -10,20 +10,20 @@ class ArticlesController {
     // return Article::query()->get();
     $query = Article::query();
 
-    // filter
+    // filter by user
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
-    // search
+    // filter by title
     $title = $request->input('title');
     if ($title) $query->where('title', 'like', "%$title%");
 
-    // sort
+    // order
     $orderBy = $request->input('orderBy', 'created_at');
     $orderDir = $request->input('orderDir', 'asc');
     $query->orderBy($orderBy, $orderDir);
 
-    // paginate
+    // limit, offset
     $limit = $request->input('limit');
     $offset = $request->input('offset');
     if ($limit) $query->limit($limit);

@@ -18,10 +18,14 @@ class User extends Model {
   public string $password;
 
   #[Column]
-  public string $avatar;
+  public ?string $avatar;
 
   function articles(): HasMany|Article {
     return $this->hasMany(Article::class);
+  }
+
+  function comments(): HasMany|Article {
+    return $this->hasMany(Comment::class);
   }
 
   static function booted() {

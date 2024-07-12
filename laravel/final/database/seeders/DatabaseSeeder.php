@@ -18,52 +18,35 @@ class DatabaseSeeder extends Seeder {
       'password' => 'password',
     ]);
 
-    for ($i = 0; $i < 9; $i++) {
-      User::create([
-        'email' => fake()->email(),
-        'password' => 'password',
-      ]);
-    }
+    User::create([
+      'email' => 'bravo@mailinator.com',
+      'password' => 'password',
+    ]);
+
+    User::create([
+      'email' => 'charlie@mailinator.com',
+      'password' => 'password',
+    ]);
 
     // articles
     ////////////////////////////////////////////////////////////////////////////
-    Article::create([
-      'title' => 'alpha',
-      'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      'user_id' => 1,
-    ]);
-
-    Article::create([
-      'title' => 'bravo',
-      'content' => 'ipsum dolor sit amet, consectetur adipiscing elit.',
-      'user_id' => 1,
-    ]);
-
-    Article::create([
-      'title' => 'charlie',
-      'content' => 'dolor sit amet, consectetur adipiscing elit.',
-      'user_id' => 1,
-    ]);
+    for ($i = 0; $i < 10; $i++) {
+      Article::create([
+        'title' => fake()->word(),
+        'content' => fake()->sentence(),
+        'user_id' => 1,
+      ]);
+    }
 
     // comments
     ////////////////////////////////////////////////////////////////////////////////
-    Comment::create([
-      'text' => 'awesome article',
-      'article_id' => 1,
-      'user_id' => 2,
-    ]);
-
-    Comment::create([
-      'text' => 'best article',
-      'article_id' => 1,
-      'user_id' => 3,
-    ]);
-
-    Comment::create([
-      'text' => 'cool article',
-      'article_id' => 1,
-      'user_id' => 4,
-    ]);
+    for ($i = 0; $i < 20; $i++) {
+      Comment::create([
+        'text' => fake()->sentence(3),
+        'article_id' => random_int(1, 10),
+        'user_id' => random_int(1, 3),
+      ]);
+    }
 
   }
 }

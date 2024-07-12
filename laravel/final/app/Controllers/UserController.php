@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class UserController {
   function show(Request $request) {

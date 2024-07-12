@@ -94,9 +94,8 @@ npm run serve
 - T: seed comments
 - ........................................
 - filter
-- search
-- sort
-- paginate
+- order
+- limit,offset
 - T: add filter etc. to comments
 - ........................................
 - file system

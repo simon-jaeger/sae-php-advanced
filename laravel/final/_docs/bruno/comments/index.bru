@@ -5,12 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/comments?user_id=1
+  url: {{baseUrl}}/comments
   body: none
   auth: none
 }
 
 query {
-  user_id: 1
-  ~article_id: 3
+  ~user_id: 1
+  ~article_id: 1
 }

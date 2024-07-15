@@ -19,8 +19,8 @@ class ArticlesController {
     if ($title) $query->where('title', 'like', "%$title%");
 
     // order
-    $orderBy = $request->input('orderBy', 'created_at');
-    $orderDir = $request->input('orderDir', 'asc');
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'asc');
     $query->orderBy($orderBy, $orderDir);
 
     // limit, offset
@@ -52,6 +52,7 @@ class ArticlesController {
     $payload = $request->validate([
       'title' => ['sometimes', 'min:1', 'max: 200'],
       'content' => ['sometimes', 'min:1', 'max: 60000'],
+      'tag_ids' => ['sometimes'],
     ]);
     $article->update($payload);
     return $article;

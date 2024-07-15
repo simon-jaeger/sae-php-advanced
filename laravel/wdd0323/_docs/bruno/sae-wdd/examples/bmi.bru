@@ -5,14 +5,14 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/examples/bmi
+  url: http://localhost:8000/api/examples/bmi
   body: json
   auth: none
 }
 
 body:json {
   {
-    "weight": 70,
-    "height": 1.8
+    "height": 1.8,
+    "weight": 70
   }
 }

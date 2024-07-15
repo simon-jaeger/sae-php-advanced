@@ -52,7 +52,7 @@ class ExamplesController {
   function bmi(Request $request) {
     $weight = $request->input('weight');
     $height = $request->input('height');
-    $bmi = $weight / ($height * $height);
+    $bmi = $weight / $height ** 2;
     $category = 'underweight';
     if ($bmi > 18.5) $category = 'normal';
     if ($bmi > 25) $category = 'overweight';

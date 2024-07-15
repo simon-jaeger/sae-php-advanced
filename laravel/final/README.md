@@ -56,7 +56,7 @@ npm run serve
 - ........................................
 - router
 - controllers
-- http exchange (request, response, status)
+- http exchange (request, response, status, body, headers)
 - https://usebruno.com
 - T: implement the missing example endpoints
 - ........................................

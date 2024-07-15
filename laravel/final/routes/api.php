@@ -8,11 +8,14 @@ use App\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/examples/ping', [ExamplesController::class, 'ping']);
 Route::get('/examples/about', [ExamplesController::class, 'about']);
 Route::post('/examples/echo', [ExamplesController::class, 'echo']);
 Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);
 Route::post('/examples/sum', [ExamplesController::class, 'sum']);
+Route::post('/examples/count', [ExamplesController::class, 'count']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
+Route::post('/examples/bmi', [ExamplesController::class, 'bmi']);
 
 Route::post('/user', [UserController::class, 'create']);
 Route::post('/auth/login', [AuthController::class, 'login']);

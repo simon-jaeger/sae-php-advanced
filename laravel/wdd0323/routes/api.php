@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\ArticlesController;
 use App\Controllers\ExamplesController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,20 @@ Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/count', [ExamplesController::class, 'count']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 Route::post('/examples/bmi', [ExamplesController::class, 'bmi']);
+
+Route::get('/articles/read', [ArticlesController::class, 'read']);
+Route::post('/articles/create', [ArticlesController::class, 'create']);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

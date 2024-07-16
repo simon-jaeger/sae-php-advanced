@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ArticlesController {
   function index(Request $request) {
-    // return Article::query()->get();
+    // return Article::all();
     $query = Article::query();
 
     // filter by user
@@ -36,7 +36,11 @@ class ArticlesController {
   }
 
   function create(Request $request) {
-    // $article = Article::create(['title' => 'foobar']);
+    // $article = new Article();
+    // $article->title = 'my first article';
+    // $article->content = 'lorem ipsum';
+    // $article->save();
+    // return $article;
     $payload = $request->validate([
       'title' => ['required', 'min:1', 'max: 200'],
       'content' => ['required', 'min:1', 'max: 60000'],
@@ -47,7 +51,8 @@ class ArticlesController {
   function update(Request $request) {
     $id = $request->input('id');
     $article = \Auth::user()->articles()->findOrFail($id);
-    // $article->title = 'foobar';
+    // $article = Article::findOrFail($id);
+    // $article->title = 'updated title';
     // $article->save();
     $payload = $request->validate([
       'title' => ['sometimes', 'min:1', 'max: 200'],
@@ -60,6 +65,7 @@ class ArticlesController {
 
   function destroy(Request $request) {
     $id = $request->input('id');
+    // $article = Article::findOrFail($id);
     $article = \Auth::user()->articles()->findOrFail($id);
     $article->delete();
     return $article;

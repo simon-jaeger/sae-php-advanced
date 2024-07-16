@@ -11,7 +11,7 @@ class ArticlesController {
   }
 
   function create() {
-    $article = Article::make();
+    $article = new Article();
     $article->title = 'my first article';
     $article->content = 'foobar';
     $article->save();

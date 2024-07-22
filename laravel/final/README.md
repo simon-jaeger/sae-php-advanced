@@ -87,7 +87,6 @@ npm run serve
 - create
 - update
 - delete
-- W: https://www.youtube.com/watch?v=-MTSQjw5DrM
 - R: https://laravel.com/docs/11.x/eloquent#retrieving-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models

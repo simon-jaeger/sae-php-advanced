@@ -82,7 +82,7 @@ npm run serve
 - R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
 - R: https://laravel.com/docs/11.x/eloquent#introduction
 - ........................................
-- CRUD and REST
+- crud
 - index
 - create
 - update
@@ -92,11 +92,11 @@ npm run serve
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
-- T: add `content` to articles and make it crudable
+- T: add `subtitle` to articles and make it crudable
 - ........................................
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
-- T: validate article `content` 
+- T: validate article `subtitle` 
 - ........................................
 - users
 - password hashing

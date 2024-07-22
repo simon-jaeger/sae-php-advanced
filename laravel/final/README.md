@@ -68,15 +68,19 @@ npm run serve
 - R: https://laravel.com/docs/11.x/migrations
 - https://tableplus.com
 - ........................................
-- MVC and ORM
-- views
+- MVC
+- view
 - router
 - controller
-- models
-- migrations
-- object relational mapping
+- model
+- migration
+- mvc.mermaid
 - R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- ........................................
+- ORM
+- object relational mapping
 - R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
+- R: https://laravel.com/docs/11.x/eloquent#introduction
 - ........................................
 - crud
 - index

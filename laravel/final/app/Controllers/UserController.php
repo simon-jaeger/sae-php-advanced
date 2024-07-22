@@ -12,19 +12,13 @@ class UserController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate([
-      'email' => ['required', 'email'],
-      'password' => ['required', 'min:8'],
-    ]);
+    $payload = User::validate($request);
     return User::create($payload);
   }
 
   function update(Request $request) {
     $user = \Auth::user();
-    $payload = $request->validate([
-      'email' => ['sometimes', 'email'],
-      'password' => ['sometimes', 'min:8'],
-    ]);
+    $payload = User::validate($request);
     $user->update($payload);
     return $user;
   }

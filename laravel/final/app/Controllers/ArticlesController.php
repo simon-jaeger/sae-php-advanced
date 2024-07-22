@@ -41,10 +41,7 @@ class ArticlesController {
     // $article->content = 'lorem ipsum';
     // $article->save();
     // return $article;
-    $payload = $request->validate([
-      'title' => ['required', 'min:1', 'max: 200'],
-      'content' => ['required', 'min:1', 'max: 60000'],
-    ]);
+    $payload = Article::validate($request);
     return \Auth::user()->articles()->create($payload);
   }
 
@@ -54,11 +51,7 @@ class ArticlesController {
     // $article = Article::findOrFail($id);
     // $article->title = 'updated title';
     // $article->save();
-    $payload = $request->validate([
-      'title' => ['sometimes', 'min:1', 'max: 200'],
-      'content' => ['sometimes', 'min:1', 'max: 60000'],
-      'tag_ids' => ['sometimes'],
-    ]);
+    $payload = Article::validate($request);
     $article->update($payload);
     return $article;
   }

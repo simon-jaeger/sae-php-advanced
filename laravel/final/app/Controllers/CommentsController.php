@@ -21,19 +21,14 @@ class CommentsController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate([
-      'text' => ['required', 'min:1', 'max: 200'],
-      'article_id' => ['required', 'exists:articles,id'],
-    ]);
+    $payload = Comment::validate($request);
     return \Auth::user()->comments()->create($payload);
   }
 
   function update(Request $request) {
     $id = $request->input('id');
     $comment = \Auth::user()->comments()->findOrFail($id);
-    $payload = $request->validate([
-      'text' => ['required', 'min:1', 'max: 200'],
-    ]);
+    $payload = Comment::validate($request);
     $comment->update($payload);
     return $comment;
   }

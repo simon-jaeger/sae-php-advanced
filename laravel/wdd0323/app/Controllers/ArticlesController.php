@@ -6,15 +6,30 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticlesController {
-  function read(Request $request) {
+  function index(Request $request) {
     return Article::all();
   }
 
-  function create() {
+  function create(Request $request) {
     $article = new Article();
-    $article->title = 'my first article';
-    $article->content = 'foobar';
+    $article->title = $request->input('title');
+    $article->content = $request->input('content');
     $article->save();
+    return $article;
+  }
+
+  function update(Request $request) {
+    $id = $request->input('id');
+    $article = Article::findOrFail($id);
+    $article->title = 'changed';
+    $article->save();
+    return $article;
+  }
+
+  function destroy(Request $request) {
+    $id = $request->input('id');
+    $article = Article::findOrFail($id);
+    $article->delete();
     return $article;
   }
 }

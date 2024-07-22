@@ -82,11 +82,12 @@ npm run serve
 - R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
 - R: https://laravel.com/docs/11.x/eloquent#introduction
 - ........................................
-- crud
+- CRUD and REST
 - index
 - create
 - update
 - delete
+- W: https://www.youtube.com/watch?v=-MTSQjw5DrM
 - R: https://laravel.com/docs/11.x/eloquent#retrieving-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models

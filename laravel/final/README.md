@@ -32,6 +32,10 @@ npm run serve
 - R: https://daylerees.com/php-pandas-classes
 - T: Rectrangle class etc.
 - ........................................
+- type hints
+- largest(Rectangle $a, Rectangle $b)
+- T: smallest(Circle $a, Circle $b)
+- ........................................
 - modeling the real world
 - example Coin class
 - T: Dice class etc.
@@ -69,6 +73,7 @@ npm run serve
 - https://tableplus.com
 - ........................................
 - MVC
+- Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...
 - view
 - router
 - controller

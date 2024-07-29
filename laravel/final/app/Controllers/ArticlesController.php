@@ -10,6 +10,10 @@ class ArticlesController {
     // return Article::all();
     $query = Article::query();
 
+    // filter by id
+    $id = $request->input('id');
+    if ($id) return $query->where('id', $id)->firstOrFail();
+
     // filter by user
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);

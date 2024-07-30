@@ -1,21 +1,28 @@
 <?php
 
 use App\Controllers\ArticlesController;
+use App\Controllers\AuthController;
 use App\Controllers\ExamplesController;
 use App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/articles', [ArticlesController::class, 'index']);
-Route::post('/articles', [ArticlesController::class, 'create']);
-Route::patch('/articles', [ArticlesController::class, 'update']);
-Route::delete('/articles', [ArticlesController::class, 'destroy']);
 
-
-Route::get('/user', [UserController::class, 'index']);
 Route::post('/user', [UserController::class, 'create']);
-Route::patch('/user', [UserController::class, 'update']);
-Route::delete('/user', [UserController::class, 'destroy']);
 
+Route::post('/auth/login', [AuthController::class, 'login']);
+
+Route::middleware(['auth:sanctum'])->group(function () {
+  Route::post('/auth/logout', [AuthController::class, 'logout']);
+
+  Route::get('/user', [UserController::class, 'show']);
+  Route::patch('/user', [UserController::class, 'update']);
+  Route::delete('/user', [UserController::class, 'destroy']);
+
+  Route::post('/articles', [ArticlesController::class, 'create']);
+  Route::patch('/articles', [ArticlesController::class, 'update']);
+  Route::delete('/articles', [ArticlesController::class, 'destroy']);
+});
 
 
 

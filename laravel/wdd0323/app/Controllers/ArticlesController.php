@@ -11,14 +11,14 @@ class ArticlesController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(Article::rules());
+    $payload = Article::validate($request);
     $article = Article::create($payload);
     return $article;
   }
 
   function update(Request $request) {
     $id = $request->input('id');
-    $payload = $request->validate(Article::rules());
+    $payload = Article::validate($request);
     $article = Article::findOrFail($id);
     $article->update($payload);
     return $article;

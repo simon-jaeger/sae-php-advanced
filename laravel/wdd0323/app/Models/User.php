@@ -5,16 +5,19 @@ namespace App\Models;
 use Config\Model;
 use WendellAdriel\Lift\Attributes\Column;
 use Illuminate\Http\Request;
+use Laravel\Sanctum\HasApiTokens;
+use WendellAdriel\Lift\Attributes\Hidden;
 
 class User extends Model {
+  use HasApiTokens;
+
   #[Column]
   public string $email;
 
-  #[Column]
+  #[Column] #[Hidden]
   public string $password;
 
   static function validate(Request $request) {
-    // TODO: validate no duplicate emails
     $post = $request->method() === 'POST';
     return $request->validate([
       'email' => ['required', 'email'],

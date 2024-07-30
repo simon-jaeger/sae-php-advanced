@@ -1,11 +1,11 @@
 meta {
-  name: create
+  name: login
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
-  url: {{baseUrl}}/user
+  url: {{baseUrl}}/auth/login
   body: json
   auth: none
 }
@@ -15,4 +15,8 @@ body:json {
     "email": "foo@bar.com",
     "password": "password"
   }
+}
+
+vars:post-response {
+  token: res.body.token
 }

@@ -20,13 +20,12 @@ class Model extends BaseModel {
   public string $updated_at;
 
   protected static $unguarded = true;
-
   protected $hidden = ['password'];
 
   public function __construct(array $attributes = []) {
     parent::__construct($attributes);
 
-    // unset column properties, so laravel's __get magic method works correctly
+    // unset column properties, so laravel's __get/__set magic methods work correctly
     $reflection = new ReflectionClass($this);
     foreach ($reflection->getProperties() as $property) {
       $attributes = $property->getAttributes(Column::class);

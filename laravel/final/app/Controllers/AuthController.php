@@ -25,7 +25,7 @@ class AuthController {
 
   function logout(Request $request) {
     $user = \Auth::user();
-    $user->currentAccessToken()->delete();
+    $user->tokens()->delete();
     return $user;
   }
 }

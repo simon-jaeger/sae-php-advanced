@@ -11,8 +11,7 @@
     "php": "^8.2",
     "laravel/framework": "^11.9",
     "laravel/sanctum": "^4.0",
-    "laravel/tinker": "^2.9",
-    "wendelladriel/laravel-lift": "^0.14.1"
+    "laravel/tinker": "^2.9"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^3.0",

@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use Config\Column;
 use Config\Model;
 use Illuminate\Http\Request;
-use WendellAdriel\Lift\Attributes\Column;
 
 class Comment extends Model {
   #[Column]

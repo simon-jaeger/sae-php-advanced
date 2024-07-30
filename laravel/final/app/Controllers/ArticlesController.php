@@ -46,7 +46,8 @@ class ArticlesController {
     // $article->save();
     // return $article;
     $payload = Article::validate($request);
-    return \Auth::user()->articles()->create($payload);
+    $article = \Auth::user()->articles()->create($payload);
+    return $article;
   }
 
   function update(Request $request) {

@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
+use Config\Column;
 use Config\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Laravel\Sanctum\HasApiTokens;
-use WendellAdriel\Lift\Attributes\Column;
-use WendellAdriel\Lift\Attributes\Hidden;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Model {
   use HasApiTokens;
@@ -15,7 +14,7 @@ class User extends Model {
   #[Column]
   public string $email;
 
-  #[Column] #[Hidden]
+  #[Column]
   public string $password;
 
   #[Column]
@@ -39,10 +38,8 @@ class User extends Model {
 
   static function booted() {
     self::saving(function (User $user) {
-      if ($user->isDirty('password')) {
-        $plain = $user->getAttribute('password');
-        $user->setAttribute('password', \Hash::make($plain));
-      }
+      if ($user->isDirty('password'))
+        $user->password = \Hash::make($user->password);
     });
   }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
+use Config\Column;
 use Config\Model;
-use WendellAdriel\Lift\Attributes\Column;
 use Illuminate\Http\Request;
 
 class Article extends Model {

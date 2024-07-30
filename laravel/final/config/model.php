@@ -3,17 +3,39 @@
 namespace Config;
 
 use Illuminate\Database\Eloquent\Model as BaseModel;
-use WendellAdriel\Lift\Lift;
+use ReflectionClass;
+use Attribute;
 
 /**
  * @mixin \Eloquent
- *
- * @property int $id
- * @property string $created_at
- * @property string $updated_at
  */
 class Model extends BaseModel {
-  use Lift;
+  #[Column]
+  public int $id;
+
+  #[Column]
+  public string $created_at;
+
+  #[Column]
+  public string $updated_at;
 
   protected static $unguarded = true;
+
+  protected $hidden = ['password'];
+
+  public function __construct(array $attributes = []) {
+    parent::__construct($attributes);
+
+    // unset column properties, so laravel's __get magic method works correctly
+    $reflection = new ReflectionClass($this);
+    foreach ($reflection->getProperties() as $property) {
+      $attributes = $property->getAttributes(Column::class);
+      if (!empty($attributes)) unset($this->{$property->getName()});
+    }
+  }
+}
+
+// simple attribute to mark column properties
+#[Attribute(Attribute::TARGET_PROPERTY)]
+class Column {
 }

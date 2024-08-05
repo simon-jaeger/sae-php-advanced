@@ -1,11 +1,11 @@
 meta {
-  name: avatar
+  name: destroy
   type: http
-  seq: 4
+  seq: 2
 }
 
 post {
-  url: {{baseUrl}}/user/avatar
+  url: {{baseUrl}}/uploads
   body: multipartForm
   auth: none
 }
@@ -15,5 +15,5 @@ headers {
 }
 
 body:multipart-form {
-  avatar: @file(/Users/simon/home/google-drive/media/images/fire-emblem/Anna1.png)
+  file: @file(/Users/simon/home/google-drive/media/images/seasons/fall.webp)
 }

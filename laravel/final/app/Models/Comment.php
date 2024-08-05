@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Config\Column;
-use Config\Model;
+use Bootstrap\Base\Column;
+use Bootstrap\Base\Model;
 use Illuminate\Http\Request;
 
 class Comment extends Model {

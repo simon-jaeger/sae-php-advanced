@@ -4,6 +4,7 @@ use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
 use App\Controllers\ExamplesController;
+use App\Controllers\UploadsController;
 use App\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, 'show']);
   Route::patch('/user', [UserController::class, 'update']);
   Route::delete('/user', [UserController::class, 'destroy']);
-  Route::post('/user/avatar', [UserController::class, 'avatar']);
 
   Route::post('/auth/logout', [AuthController::class, 'logout']);
 
@@ -37,22 +37,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/comments', [CommentsController::class, 'create']);
   Route::patch('/comments', [CommentsController::class, 'update']);
   Route::delete('/comments', [CommentsController::class, 'destroy']);
-});
 
-// Route::get('/ping', function () {
-//   return 'pong';
-// });
-//
-// Route::get('/todos', function () {
-//   return Storage::get('todos.json');
-// });
-//
-// Route::post('/todos', function (Request $request) {
-//   $todos = Storage::json('todos.json');
-//   array_push($todos, $request->input('todo'));
-//   Storage::put('todos.json', json_encode($todos));
-// });
-//
-// Route::delete('/todos', function (Request $request) {
-//   Storage::put('todos.json', '[]');
-// });
+  Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::delete('/uploads', [UploadsController::class, 'destroy']);
+});

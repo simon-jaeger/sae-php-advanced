@@ -28,16 +28,4 @@ class UserController {
     $user->delete();
     return $user;
   }
-
-  function avatar(Request $request) {
-    $user = \Auth::user();
-    $request->validate([
-      'avatar' => ['sometimes', 'image', 'max:2048'],
-    ]);
-    $file = $request->file('avatar');
-    if ($user->avatar) \Storage::delete($user->avatar);
-    $user->avatar = \Storage::putFile('uploads/avatars', $file);
-    $user->save();
-    return $user;
-  }
 }

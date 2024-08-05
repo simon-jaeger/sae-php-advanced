@@ -6,7 +6,6 @@ use App\Controllers\CommentsController;
 use App\Controllers\ExamplesController;
 use App\Controllers\UploadsController;
 use App\Controllers\UserController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/examples/ping', [ExamplesController::class, 'ping']);

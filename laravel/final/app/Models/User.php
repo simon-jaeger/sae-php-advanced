@@ -32,7 +32,8 @@ class User extends Model {
 
   static function booted() {
     self::saving(function (User $user) {
-      if ($user->isDirty('password')) $user->password = \Hash::make($user->password);
+      if ($user->isDirty('password'))
+        $user->password = \Hash::make($user->password);
     });
   }
 }

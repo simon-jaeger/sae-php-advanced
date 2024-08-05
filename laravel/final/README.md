@@ -32,17 +32,9 @@ npm run serve
 - R: https://daylerees.com/php-pandas-classes
 - T: Rectrangle class etc.
 - ........................................
-- type hints
-- largest(Rectangle $a, Rectangle $b)
-- T: smallest(Circle $a, Circle $b)
-- ........................................
-- modeling the real world
-- example Coin class
-- T: Dice class etc.
-- ........................................
 - statics
 - R: https://daylerees.com/php-pandas-statics/
-- T: Color static class
+- example Task class with static properties and methods
 - ........................................
 - laravel: what is a framework?
 - laravel: installation
@@ -55,8 +47,6 @@ npm run serve
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
-- T: add an api endpoint DELETE /todos that deletes all todos, use it in the gui
-- T: make the gui prettier
 - ........................................
 - router
 - controllers
@@ -119,19 +109,19 @@ npm run serve
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - ........................................
+- filter
+- order
+- limit,offset
+- T: add filter etc. to comments
+
+## optional
+
 - seeding
 - https://fakerphp.github.io
 - R: https://laravel.com/docs/11.x/seeding
 - T: seed comments
 - ........................................
-- filter
-- order
-- limit,offset
-- T: add filter etc. to comments
-- ........................................
-- file system
 - file uploads
 - ........................................
-- advanded features: admin actions, impersonate, ...
+- admin actions
 - ...
-- T: workshop

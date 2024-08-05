@@ -13,7 +13,8 @@ class UserController {
 
   function create(Request $request) {
     $payload = User::validate($request);
-    return User::create($payload);
+    $user = User::create($payload);
+    return $user;
   }
 
   function update(Request $request) {

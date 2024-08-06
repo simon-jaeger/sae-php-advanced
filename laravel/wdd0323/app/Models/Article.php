@@ -13,6 +13,9 @@ class Article extends Model {
   #[Column]
   public string $content;
 
+  #[Column]
+  public int $user_id;
+
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([

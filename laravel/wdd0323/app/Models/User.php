@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Config\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use WendellAdriel\Lift\Attributes\Column;
 use Illuminate\Http\Request;
 use Laravel\Sanctum\HasApiTokens;
@@ -16,6 +17,10 @@ class User extends Model {
 
   #[Column] #[Hidden]
   public string $password;
+
+  function articles(): HasMany|Article {
+    return $this->hasMany(Article::class);
+  }
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';

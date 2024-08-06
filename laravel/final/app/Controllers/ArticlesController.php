@@ -57,7 +57,6 @@ class ArticlesController {
 
   function destroy(Request $request) {
     $id = $request->input('id');
-    // $article = Article::findOrFail($id);
     $article = \Auth::user()->articles()->findOrFail($id);
     $article->delete();
     return $article;

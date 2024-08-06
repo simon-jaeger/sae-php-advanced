@@ -25,7 +25,7 @@ class User extends Model {
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([
-      'email' => [$post ? 'required' : 'sometimes', 'email'],
+      'email' => [$post ? 'required' : 'sometimes', 'email', 'unique:users,email'],
       'password' => [$post ? 'required' : 'sometimes', 'min:8'],
     ]);
   }

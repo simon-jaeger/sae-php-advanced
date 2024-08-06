@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Comment;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use App\Models\Article;
 use App\Models\User;
@@ -46,6 +47,12 @@ class DatabaseSeeder extends Seeder {
         'article_id' => random_int(1, 10),
         'user_id' => random_int(1, 3),
       ]);
+    }
+
+    // tags
+    ////////////////////////////////////////////////////////////////////////////////
+    for ($i = 0; $i < 10; $i++) {
+      Tag::create(['name' => fake()->word()]);
     }
 
   }

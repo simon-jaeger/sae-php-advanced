@@ -1,11 +1,11 @@
 meta {
-  name: destroy
+  name: assign
   type: http
-  seq: 2
+  seq: 3
 }
 
-delete {
-  url: {{baseUrl}}/uploads
+put {
+  url: {{baseUrl}}/tags/assign
   body: json
   auth: none
 }
@@ -16,6 +16,7 @@ headers {
 
 body:json {
   {
-    "filename": "fall.webp"
+    "article_id": 3,
+    "tag_ids": [3,4,5]
   }
 }

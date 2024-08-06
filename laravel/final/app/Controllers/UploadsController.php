@@ -10,7 +10,7 @@ class UploadsController {
     $request->validate(['file' => ['required', 'max:2048']]);
     $file = $request->file('file');
     return \Storage::putFileAs(
-      'uploads/user-' . $user->id,
+      'uploads/' . $user->id,
       $file,
       $file->getClientOriginalName(),
     );
@@ -18,8 +18,8 @@ class UploadsController {
 
   function destroy(Request $request) {
     $user = \Auth::user();
-    $name = $request->input('name');
-    $path = 'uploads/user-' . $user->id . '/' . $name;
+    $filename = $request->input('filename');
+    $path = 'uploads/' . $user->id . '/' . $filename;
     \Storage::delete($path);
     return $path;
   }

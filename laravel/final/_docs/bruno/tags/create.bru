@@ -1,11 +1,11 @@
 meta {
-  name: destroy
+  name: create
   type: http
   seq: 2
 }
 
-delete {
-  url: {{baseUrl}}/uploads
+post {
+  url: {{baseUrl}}/tags
   body: json
   auth: none
 }
@@ -16,6 +16,6 @@ headers {
 
 body:json {
   {
-    "filename": "fall.webp"
+    "name": "neo"
   }
 }

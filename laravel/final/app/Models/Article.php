@@ -16,6 +16,12 @@ class Article extends Model {
   #[Column]
   public int $user_id;
 
+  function tags() {
+    return $this->belongsToMany(Tag::class);
+  }
+
+  protected $with = ['tags'];
+
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([

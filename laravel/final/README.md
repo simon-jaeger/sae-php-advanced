@@ -81,7 +81,7 @@ npm run serve
 - index
 - create
 - update
-- delete
+- destroy
 - R: https://laravel.com/docs/11.x/eloquent#retrieving-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
@@ -104,8 +104,9 @@ npm run serve
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 - ........................................
-- relationships
+- relationships (1:n)
 - articles n:1 user
+- R: https://phoenixnap.com/kb/database-relationships
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - ........................................
@@ -113,6 +114,12 @@ npm run serve
 - order
 - limit,offset
 - T: add filter etc. to comments
+- ........................................
+- relationships (n:m)
+- tags n:m article
+- crud tags
+- assign tags
+- filter by tags
 
 ## optional
 

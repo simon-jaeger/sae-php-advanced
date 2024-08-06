@@ -22,7 +22,7 @@ class Model extends BaseModel {
   public string $updated_at;
 
   protected static $unguarded = true;
-  protected $hidden = ['password'];
+  protected $hidden = ['password', 'pivot'];
 
   public function __construct(array $attributes = []) {
     parent::__construct($attributes);

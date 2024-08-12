@@ -110,6 +110,11 @@ npm run serve
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - ........................................
+- seeding
+- https://fakerphp.github.io
+- R: https://laravel.com/docs/11.x/seeding
+- T: seed comments
+- ........................................
 - filter
 - order
 - limit,offset
@@ -120,15 +125,8 @@ npm run serve
 - crud tags
 - assign tags
 - filter by tags
-
-## optional
-
-- seeding
-- https://fakerphp.github.io
-- R: https://laravel.com/docs/11.x/seeding
-- T: seed comments
 - ........................................
+- extra topics:
 - file uploads
-- ........................................
 - admin actions
 - ...

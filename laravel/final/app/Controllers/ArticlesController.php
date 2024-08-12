@@ -21,11 +21,17 @@ class ArticlesController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
-    // filter by tag
+    // filter by tags
     $tagIds = $request->input('tag_ids');
-    if ($tagIds) $query->whereHas('tags',
-      fn($q) => $q->whereIn('tag_id', explode(',', $tagIds))
-    );
+    if ($tagIds) {
+      $tagIds = explode(',', $tagIds);
+      $query->whereHas(
+        'tags',
+        fn($q) => $q->whereIn('tag_id', $tagIds),
+        '=',
+        count($tagIds)
+      );
+    }
 
     // order
     $orderBy = $request->input('order_by', 'created_at');

@@ -17,6 +17,17 @@ class ArticlesController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
+    // order
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'desc');
+    $query->orderBy($orderBy, $orderDir);
+
+    // limit, offset
+    $limit = $request->input('limit');
+    $offset = $request->input('offset');
+    if ($limit) $query->limit($limit);
+    if ($offset) $query->offset($offset);
+
     // return $query->toSql();
     return $query->get();
   }

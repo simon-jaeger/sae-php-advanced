@@ -7,7 +7,18 @@ use Illuminate\Http\Request;
 
 class ArticlesController {
   function index(Request $request) {
-    return Article::all();
+    $query = Article::query();
+
+    // filter by id
+    $id = $request->input('id');
+    if ($id) $query->where('id', $id);
+
+    // filter by user
+    $userId = $request->input('user_id');
+    if ($userId) $query->where('user_id', $userId);
+
+    // return $query->toSql();
+    return $query->get();
   }
 
   function create(Request $request) {

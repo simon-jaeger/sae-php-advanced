@@ -17,6 +17,19 @@ class ArticlesController {
     $userId = $request->input('user_id');
     if ($userId) $query->where('user_id', $userId);
 
+    // filter by tags
+    $tagIds = $request->input('tag_ids');
+    $isGrouped = $request->input('is_grouped');
+    if ($tagIds) {
+      $tagIds = explode(',', $tagIds);
+      $query->whereHas(
+        'tags',
+        fn($q) => $q->whereIn('tag_id', $tagIds),
+        '>=',
+        $isGrouped ? count($tagIds) : 1,
+      );
+    }
+
     // order
     $orderBy = $request->input('order_by', 'created_at');
     $orderDir = $request->input('order_dir', 'desc');

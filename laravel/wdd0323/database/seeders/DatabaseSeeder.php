@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -29,9 +30,18 @@ class DatabaseSeeder extends Seeder {
       Article::create([
         'title' => fake()->word(),
         'content' => fake()->sentence(),
-        'user_id' => random_int(1,3),
+        'user_id' => 1,
       ]);
     }
+
+    Tag::create(['name' => 'red',]);
+    Tag::create(['name' => 'green',]);
+    Tag::create(['name' => 'blue',]);
+    Tag::create(['name' => 'magenta',]);
+    Tag::create(['name' => 'cyan',]);
+    Tag::create(['name' => 'yellow',]);
+    Tag::create(['name' => 'black',]);
+    Tag::create(['name' => 'white',]);
 
   }
 }

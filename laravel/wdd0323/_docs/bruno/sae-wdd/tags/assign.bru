@@ -4,8 +4,8 @@ meta {
   seq: 3
 }
 
-post {
-  url: {{baseUrl}}/tags
+put {
+  url: {{baseUrl}}/tags/assign
   body: json
   auth: none
 }
@@ -16,6 +16,7 @@ headers {
 
 body:json {
   {
-    "name": "cooking"
+    "article_id": 3,
+    "tag_ids": [3,4,5]
   }
 }

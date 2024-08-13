@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Config\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Http\Request;
 use WendellAdriel\Lift\Attributes\Column;
 
@@ -15,6 +16,12 @@ class Article extends Model {
 
   #[Column]
   public int $user_id;
+
+  function tags(): BelongsToMany|Tag {
+    return $this->belongsToMany(Tag::class);
+  }
+
+  protected $with = ['tags'];
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';

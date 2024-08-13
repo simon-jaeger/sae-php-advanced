@@ -1,0 +1,21 @@
+meta {
+  name: assign
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/tags
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "cooking"
+  }
+}

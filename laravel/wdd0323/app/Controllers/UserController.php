@@ -12,7 +12,14 @@ class UserController {
 
   function create(Request $request) {
     $payload = User::validate($request);
-    return User::create($payload);
+    $user = User::create($payload);
+
+    // \Mail::raw(
+    //   'welcome to our app',
+    //   fn($mail) => $mail->to($user->email)->subject('welcome')
+    // );
+
+    return $user;
   }
 
   function update(Request $request) {

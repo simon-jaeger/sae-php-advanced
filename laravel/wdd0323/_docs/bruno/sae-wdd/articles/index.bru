@@ -5,12 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/articles?user_id=1
+  url: {{baseUrl}}/articles?order_by=id&order_dir=asc&tag_ids=1,2,3&is_grouped=yes
   body: none
   auth: none
 }
 
 query {
-  user_id: 1
+  order_by: id
+  order_dir: asc
+  tag_ids: 1,2,3
+  is_grouped: yes
+  ~user_id: 1
   ~id: 1
 }

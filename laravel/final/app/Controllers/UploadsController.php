@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Illuminate\Http\Request;
 
+// basic uploads example
 class UploadsController {
   function create(Request $request) {
     $user = \Auth::user();

@@ -20,6 +20,8 @@ class UploadsController {
     $user = \Auth::user();
     $filename = $request->input('filename');
     $path = 'uploads/' . $user->id . '/' . $filename;
+    if (!\Storage::exists($path))
+      return abort(404, 'file does not exist');
     \Storage::delete($path);
     return $path;
   }

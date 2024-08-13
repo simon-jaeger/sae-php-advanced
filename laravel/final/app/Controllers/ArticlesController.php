@@ -28,7 +28,6 @@ class ArticlesController {
       $query->whereHas(
         'tags',
         fn($q) => $q->whereIn('tag_id', $tagIds),
-        '=',
         count($tagIds)
       );
     }
@@ -44,6 +43,7 @@ class ArticlesController {
     if ($limit) $query->limit($limit);
     if ($offset) $query->offset($offset);
 
+    // return $query->toSql();
     return $query->get();
   }
 

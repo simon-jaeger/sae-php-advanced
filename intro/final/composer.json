@@ -1,0 +1,16 @@
+{
+  "name": "app/app",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "ext-readline": "*"
+  },
+  "scripts": {
+    "dump_autoload": "composer dump-autoload"
+  }
+}

@@ -19,4 +19,11 @@ class Rectangle {
   function isSquare() {
     return $this->width === $this->height;
   }
+
+  static function makeSquare(int $size) {
+    $rectangle = new Rectangle();
+    $rectangle->width = $size;
+    $rectangle->height = $size;
+    return $rectangle;
+  }
 }

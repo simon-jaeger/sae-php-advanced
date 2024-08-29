@@ -10,7 +10,8 @@ return new class extends Migration {
       $table->id();
       $table->string('email');
       $table->string('password');
-      $table->timestamps();
+      $table->timestamp('created_at');
+      $table->timestamp('updated_at');
     });
   }
 

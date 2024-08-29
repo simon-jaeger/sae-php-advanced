@@ -1,6 +1,6 @@
 <?php
 
-namespace Bootstrap\Base;
+namespace Bootstrap;
 
 use Attribute;
 

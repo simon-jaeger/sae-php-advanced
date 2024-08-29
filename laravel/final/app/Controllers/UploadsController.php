@@ -3,14 +3,16 @@
 namespace App\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 // basic uploads example
 class UploadsController {
   function create(Request $request) {
-    $user = \Auth::user();
+    $user = Auth::user();
     $request->validate(['file' => ['required', 'max:2048']]);
     $file = $request->file('file');
-    return \Storage::putFileAs(
+    return Storage::putFileAs(
       'uploads/' . $user->id,
       $file,
       $file->getClientOriginalName(),
@@ -18,12 +20,12 @@ class UploadsController {
   }
 
   function destroy(Request $request) {
-    $user = \Auth::user();
+    $user = Auth::user();
     $filename = $request->input('filename');
     $path = 'uploads/' . $user->id . '/' . $filename;
-    if (!\Storage::exists($path))
+    if (!Storage::exists($path))
       return abort(404, 'file does not exist');
-    \Storage::delete($path);
+    Storage::delete($path);
     return $path;
   }
 }

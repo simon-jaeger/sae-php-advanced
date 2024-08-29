@@ -10,7 +10,8 @@ return new class extends Migration {
     Schema::create('tags', function (Blueprint $table) {
       $table->id();
       $table->string('name');
-      $table->timestamps();
+      $table->timestamp('created_at');
+      $table->timestamp('updated_at');
     });
 
     // pivot table
@@ -18,7 +19,6 @@ return new class extends Migration {
       $table->id();
       $table->foreignId('article_id')->constrained()->cascadeOnDelete();
       $table->foreignId('tag_id')->constrained()->cascadeOnDelete();
-      $table->timestamps();
     });
   }
 

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 // basic mailing example
 class MailsController {
@@ -13,7 +14,7 @@ class MailsController {
     $to = $request->input('to');
 
     // send mail
-    \Mail::raw(
+    Mail::raw(
       $content,
       fn($mail) => $mail->to($to)->subject($subject),
     );

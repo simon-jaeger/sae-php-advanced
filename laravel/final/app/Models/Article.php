@@ -2,19 +2,17 @@
 
 namespace App\Models;
 
-use Bootstrap\Base\Column;
-use Bootstrap\Base\Model;
+use Bootstrap\Column;
+use Bootstrap\Model;
 use Illuminate\Http\Request;
 
 class Article extends Model {
-  #[Column]
-  public string $title;
-
-  #[Column]
-  public string $content;
-
-  #[Column]
-  public int $user_id;
+  #[Column] public int $id;
+  #[Column] public string $title;
+  #[Column] public string $content;
+  #[Column] public int $user_id;
+  #[Column] public string $created_at;
+  #[Column] public string $updated_at;
 
   function tags() {
     return $this->belongsToMany(Tag::class);

@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController {
   function show(Request $request) {
-    return \Auth::user();
+    return Auth::user();
   }
 
   function create(Request $request) {
@@ -18,14 +18,14 @@ class UserController {
   }
 
   function update(Request $request) {
-    $user = \Auth::user();
+    $user = Auth::user();
     $payload = User::validate($request);
     $user->update($payload);
     return $user;
   }
 
   function destroy(Request $request) {
-    $user = \Auth::user();
+    $user = Auth::user();
     $user->delete();
     return $user;
   }

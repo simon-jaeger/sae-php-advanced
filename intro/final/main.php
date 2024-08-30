@@ -2,6 +2,7 @@
 
 require './classes/Circle.php';
 require './classes/Rectangle.php';
+require './classes/Dice.php';
 
 // $circle = new Circle();
 // $circle->radius = 4;
@@ -9,11 +10,15 @@ require './classes/Rectangle.php';
 // var_dump($circle->circumference());
 // var_dump($circle->area());
 
-$rectangle = new Rectangle();
-$rectangle->width = 5;
-$rectangle->height = 10;
-var_dump($rectangle);
-var_dump($rectangle->circumference());
-var_dump($rectangle->area());
-var_dump($rectangle->diagonal());
-var_dump($rectangle->isSquare());
+// $rectangle = new Rectangle();
+// $rectangle->width = 5;
+// $rectangle->height = 10;
+// var_dump($rectangle);
+// var_dump($rectangle->circumference());
+// var_dump($rectangle->area());
+// var_dump($rectangle->diagonal());
+// var_dump($rectangle->isSquare());
+
+$dice = new Dice();
+$dice->roll();
+var_dump($dice->value);

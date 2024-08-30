@@ -5,6 +5,7 @@ namespace Bootstrap;
 use Illuminate\Database\Eloquent\Model as BaseModel;
 use Laravel\Sanctum\HasApiTokens;
 use ReflectionClass;
+use Attribute;
 
 /**
  * @mixin \Eloquent
@@ -25,4 +26,9 @@ class Model extends BaseModel {
       if (!empty($attributes)) unset($this->{$property->getName()});
     }
   }
+}
+
+// simple attribute to mark column properties
+#[Attribute(Attribute::TARGET_PROPERTY)]
+class Column {
 }

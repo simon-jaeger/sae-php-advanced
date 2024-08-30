@@ -15,7 +15,11 @@ duration: 15 * 3h
 - object oriented programming
 - example Circle class
 - R: https://daylerees.com/php-pandas-classes
-- T: Rectrangle class
+- T: Rectangle class
+--------------------------------------------------------------------------------
+- real world modeling
+- example Dice class
+- T: model another real world object
 --------------------------------------------------------------------------------
 - statics
 - Rectangle::makeSquare(4);
@@ -74,6 +78,7 @@ duration: 15 * 3h
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
 - T: add `subtitle` to articles and make it crudable
+--------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
 - T: validate article `subtitle` 

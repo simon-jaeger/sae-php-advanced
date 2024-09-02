@@ -3,7 +3,6 @@
 namespace Bootstrap;
 
 use Illuminate\Database\Eloquent\Model as BaseModel;
-use Laravel\Sanctum\HasApiTokens;
 use ReflectionClass;
 use Attribute;
 
@@ -11,8 +10,6 @@ use Attribute;
  * @mixin \Eloquent
  */
 class Model extends BaseModel {
-  use HasApiTokens;
-
   protected static $unguarded = true;
   protected $hidden = ['password', 'pivot'];
 

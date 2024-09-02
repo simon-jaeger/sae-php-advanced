@@ -2,6 +2,19 @@
 
 duration: 15 * 3h
 
+## setup
+
+```bash
+# install dependencies
+composer install
+
+# (re-)create database
+npm run seed
+
+# start server
+npm run serve
+```
+
 ## outline
 
 - bash
@@ -81,7 +94,7 @@ duration: 15 * 3h
 --------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
-- T: validate article `subtitle` 
+- T: validate article `subtitle`
 --------------------------------------------------------------------------------
 - users
 - password hashing

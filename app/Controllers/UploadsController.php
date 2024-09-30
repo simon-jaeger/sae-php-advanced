@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 // basic uploads example
 class UploadsController {
   function create(Request $request) {
+    // NOTE: file uploads in php only work for POST requests!
     $user = Auth::user();
     $request->validate(['file' => ['required', 'max:2048']]);
     $file = $request->file('file');

@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "clear_cache": "php artisan cache:clear",
+    "clear_cache": "php artisan optimize:clear",
     "dump_autoload": "composer dump-autoload",
     "ide-helper": [
       "php artisan ide-helper:generate"

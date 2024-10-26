@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model as BaseModel;
 use ReflectionClass;
 use Attribute;
 
-/**
- * @mixin \Eloquent
- */
+/** base model | @mixin \Eloquent */
 class Model extends BaseModel {
   protected static $unguarded = true;
   protected $hidden = ['password', 'pivot'];

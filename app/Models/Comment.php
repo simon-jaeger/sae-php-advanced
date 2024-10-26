@@ -18,7 +18,7 @@ class Comment extends Model {
     $post = $request->method() === 'POST';
     return $request->validate([
       'text' => ['required', 'min:1', 'max: 200'],
-      'article_id' => [$post ? 'required' : 'exclude', 'exists:articles,id'],
+      'article_id' => [($post ? 'required' : 'exclude'), 'exists:articles,id'],
     ]);
   }
 }

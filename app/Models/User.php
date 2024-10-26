@@ -29,14 +29,14 @@ class User extends Model {
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([
-      'email' => [$post ? 'required' : 'sometimes', 'email', 'unique:users,email'],
-      'password' => [$post ? 'required' : 'sometimes', 'min:8'],
+      'email' => [($post ? 'required' : 'sometimes'), 'email', 'unique:users,email'],
+      'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
     ]);
   }
 
   static function booted() {
     self::saving(function (User $user) {
-      if ($user->isDirty('password'))
+      if (!Hash::isHashed($user->password))
         $user->password = Hash::make($user->password);
     });
   }

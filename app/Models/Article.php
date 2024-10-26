@@ -23,8 +23,8 @@ class Article extends Model {
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([
-      'title' => [$post ? 'required' : 'sometimes', 'min:1', 'max: 200'],
-      'content' => [$post ? 'required' : 'sometimes', 'min:1', 'max: 60000'],
+      'title' => [($post ? 'required' : 'sometimes'), 'min:1', 'max: 200'],
+      'content' => [($post ? 'required' : 'sometimes'), 'min:1', 'max: 60000'],
     ]);
   }
 }

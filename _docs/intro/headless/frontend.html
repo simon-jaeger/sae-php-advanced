@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>headless example</title>
+  <script>
+    async function load() {
+      const response = await fetch('http://localhost:8000/backend.php')
+      const data = await response.json()
+      document.getElementById('output').textContent = data.msg
+    }
+  </script>
+</head>
+
+<body>
+  <h1>headless example</h1>
+  <button onclick="load()">load</button>
+  <div id="output">...</div>
+</body>
+</html>

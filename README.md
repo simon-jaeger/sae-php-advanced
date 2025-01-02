@@ -17,13 +17,25 @@ npm run serve
 
 ## outline
 
-- bash
+- terminal and bash
 - os package manager (brew.sh / scoop.sh)
-- php (v8.2+)
-- composer (v2.6+)
-- phpstorm or...
-- ...vscode with [intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-- T: use bash to create a folder, create a php file, run it
+- php (v8.4+)
+- composer (v2.8+)
+- R: https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/
+- T: use bash to create a folder and a php file
+- T: write php code that outputs the text "Hello, world!"
+- T: run the php file in your terminal (php hello_world.php)
+--------------------------------------------------------------------------------
+- basics review
+- R: https://daylerees.com/php-pandas-variables-and-assignment/
+- R: https://daylerees.com/php-pandas-strings/
+- R: https://daylerees.com/php-pandas-arrays/
+- R: https://daylerees.com/php-pandas-forks/
+- R: https://daylerees.com/php-pandas-loops/
+- R: https://daylerees.com/php-pandas-functions/
+- T: use php to count from 0 to 100
+- T: use php to count down from 100 to 0 and skip uneven numbers
+- T: FizzBuzz
 --------------------------------------------------------------------------------
 - object oriented programming
 - example Circle class
@@ -38,18 +50,18 @@ npm run serve
 - Rectangle::makeSquare(4);
 - R: https://daylerees.com/php-pandas-statics/
 --------------------------------------------------------------------------------
-- laravel: what is a framework?
-- laravel: installation
-- laravel: directory structure
-- laravel: namespaces
-- R: https://laravel.com
---------------------------------------------------------------------------------
 - headless architecture / separation of concerns
 - backend server api
 - frontend client gui
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
+--------------------------------------------------------------------------------
+- laravel: what is a framework?
+- laravel: installation
+- laravel: directory structure
+- laravel: namespaces
+- R: https://laravel.com
 --------------------------------------------------------------------------------
 - router
 - controllers
@@ -64,7 +76,6 @@ npm run serve
 - models (Article.php)
 - migrations
 - R: https://laravel.com/docs/11.x/migrations
-- https://tableplus.com
 --------------------------------------------------------------------------------
 - MVC
 - Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...

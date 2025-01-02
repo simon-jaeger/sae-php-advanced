@@ -28,7 +28,7 @@ class ArticlesController {
       $tagIds = explode(',', $tagIds);
       $query->whereHas(
         'tags',
-        fn($q) => $q->whereIn('tag_id', $tagIds),
+        fn($q) => $q->whereIn('tags.id', $tagIds),
         '>=',
         count($tagIds)
       );

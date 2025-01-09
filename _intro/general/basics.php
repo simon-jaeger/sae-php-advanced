@@ -16,7 +16,7 @@ if ($age >= 18) {
 }
 
 // count from 0 to 9
-for ($i = 0; $i < 9; $i++) {
+for ($i = 0; $i < 10; $i++) {
   print($i . "\n");
 }
 

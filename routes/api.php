@@ -10,9 +10,6 @@ use App\Controllers\UploadsController;
 use App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-// ping
-Route::get('/ping', fn() => 'pong');
-
 // guest endpoints
 Route::post('/user', [UserController::class, 'create']);
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -54,3 +51,4 @@ Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/count', [ExamplesController::class, 'count']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 Route::post('/examples/bmi', [ExamplesController::class, 'bmi']);
+Route::post('/examples/rps', [ExamplesController::class, 'rps']);

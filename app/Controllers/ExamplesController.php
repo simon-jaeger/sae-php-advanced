@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class ExamplesController {
   function ping(Request $request) {
@@ -59,6 +60,26 @@ class ExamplesController {
     return [
       'bmi' => $bmi,
       'category' => $category,
+    ];
+  }
+
+  function rps(Request $request) {
+    $player = $request->input('player');
+    $computer = Arr::random(['r', 'p', 's']);
+
+    $result = '';
+    if ($player === $computer) $result = 'draw';
+    else if (
+      ($player === 'r' && $computer === 's') ||
+      ($player === 'p' && $computer === 'r') ||
+      ($player === 's' && $computer === 'p')
+    ) $result = 'you win';
+    else $result = 'you lose';
+
+    return [
+      'player' => $player,
+      'computer' => $computer,
+      'result' => $result,
     ];
   }
 }

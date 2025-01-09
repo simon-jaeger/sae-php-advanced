@@ -1,0 +1,17 @@
+meta {
+  name: rps
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/examples/rps
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "choice": "r"
+  }
+}

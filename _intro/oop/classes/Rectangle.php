@@ -4,6 +4,11 @@ class Rectangle {
   public int $width;
   public int $height;
 
+  function __construct($width, $height) {
+    $this->width = $width;
+    $this->height = $height;
+  }
+
   function circumference() {
     return 2 * $this->width + 2 * $this->height;
   }
@@ -21,9 +26,7 @@ class Rectangle {
   }
 
   static function makeSquare(int $size) {
-    $rectangle = new Rectangle();
-    $rectangle->width = $size;
-    $rectangle->height = $size;
+    $rectangle = new Rectangle($size, $size);
     return $rectangle;
   }
 }

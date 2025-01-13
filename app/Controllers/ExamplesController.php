@@ -64,21 +64,21 @@ class ExamplesController {
   }
 
   function rps(Request $request) {
-    $player = $request->input('player');
-    $computer = Arr::random(['r', 'p', 's']);
+    $attack = $request->input('attack');
+    $defense = Arr::random(['rock', 'paper', 'scissors']);
 
     $result = '';
-    if ($player === $computer) $result = 'draw';
+    if ($attack === $defense) $result = 'draw';
     else if (
-      ($player === 'r' && $computer === 's') ||
-      ($player === 'p' && $computer === 'r') ||
-      ($player === 's' && $computer === 'p')
+      ($attack === 'rock' && $defense === 'scissors') ||
+      ($attack === 'paper' && $defense === 'rock') ||
+      ($attack === 'scissors' && $defense === 'paper')
     ) $result = 'you win';
     else $result = 'you lose';
 
     return [
-      'player' => $player,
-      'computer' => $computer,
+      'attack' => $attack,
+      'defense' => $defense,
       'result' => $result,
     ];
   }

@@ -23,4 +23,12 @@ duration: 15 * 3h
 - T: use php to count from 0 to 100
 - T: use php to count down from 100 to 0 and skip uneven numbers
 - T: FizzBuzz
-
+--------------------------------------------------------------------------------
+- object oriented programming
+- example Circle class
+- R: https://daylerees.com/php-pandas-classes
+- T: Rectangle class
+--------------------------------------------------------------------------------
+- real world modeling
+- example Dice class
+- T: model another real world object

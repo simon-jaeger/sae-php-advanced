@@ -1,8 +1,8 @@
 <?php
 
 class Rectangle {
-  public int $width;
-  public int $height;
+  public float $width;
+  public float $height;
 
   function __construct($width, $height) {
     $this->width = $width;
@@ -24,9 +24,10 @@ class Rectangle {
   function isSquare() {
     return $this->width === $this->height;
   }
-
-  static function makeSquare(int $size) {
-    $rectangle = new Rectangle($size, $size);
-    return $rectangle;
-  }
 }
+
+$rect1 = new Rectangle(4, 8);
+$rect2 = new Rectangle(3, 9);
+$rect3 = new Rectangle(10, 20);
+
+print($rect3->width > $rect1->width);

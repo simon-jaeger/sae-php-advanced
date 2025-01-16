@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>headless example</title>
   <script>
     async function load() {
-      const response = await fetch('http://localhost:8000/backend.php')
-      const data = await response.json()
+      const response = await fetch('http://localhost:8000/hello-world.php');
+      const data = await response.json() // { msg: 'hello world 42' }
       document.getElementById('output').textContent = data.msg
     }
   </script>
 </head>
 
 <body>
-  <h1>headless example</h1>
+  <h1>Headless example</h1>
+  <p>Showcasing how headless apis work.</p>
   <button onclick="load()">load</button>
   <div id="output">...</div>
 </body>

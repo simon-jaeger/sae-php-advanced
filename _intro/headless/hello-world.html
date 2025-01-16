@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <script>
     async function load() {
-      const response = await fetch('http://localhost:8000/backend.php');
+      const response = await fetch('http://localhost:8000/hello-world.php');
       const data = await response.json() // { msg: 'hello world 42' }
       document.getElementById('output').textContent = data.msg
     }

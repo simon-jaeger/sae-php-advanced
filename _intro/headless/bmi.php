@@ -1,12 +1,12 @@
 <?php
 
-header("Access-Control-Allow-Origin: *"); // allow cors
-header('Content-Type: application/json'); // send json, not html
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
 
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
-$height = $data['height'] ?? null;
-$weight = $data['weight'] ?? null;
+$height = $data['height'];
+$weight = $data['weight'];
 
 $bmi = $weight / $height ** 2;
 $category = 'underweight';

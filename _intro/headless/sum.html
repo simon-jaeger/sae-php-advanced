@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>bmi</title>
+  <title>sum</title>
   <script>
     async function calculate() {
       const a = document.getElementById('a').value
       const b = document.getElementById('b').value
       const response = await fetch('http://localhost:8000/sum.php', {
         method: 'POST',
-        body: JSON.stringify({a, b}),
+        body: JSON.stringify({a,b})
       })
       const data = await response.json()
       document.getElementById('sum').textContent = data.sum

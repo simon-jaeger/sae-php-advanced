@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>bmi</title>
+  <script>
+    async function calculate() {
+      const a = document.getElementById('a').value
+      const b = document.getElementById('b').value
+      const response = await fetch('http://localhost:8000/sum.php', {
+        method: 'POST',
+        body: JSON.stringify({a, b}),
+      })
+      const data = await response.json()
+      document.getElementById('sum').textContent = data.sum
+    }
+  </script>
+</head>
+
+<body>
+  <h1>sum</h1>
+  <input id="a" type="number" value="0">
+  <input id="b" type="number" value="0">
+  <button onclick="calculate()">calculate</button>
+  <div id="sum">...</div>
+</body>
+</html>

@@ -32,3 +32,13 @@ duration: 15 * 3h
 - real world modeling
 - example Dice class
 - T: model another real world object
+--------------------------------------------------------------------------------
+- headless architecture
+- backend server api
+- frontend client gui
+- hello world and sum examples
+- R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
+- R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+- R: https://javascript.info/fetch
+- T: create a bmi app
+

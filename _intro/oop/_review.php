@@ -10,7 +10,7 @@ class Shape {
 }
 
 class Circle extends Shape {
-  public float $radius = 0;
+  public float $radius;
 
   function __construct($radius) {
     $this->radius = $radius;
@@ -21,10 +21,16 @@ class Circle extends Shape {
   }
 }
 
-$circle = new Circle(1);
-$circle->x = 4;
-$circle->y = 8;
-print($circle->position());
+$circle = new Circle(3);
+$circle->x = 1;
+$circle->y = 2;
+var_dump([
+  $circle->x, // inherited, all shapes have x
+  $circle->y, // inhertited, all shapes have y
+  $circle->radius, // not inherited, only circles have radius
+  $circle->position(), // inherited, all shapes can get their position
+  $circle->diameter() // not inherited, only circles can calculate their diameter
+]);
 
 class Rectangle extends Shape {
   public float $width;

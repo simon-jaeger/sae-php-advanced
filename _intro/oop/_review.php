@@ -36,6 +36,8 @@ class Rectangle extends Shape {
   public float $width;
   public float $height;
 
+  public static $german = 'Rechteck';
+
   function __construct($width, $height) {
     $this->width = $width;
     $this->height = $height;
@@ -56,6 +58,8 @@ class Rectangle extends Shape {
     else return $b;
   }
 }
+
+print(Rectangle::$german); // Rechteck
 
 $square = Rectangle::makeSquare(4);
 print($square->width); // 4

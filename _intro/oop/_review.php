@@ -40,6 +40,35 @@ class Rectangle extends Shape {
     $this->width = $width;
     $this->height = $height;
   }
+
+  function area() {
+    return $this->width * $this->height;
+  }
+
+  static function makeSquare($size) {
+    return new Rectangle($size, $size);
+  }
+
+  static function largest(Rectangle $a, Rectangle $b) {
+    $areaA = $a->area();
+    $areaB = $b->area();
+    if ($areaA > $areaB) return $a;
+    else return $b;
+  }
 }
 
-$rectangle = new Rectangle(10, 5);
+$square = Rectangle::makeSquare(4);
+print($square->width); // 4
+print($square->height); // 4
+
+$rect = new Rectangle(10, 20);
+var_dump(Rectangle::largest($square, $rect)); // $rect
+
+class Util {
+  static function pickRandom($array) {
+    $index = random_int(1, count($array) - 1);
+    return $array[$index];
+  }
+}
+
+print(Util::pickRandom([1, 2, 3]));

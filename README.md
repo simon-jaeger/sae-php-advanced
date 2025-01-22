@@ -32,6 +32,16 @@ duration: 15 * 3h
 - real world modeling
 - example Dice class
 - T: model another real world object
+- --------------------------------------------------------------------------------
+- inheritance
+- Circle extends Shape
+- R: https://daylerees.com/php-pandas-inheritance/
+- T: create another inheritance example
+- --------------------------------------------------------------------------------
+- statics
+- Rectangle::makeSquare(4);
+- Util::pickRandom($array);
+- R: https://daylerees.com/php-pandas-statics/
 --------------------------------------------------------------------------------
 - headless architecture
 - backend server api

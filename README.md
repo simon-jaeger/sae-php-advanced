@@ -48,6 +48,7 @@ npm run serve
 --------------------------------------------------------------------------------
 - statics
 - Rectangle::makeSquare(4);
+- Util::pickRandom($array);
 - R: https://daylerees.com/php-pandas-statics/
 --------------------------------------------------------------------------------
 - headless architecture / separation of concerns
@@ -57,11 +58,18 @@ npm run serve
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
 --------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/20093/assignments
+- T: start planning
+--------------------------------------------------------------------------------
 - laravel: what is a framework?
 - laravel: installation
 - laravel: directory structure
-- laravel: namespaces
+- laravel: namespaces and helpers
+- laravel: hello world
 - R: https://laravel.com
+- R: https://laravel.com/docs/11.x/helpers
+- T: try the helper classes Arr and Number
 --------------------------------------------------------------------------------
 - router
 - controllers
@@ -69,7 +77,7 @@ npm run serve
 - https://usebruno.com
 - R: https://laravel.com/docs/11.x/requests#retrieving-input
 - T: implement the missing example endpoints
-- T: create a frontend for the bmi endpoint
+- T: create a frontend for the rps endpoint
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
 - entity relationship diagram (erd.mermaid)

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 return Application::configure(basePath: dirname(__DIR__))
-  ->withRouting(api: __DIR__ . '/../routes/api.php')
+  ->withRouting(api: __DIR__ . '/../routes/api.php', apiPrefix: '')
   ->withMiddleware(function (Middleware $middleware) {
     $middleware->append(DefaultHeaders::class);
   })

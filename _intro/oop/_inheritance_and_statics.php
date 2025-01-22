@@ -42,7 +42,7 @@ class Rectangle extends Shape {
   }
 
   // usable directly on class
-  // used for utility functions or "custom constructors", like makeSquare
+  // used for helper functions or "custom constructors", like makeSquare
   static function makeSquare($size) {
     return new Rectangle($size, $size);
   }
@@ -50,3 +50,13 @@ class Rectangle extends Shape {
 
 $square = Rectangle::makeSquare(4);
 var_dump($square);
+
+// helper class with only static methods, never instantiated
+class Util {
+  static function pickRandom($array) {
+    $index = random_int(0, count($array) - 1);
+    return $array[$index];
+  }
+}
+
+print(Util::pickRandom(['a', 'b', 'c']));

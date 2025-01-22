@@ -43,6 +43,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 // example endpoints
+Route::get('', function () {
+  return 'hello laravel'; // curl localhost:8000
+});
 Route::get('/examples/ping', [ExamplesController::class, 'ping']);
 Route::get('/examples/about', [ExamplesController::class, 'about']);
 Route::post('/examples/echo', [ExamplesController::class, 'echo']);

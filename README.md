@@ -46,6 +46,11 @@ npm run serve
 - example Dice class
 - T: model another real world object
 --------------------------------------------------------------------------------
+- inheritance
+- Circle extends Shape
+- R: https://daylerees.com/php-pandas-inheritance/
+- T: create another inheritance example
+- --------------------------------------------------------------------------------
 - statics
 - Rectangle::makeSquare(4);
 - Util::pickRandom($array);
@@ -60,7 +65,7 @@ npm run serve
 --------------------------------------------------------------------------------
 - assignments
 - R: https://canvas.sae.edu/courses/20093/assignments
-- T: start planning
+- T: start planning your project
 --------------------------------------------------------------------------------
 - laravel: what is a framework?
 - laravel: installation

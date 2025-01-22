@@ -1,8 +1,8 @@
 <?php
 
 class Shape {
-  public float $x;
-  public float $y;
+  public float $x = 0;
+  public float $y = 0;
 
   function position() {
     return $this->x . '/' . $this->y;
@@ -24,7 +24,7 @@ class Circle extends Shape {
 $circle = new Circle(3);
 $circle->x = 1;
 $circle->y = 2;
-var_dump([
+print_r([
   $circle->x, // inherited, all shapes have x
   $circle->y, // inhertited, all shapes have y
   $circle->radius, // not inherited, only circles have radius
@@ -59,11 +59,11 @@ class Rectangle extends Shape {
   }
 }
 
-print(Rectangle::$german); // Rechteck
+print(Rectangle::$german . "\n"); // Rechteck
 
 $square = Rectangle::makeSquare(4);
-print($square->width); // 4
-print($square->height); // 4
+print($square->width . "\n"); // 4
+print($square->height . "\n"); // 4
 
 $rect = new Rectangle(10, 20);
 var_dump(Rectangle::largest($square, $rect)); // $rect

@@ -70,7 +70,7 @@ var_dump(Rectangle::largest($square, $rect)); // $rect
 
 class Util {
   static function pickRandom($array) {
-    $index = random_int(1, count($array) - 1);
+    $index = random_int(0, count($array) - 1);
     return $array[$index];
   }
 }

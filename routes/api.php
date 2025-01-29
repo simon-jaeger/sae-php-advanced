@@ -1,17 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Arr;
+use App\Controllers\ExamplesController;
 
 // example endpoints
 Route::get('', function () {
   return 'hello laravel';
 });
 
-Route::get('/hello', function () {
-  return 'hello ' . random_int(0, 99);
-});
+Route::get('/examples/hello', [ExamplesController::class, 'hello']);
+Route::get('/examples/random', [ExamplesController::class, 'random']);
+Route::get('/examples/about', [ExamplesController::class, 'about']);
 
-Route::get('/random', function () {
-  return Arr::random([1,2,3,4]);
-});
+// Route::get('/random', function () {
+//   return Arr::random([1,2,3,4]);
+// });

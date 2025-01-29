@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "sae-php-advanced",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

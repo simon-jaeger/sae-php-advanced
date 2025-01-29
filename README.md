@@ -51,4 +51,23 @@ duration: 15 * 3h
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
 - T: create a bmi app
-
+--------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/20093/assignments
+- T: start planning your project
+--------------------------------------------------------------------------------
+- laravel: what is a framework?
+- laravel: installation
+- laravel: directory structure
+- laravel: namespaces and helpers
+- laravel: hello world
+- R: https://laravel.com
+- R: https://laravel.com/docs/11.x/helpers
+- T: try the helper classes Arr and Number
+--------------------------------------------------------------------------------
+- router
+- controllers
+- http exchange (request, response, status, body, headers)
+- https://usebruno.com
+- T: implement the missing example endpoints
+- T: create a frontend for the rps endpoint

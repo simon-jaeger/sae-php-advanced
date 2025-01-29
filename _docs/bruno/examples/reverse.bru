@@ -1,0 +1,17 @@
+meta {
+  name: reverse
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8000/examples/reverse
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "text": "foobar"
+  }
+}

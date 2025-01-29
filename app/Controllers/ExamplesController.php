@@ -28,4 +28,28 @@ class ExamplesController {
     $text = $request->input('text');
     return $text;
   }
+
+  function reverse(Request $request) {
+    $text = $request->input('text');
+    return strrev($text);
+  }
+
+  function sum(Request $request) {
+    $numbers = $request->input('numbers');
+    return array_sum($numbers);
+  }
+
+  function count(Request $request) {
+    $text = $request->input('text');
+    return str_word_count($text);
+  }
+
+  function temperature(Request $request) {
+    $celsius = $request->input('celsius');
+    return [
+      'celsius' => $celsius,
+      'kelvin' => $celsius + 273.15,
+      'fahrenheit' => ($celsius * 9 / 5) + 32,
+    ];
+  }
 }

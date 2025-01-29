@@ -1,0 +1,17 @@
+meta {
+  name: sum
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8000/examples/sum
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "numbers": [1, 2, 3, 4, 5]
+  }
+}

@@ -23,4 +23,9 @@ class ExamplesController {
       'method' => $request->getMethod(),
     ];
   }
+
+  function echo(Request $request) {
+    $text = $request->input('text');
+    return $text;
+  }
 }

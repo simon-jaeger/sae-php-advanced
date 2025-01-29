@@ -1,0 +1,17 @@
+meta {
+  name: echo
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/examples/echo
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "text": "any string"
+  }
+}

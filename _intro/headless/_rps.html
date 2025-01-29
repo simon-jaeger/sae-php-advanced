@@ -19,7 +19,7 @@
   </style>
   <script>
     async function play(attack) {
-      const response = await fetch('http://localhost:8000/api/examples/rps', {
+      const response = await fetch('http://localhost:8000/examples/rps', {
         method: 'POST',
         body: JSON.stringify({attack}),
       })

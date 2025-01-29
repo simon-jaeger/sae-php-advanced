@@ -80,15 +80,16 @@ npm run serve
 - controllers
 - http exchange (request, response, status, body, headers)
 - https://usebruno.com
-- R: https://laravel.com/docs/11.x/requests#retrieving-input
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
 - entity relationship diagram (erd.mermaid)
+- T: create an erd for your own project
 - models (Article.php)
+- T: create models for your own project
 - migrations
-- R: https://laravel.com/docs/11.x/migrations
+- T: migrations for your own project
 --------------------------------------------------------------------------------
 - MVC
 - Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...
@@ -103,7 +104,6 @@ npm run serve
 - ORM
 - object relational mapping
 - R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
-- R: https://laravel.com/docs/11.x/eloquent#introduction
 --------------------------------------------------------------------------------
 - crud
 - index

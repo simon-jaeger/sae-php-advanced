@@ -15,3 +15,4 @@ Route::post('/examples/reverse', [ExamplesController::class, 'reverse']);
 Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/count', [ExamplesController::class, 'count']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
+Route::post('/examples/rps', [ExamplesController::class, 'rps']);

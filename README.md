@@ -2,6 +2,13 @@
 
 duration: 15 * 3h
 
+## setup
+
+```bash
+composer install # install dependencies
+php artisan migrate:fresh # (re-)create database
+```
+
 ## outline
 
 - terminal and bash

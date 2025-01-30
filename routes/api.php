@@ -1,7 +1,23 @@
 <?php
 
+use App\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
+
+
+Route::get('/articles', [ArticlesController::class, 'index']);
+Route::post('/articles', [ArticlesController::class, 'create']);
+
+
+
+
+
+
+
+
+
+
+
 
 // example endpoints
 Route::get('', function () {

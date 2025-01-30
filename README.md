@@ -24,8 +24,7 @@ php artisan migrate:fresh # (re-)create database
 
 - terminal and bash
 - os package manager (brew.sh / scoop.sh)
-- php (v8.4+)
-- composer (v2.8+)
+- install php and composer
 - R: https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/
 - T: use bash to create a folder and a php file
 - T: write php code that outputs the text "Hello, world!"
@@ -89,3 +88,33 @@ php artisan migrate:fresh # (re-)create database
 - https://usebruno.com
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint
+--------------------------------------------------------------------------------
+- demo project: blogging platform (medium, hashnode, ...)
+- models (Article.php)
+- migrations
+- T: create a model and migration for your own project
+--------------------------------------------------------------------------------
+- MVC
+- Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...
+- view
+- router
+- controller
+- model
+- migration
+- mvc.mermaid
+- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+--------------------------------------------------------------------------------
+- ORM
+- object relational mapping
+- orm.md
+--------------------------------------------------------------------------------
+- crud
+- index
+- create
+- update
+- destroy
+- R: https://laravel.com/docs/11.x/eloquent#retrieving-models
+- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/11.x/eloquent#deleting-models
+- T: make your own model crudable

@@ -85,9 +85,8 @@ npm run serve
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
 - models (Article.php)
-- T: create models for your own project
 - migrations
-- T: migrations for your own project
+- T: create a model and migration for your own project
 --------------------------------------------------------------------------------
 - MVC
 - Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...

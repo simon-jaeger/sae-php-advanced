@@ -2,6 +2,12 @@
 
 duration: 15 * 3h
 
+## dependencies
+
+- php 8.4+
+- composer 2.8+
+- extension=pdo_sqlite (php --ini)
+
 ## setup
 
 ```bash
@@ -15,12 +21,16 @@ npm run seed
 npm run serve
 ```
 
+## common issues
+
+- php installed via xampp might cause issues. if that happens, install it with homebrew/scoop instead.
+- your anti virus might block/delete files inside laravel. make sure to whitelist it in that case.
+
 ## outline
 
 - terminal and bash
 - os package manager (brew.sh / scoop.sh)
-- php (v8.4+)
-- composer (v2.8+)
+- install php and composer
 - R: https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/bash/bash-commands-to-manage-directories-files/
 - T: use bash to create a folder and a php file
 - T: write php code that outputs the text "Hello, world!"
@@ -100,7 +110,6 @@ npm run serve
 --------------------------------------------------------------------------------
 - ORM
 - object relational mapping
-- R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
 - orm.md
 --------------------------------------------------------------------------------
 - crud

@@ -101,6 +101,7 @@ npm run serve
 - ORM
 - object relational mapping
 - R: https://medium.com/@kavya1234/what-is-orm-b5d4ab4d0015
+- orm.md
 --------------------------------------------------------------------------------
 - crud
 - index

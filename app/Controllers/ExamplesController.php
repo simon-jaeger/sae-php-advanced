@@ -72,4 +72,5 @@ class ExamplesController {
       'result' => $result,
     ];
   }
+
 }

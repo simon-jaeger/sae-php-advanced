@@ -24,6 +24,7 @@ class ArticlesController {
     $article = Article::findOrFail($id);
     $article->title = $request->input('title');
     $article->content = $request->input('content');
+    $article->save();
     return $article;
   }
 

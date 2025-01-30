@@ -1,0 +1,19 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:8000/articles
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 2,
+    "title": "my second post b",
+    "content": "it is quite easy"
+  }
+}

@@ -84,8 +84,6 @@ npm run serve
 - T: create a frontend for the rps endpoint
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
-- entity relationship diagram (erd.mermaid)
-- T: create an erd for your own project
 - models (Article.php)
 - T: create models for your own project
 - migrations
@@ -132,9 +130,12 @@ npm run serve
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 --------------------------------------------------------------------------------
+- relationships and erds (erd.mermaid)
+- R: https://phoenixnap.com/kb/database-relationships
+- T: create an erd for your own project
+--------------------------------------------------------------------------------
 - relationships (1:n)
 - articles n:1 user
-- R: https://phoenixnap.com/kb/database-relationships
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 --------------------------------------------------------------------------------
@@ -145,7 +146,7 @@ npm run serve
 --------------------------------------------------------------------------------
 - filter
 - order
-- limit,offset
+- limit, offset
 - T: add filter etc. to comments
 --------------------------------------------------------------------------------
 - relationships (n:m)

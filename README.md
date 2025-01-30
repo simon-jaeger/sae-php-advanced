@@ -2,12 +2,23 @@
 
 duration: 15 * 3h
 
+## dependencies
+
+- php 8.4+
+- composer 2.8+
+- extension=pdo_sqlite (php --ini)
+
 ## setup
 
 ```bash
 composer install # install dependencies
 php artisan migrate:fresh # (re-)create database
 ```
+
+## common issues
+
+- php installed via xampp might cause issues. if that happens, install it with homebrew/scoop instead.
+- your anti virus might block/delete files inside laravel. make sure to whitelist it in that case.
 
 ## outline
 

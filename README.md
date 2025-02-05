@@ -125,13 +125,13 @@ npm run serve
 --------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
-- T: validate article `subtitle`
+- T: task add validation to your own model
 --------------------------------------------------------------------------------
 - users
 - password hashing
 - lifecycle hooks
 - R: https://laravel.com/docs/11.x/eloquent#events-using-closures
-- T: add more password rules
+- T: add more fields to your user
 --------------------------------------------------------------------------------
 - authentication
 - api tokens
@@ -147,22 +147,26 @@ npm run serve
 - articles n:1 user
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
+- T: add a 1:n relationship between your own models
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
 - R: https://laravel.com/docs/11.x/seeding
 - T: seed comments
+- T: seed your own models
 --------------------------------------------------------------------------------
 - filter
 - order
 - limit, offset
 - T: add filter etc. to comments
+- T: add filter etc. to your own entities
 --------------------------------------------------------------------------------
 - relationships (n:m)
 - tags n:m article
 - crud tags
 - assign tags
 - filter by tags
+- T: work on your projects
 --------------------------------------------------------------------------------
 - extra topics:
 - file uploads

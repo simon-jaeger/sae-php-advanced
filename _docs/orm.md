@@ -3,7 +3,7 @@
 read
 
 ```php
-Articles::all();
+Article::all();
 ```
 ```sql
 SELECT * FROM articles;

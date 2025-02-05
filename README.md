@@ -118,3 +118,7 @@ php artisan migrate:fresh # (re-)create database
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
 - T: make your own model crudable
+--------------------------------------------------------------------------------
+- validation
+- R: https://laravel.com/docs/11.x/validation#available-validation-rules
+- T: task add validation to your own model

@@ -11,20 +11,17 @@ class ArticlesController {
   }
 
   function create(Request $request) {
-    $article = new Article();
-    $article->title = $request->input('title');
-    $article->content = $request->input('content');
-    $article->save();
+    $payload = Article::validate($request);
+    $article = Article::create($payload);
     return $article;
   }
 
   function update(Request $request) {
+    $payload = Article::validate($request);
     $id = $request->input('id');
     /** @var Article $article */
     $article = Article::findOrFail($id);
-    $article->title = $request->input('title');
-    $article->content = $request->input('content');
-    $article->save();
+    $article->update($payload);
     return $article;
   }
 

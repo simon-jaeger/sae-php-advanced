@@ -19,7 +19,6 @@ class ArticlesController {
   function update(Request $request) {
     $payload = Article::validate($request);
     $id = $request->input('id');
-    /** @var Article $article */
     $article = Article::findOrFail($id);
     $article->update($payload);
     return $article;

@@ -123,3 +123,16 @@ php artisan migrate:fresh # (re-)create database
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
 - T: task add validation to your own model
+--------------------------------------------------------------------------------
+- users
+- password hashing
+- lifecycle hooks
+- R: https://laravel.com/docs/11.x/eloquent#events-using-closures
+- T: add more fields to your user
+--------------------------------------------------------------------------------
+- authentication
+- api tokens
+- authorization header
+- middleware
+- R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
+- R: https://datatracker.ietf.org/doc/html/rfc6750

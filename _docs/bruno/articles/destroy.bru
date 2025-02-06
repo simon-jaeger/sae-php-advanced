@@ -5,9 +5,13 @@ meta {
 }
 
 delete {
-  url: http://localhost:8000/articles
+  url: http://localhost:8000/articles?Authorization=Bearer {{token}}
   body: json
   auth: none
+}
+
+query {
+  Authorization: Bearer {{token}}
 }
 
 body:json {

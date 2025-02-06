@@ -6,8 +6,11 @@ use Bootstrap\Column;
 use Bootstrap\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Model {
+  use HasApiTokens;
+
   #[Column] public int $id;
   #[Column] public string $email;
   #[Column] public string $password;

@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/users
+  url: http://localhost:8000/users?Authorization=Bearer {{token}}
   body: none
   auth: none
+}
+
+query {
+  Authorization: Bearer {{token}}
 }

@@ -1,11 +1,11 @@
 meta {
-  name: create
+  name: logout
   type: http
   seq: 2
 }
 
 post {
-  url: http://localhost:8000/articles
+  url: http://localhost:8000/auth/logout
   body: json
   auth: none
 }
@@ -16,8 +16,7 @@ headers {
 
 body:json {
   {
-    "title": "abc",
-    "content": "asdf",
-    "isAdmin": true
+    "email": "a@b.com",
+    "password": "loremipsum"
   }
 }

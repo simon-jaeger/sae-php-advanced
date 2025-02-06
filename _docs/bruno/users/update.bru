@@ -1,0 +1,19 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:8000/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1,
+    "email": "a2@b.com",
+    "password": "loremipsum"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: destroy
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8000/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

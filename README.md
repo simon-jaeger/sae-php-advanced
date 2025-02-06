@@ -107,6 +107,7 @@ php artisan migrate:fresh # (re-)create database
 - ORM
 - object relational mapping
 - orm.md
+- R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
 --------------------------------------------------------------------------------
 - crud
 - index

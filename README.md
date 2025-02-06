@@ -111,6 +111,7 @@ npm run serve
 - ORM
 - object relational mapping
 - orm.md
+- R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
 --------------------------------------------------------------------------------
 - crud
 - index
@@ -138,6 +139,7 @@ npm run serve
 - authorization header
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
+- R: https://datatracker.ietf.org/doc/html/rfc6750
 --------------------------------------------------------------------------------
 - relationships and erds (erd.mermaid)
 - R: https://phoenixnap.com/kb/database-relationships

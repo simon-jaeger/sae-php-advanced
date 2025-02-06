@@ -6,10 +6,12 @@ use App\Controllers\ExamplesController;
 use App\Controllers\ArticlesController;
 use App\Controllers\UsersController;
 
+// guest endpoints
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/users', [UsersController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
 
+// user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/auth/logout', [AuthController::class, 'logout']);
 

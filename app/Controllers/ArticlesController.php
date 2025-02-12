@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class ArticlesController {
   function index() {
     return Article::all();
-    // return Auth::user()->articles()->get();
   }
 
   function create(Request $request) {
@@ -28,7 +27,6 @@ class ArticlesController {
 
   function destroy(Request $request) {
     $id = $request->input('id');
-    // $article = Article::findOrFail($id);
     $article = Auth::user()->articles()->findOrFail($id);
     $article->delete();
     return $article;

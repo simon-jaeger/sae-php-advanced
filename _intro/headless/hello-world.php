@@ -1,5 +1,7 @@
 <?php
 
+// TODO: maybe skip for future students and immediately start with laravel?
+
 // start with:
 // php -S localhost:8000
 

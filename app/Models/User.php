@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Bootstrap\Column;
 use Bootstrap\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
@@ -18,11 +17,11 @@ class User extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  function articles(): HasMany|Article {
+  function articles() {
     return $this->hasMany(Article::class);
   }
 
-  function comments(): HasMany|Article {
+  function comments() {
     return $this->hasMany(Comment::class);
   }
 

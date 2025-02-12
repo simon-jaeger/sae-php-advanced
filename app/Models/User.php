@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Bootstrap\Column;
 use Bootstrap\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
@@ -16,6 +17,10 @@ class User extends Model {
   #[Column] public string $password;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
+
+  function articles(): HasMany|Article {
+    return $this->hasMany(Article::class);
+  }
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';

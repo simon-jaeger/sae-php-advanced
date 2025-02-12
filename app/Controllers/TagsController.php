@@ -21,7 +21,6 @@ class TagsController {
     $tagIds = $request->input('tag_ids');
     $article = Auth::user()->articles()->findOrFail($articleId);
     $article->tags()->sync($tagIds);
-    $article->save();
     return $article->fresh();
   }
 }

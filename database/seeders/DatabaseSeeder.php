@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder {
     ////////////////////////////////////////////////////////////////////////////////
     for ($i = 0; $i < 20; $i++) {
       Comment::create([
-        'text' => fake()->sentence(3),
+        'text' => fake()->sentence(),
         'article_id' => random_int(1, 10),
         'user_id' => random_int(1, 3),
       ]);

@@ -5,18 +5,17 @@ meta {
 }
 
 patch {
-  url: http://localhost:8000/users?Authorization=Bearer {{token}}
+  url: http://localhost:8000/user
   body: json
   auth: none
 }
 
-query {
+headers {
   Authorization: Bearer {{token}}
 }
 
 body:json {
   {
-    "id": 1,
     "email": "a2@b.com",
     "password": "loremipsum"
   }

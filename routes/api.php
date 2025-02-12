@@ -4,20 +4,20 @@ use App\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 use App\Controllers\ArticlesController;
-use App\Controllers\UsersController;
+use App\Controllers\UserController;
 
 // guest endpoints
 Route::post('/auth/login', [AuthController::class, 'login']);
-Route::post('/users', [UsersController::class, 'create']);
+Route::post('/user', [UserController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
 
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/auth/logout', [AuthController::class, 'logout']);
 
-  Route::get('/users', [UsersController::class, 'index']);
-  Route::patch('/users', [UsersController::class, 'update']);
-  Route::delete('/users', [UsersController::class, 'destroy']);
+  Route::get('/user', [UserController::class, 'index']);
+  Route::patch('/user', [UserController::class, 'update']);
+  Route::delete('/user', [UserController::class, 'destroy']);
 
   Route::post('/articles', [ArticlesController::class, 'create']);
   Route::patch('/articles', [ArticlesController::class, 'update']);

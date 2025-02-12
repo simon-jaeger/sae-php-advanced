@@ -136,3 +136,13 @@ php artisan migrate:fresh # (re-)create database
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 - R: https://datatracker.ietf.org/doc/html/rfc6750
+--------------------------------------------------------------------------------
+- relationships and erds (erd.mermaid)
+- R: https://phoenixnap.com/kb/database-relationships
+- T: create an erd for your own project
+--------------------------------------------------------------------------------
+- relationships (1:n)
+- articles n:1 user
+- R: https://laravel.com/docs/11.x/eloquent-relationships
+- T: add comments (n:1 article, n:1 user)
+- T: add a 1:n relationship between your own models

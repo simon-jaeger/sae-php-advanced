@@ -21,6 +21,10 @@ class User extends Model {
     return $this->hasMany(Article::class);
   }
 
+  function comments() {
+    return $this->hasMany(Comment::class);
+  }
+
   static function validate(Request $request) {
     $post = $request->method() === 'POST';
     return $request->validate([

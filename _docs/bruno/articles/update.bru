@@ -5,13 +5,9 @@ meta {
 }
 
 patch {
-  url: http://localhost:8000/articles?Authorization=Bearer {{token}}
+  url: http://localhost:8000/articles
   body: json
   auth: none
-}
-
-query {
-  Authorization: Bearer {{token}}
 }
 
 headers {

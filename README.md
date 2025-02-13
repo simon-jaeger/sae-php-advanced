@@ -12,7 +12,7 @@ duration: 15 * 3h
 
 ```bash
 composer install # install dependencies
-php artisan migrate:fresh # (re-)create database
+php artisan migrate:fresh --seed # (re-)create database
 ```
 
 ## common issues

@@ -146,3 +146,9 @@ php artisan migrate:fresh --seed # (re-)create database
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
+--------------------------------------------------------------------------------
+- seeding
+- https://fakerphp.github.io
+- R: https://laravel.com/docs/11.x/seeding
+- T: seed comments
+- T: seed your own models

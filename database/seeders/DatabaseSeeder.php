@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Comment;
-use App\Models\Tag;
 use Illuminate\Database\Seeder;
-use App\Models\Article;
 use App\Models\User;
+use App\Models\Comment;
+use App\Models\Article;
+use App\Models\Tag;
 
 // faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
 

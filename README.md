@@ -161,13 +161,16 @@ npm run serve
 - order
 - limit, offset
 - T: add filter etc. to comments
+- R: https://laravel.com/docs/11.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
 --------------------------------------------------------------------------------
 - relationships (n:m)
 - tags n:m article
 - crud tags
 - assign tags
-- filter by tags
+--------------------------------------------------------------------------------
+- getting help from chat gpt(example: i work on a laravel project where articles have many tags. show me how to filter articles by tag ids.)
+- filter by tags (via help of chat gpt)
 - T: work on your projects
 --------------------------------------------------------------------------------
 - extra topics:

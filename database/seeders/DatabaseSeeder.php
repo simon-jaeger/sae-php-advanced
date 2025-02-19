@@ -30,11 +30,11 @@ class DatabaseSeeder extends Seeder {
 
     // articles
     ////////////////////////////////////////////////////////////////////////////
-    for ($i = 0; $i < 10; $i++) {
+    for ($i = 0; $i < 20; $i++) {
       Article::create([
         'title' => fake()->word(),
         'content' => fake()->sentence(),
-        'user_id' => 1,
+        'user_id' => random_int(1, 3),
       ]);
     }
 

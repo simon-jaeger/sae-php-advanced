@@ -7,8 +7,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ArticlesController {
-  function index() {
-    return Article::all();
+  function index(Request $request) {
+    $query = Article::query();
+
+    $id = $request->input('id');
+    if($id) return $query->where('id', $id)->firstOrFail();
+
+    $userId = $request->input('user_id');
+    if($userId) $query->where('user_id', $userId);
+
+    $title = $request->input('title');
+    if($title) $query->where('title', 'like', "%$title%");
+
+    // return $query->toSql(); // for debugging
+    return $query->get();
   }
 
   function create(Request $request) {

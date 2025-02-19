@@ -2,6 +2,7 @@
 
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
+use App\Controllers\TagsController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 use App\Controllers\ArticlesController;
@@ -12,6 +13,7 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/user', [UserController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
 Route::get('/comments', [CommentsController::class, 'index']);
+Route::get('/tags', [TagsController::class, 'index']);
 
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -28,6 +30,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/comments', [CommentsController::class, 'create']);
   Route::patch('/comments', [CommentsController::class, 'update']);
   Route::delete('/comments', [CommentsController::class, 'destroy']);
+
+  Route::post('/tags', [TagsController::class, 'create']);
 });
 
 

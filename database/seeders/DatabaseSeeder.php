@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Article;
 use App\Models\Comment;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -40,12 +41,18 @@ class DatabaseSeeder extends Seeder {
 
     // comments
     ////////////////////////////////////////////////////////////////////////////
-    for ($i = 0; $i < 10; $i++) {
+    for ($i = 0; $i < 20; $i++) {
       Comment::create([
         'text' => fake()->sentence(),
         'article_id' => random_int(1, 10),
         'user_id' => random_int(1, 3),
       ]);
+    }
+
+    // tags
+    ////////////////////////////////////////////////////////////////////////////////
+    for ($i = 0; $i < 10; $i++) {
+      Tag::create(['name' => fake()->word()]);
     }
 
   }

@@ -5,12 +5,12 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/comments
+  url: http://localhost:8000/comments?article_id=5
   body: none
   auth: none
 }
 
 query {
+  article_id: 5
   ~user_id: 1
-  ~article_id: 1
 }

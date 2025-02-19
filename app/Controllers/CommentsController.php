@@ -5,10 +5,22 @@ namespace App\Controllers;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class CommentsController {
   function index(Request $request) {
-    return Comment::all();
+    $query = Comment::query();
+
+    $token = PersonalAccessToken::findToken($request->bearerToken());
+    $user = $token->tokenable;
+
+    $userId = $request->input('user_id');
+    if ($userId) $query->where('user_id', $userId);
+
+    $articleId = $request->input('article_id');
+    if ($articleId) $query->where('article_id', $articleId);
+
+    return $query->get();
   }
 
   function create(Request $request) {

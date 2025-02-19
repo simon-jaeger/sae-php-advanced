@@ -152,3 +152,11 @@ php artisan migrate:fresh --seed # (re-)create database
 - R: https://laravel.com/docs/11.x/seeding
 - T: seed comments
 - T: seed your own models
+--------------------------------------------------------------------------------
+- filter
+- order
+- limit, offset
+- T: add filter etc. to comments
+- R: https://laravel.com/docs/11.x/queries#basic-where-clauses
+- T: add filter etc. to your own entities
+--------------------------------------------------------------------------------

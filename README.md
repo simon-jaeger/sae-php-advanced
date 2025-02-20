@@ -81,16 +81,15 @@ npm run serve
 - laravel: installation
 - laravel: directory structure
 - laravel: namespaces and helpers
-- laravel: hello world
+- laravel: hello laravel
 - R: https://laravel.com
-- R: https://laravel.com/docs/11.x/helpers
-- T: try the helper classes Arr and Number
 --------------------------------------------------------------------------------
 - router
 - controllers
 - http exchange (request, response, status, body, headers)
 - https://usebruno.com
 - T: implement the missing example endpoints
+- T: create a frontend for the bmi endpoint
 - T: create a frontend for the rps endpoint
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
@@ -168,9 +167,7 @@ npm run serve
 - tags n:m article
 - crud tags
 - assign tags
---------------------------------------------------------------------------------
-- getting help from chat gpt(example: i work on a laravel project where articles have many tags. show me how to filter articles by tag ids.)
-- filter by tags (via help of chat gpt)
+- filter by tags
 - T: work on your projects
 --------------------------------------------------------------------------------
 - extra topics:

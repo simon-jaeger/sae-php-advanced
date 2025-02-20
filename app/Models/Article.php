@@ -14,11 +14,11 @@ class Article extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
+  protected $with = ['tags'];
+
   function tags() {
     return $this->belongsToMany(Tag::class);
   }
-
-  protected $with = ['tags'];
 
   static function validate(Request $request) {
     $post = $request->method() === 'POST';

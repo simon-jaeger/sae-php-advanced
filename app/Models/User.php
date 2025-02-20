@@ -17,6 +17,8 @@ class User extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
+  protected $hidden = ['password'];
+
   function articles() {
     return $this->hasMany(Article::class);
   }

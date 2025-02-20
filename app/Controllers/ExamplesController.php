@@ -10,17 +10,6 @@ class ExamplesController {
     return 'pong';
   }
 
-  function about(Request $request) {
-    return [
-      'laravel' => \App::version(),
-      'php' => phpversion(),
-      'ini' => php_ini_loaded_file(),
-      'host' => $request->getHost(),
-      'port' => $request->getPort(),
-      'method' => $request->getMethod(),
-    ];
-  }
-
   function echo(Request $request) {
     $text = $request->input('text');
     return $text;
@@ -47,6 +36,23 @@ class ExamplesController {
       'celsius' => $celsius,
       'kelvin' => $celsius + 273.15,
       'fahrenheit' => ($celsius * 9 / 5) + 32,
+    ];
+  }
+
+  function bmi(Request $request) {
+    $height = $request->input('height');
+    $weight = $request->input('weight');
+
+    $bmi = $weight / $height ** 2;
+    $category = 'underweight';
+    if ($bmi > 18.5) $category = 'normal';
+    if ($bmi > 25) $category = 'overweight';
+
+    return [
+      'height' => $height,
+      'weight' => $weight,
+      'bmi' => $bmi,
+      'category' => $category,
     ];
   }
 

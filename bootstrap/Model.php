@@ -9,7 +9,7 @@ use Attribute;
 /** @mixin \Eloquent */
 class Model extends BaseModel {
   protected static $unguarded = true;
-  protected $hidden = ['password', 'pivot'];
+  protected $hidden = ['pivot'];
 
   public function __construct(array $attributes = []) {
     parent::__construct($attributes);

@@ -12,10 +12,6 @@ class Tag extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  function articles() {
-    return $this->belongsToMany(Article::class);
-  }
-
   static function validate(Request $request) {
     return $request->validate([
       'name' => ['required', 'min:1', 'max: 99', 'unique:tags,name'],

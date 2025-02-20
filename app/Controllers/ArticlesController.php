@@ -26,9 +26,11 @@ class ArticlesController {
     $tagIds = $request->input('tag_ids');
     if ($tagIds) {
       $tagIds = explode(',', $tagIds);
+      // $query->has('tags'); // articles that have tags
+      // $query->has('tags', '>=', count($tagIds)); // articles that have at least that many tags
       $query->whereHas(
         'tags',
-        fn($q) => $q->whereIn('tags.id', $tagIds),
+        fn($q) => $q->whereIn('tags.id', $tagIds), // only tags with ids that are part of the search array
         '>=',
         count($tagIds)
       );

@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: http://localhost:8000/articles
+  url: http://localhost:8000/articles?tag_ids=1,2,3
   body: json
   auth: none
 }
 
 query {
+  tag_ids: 1,2,3
   ~user_id: 1
   ~title: ferend
   ~id: 7

@@ -11,13 +11,23 @@ class ArticlesController {
     $query = Article::query();
 
     $id = $request->input('id');
-    if($id) return $query->where('id', $id)->firstOrFail();
+    if ($id) return $query->where('id', $id)->firstOrFail();
 
     $userId = $request->input('user_id');
-    if($userId) $query->where('user_id', $userId);
+    if ($userId) $query->where('user_id', $userId);
 
     $title = $request->input('title');
-    if($title) $query->where('title', 'like', "%$title%");
+    if ($title) $query->where('title', 'like', "%$title%");
+
+    $tagIds = $request->input('tag_ids');
+    if ($tagIds) {
+      $tagIds = explode(',', $tagIds);
+      $query->whereHas(
+        'tags',
+        fn($q) => $q->whereIn('tags.id', $tagIds),
+        '>=', count($tagIds)
+      );
+    }
 
     // return $query->toSql(); // for debugging
     return $query->get();

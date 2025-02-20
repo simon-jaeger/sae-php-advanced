@@ -14,6 +14,12 @@ class Article extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
+  function tags() {
+    return $this->belongsToMany(Tag::class);
+  }
+
+  protected $with = ['tags'];
+
   static function validate(Request $request) {
     return $request->validate([
       'title' => ['required','min:1','max:200'],

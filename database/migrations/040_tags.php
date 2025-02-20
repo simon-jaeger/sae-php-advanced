@@ -12,9 +12,15 @@ return new class extends Migration {
       $table->timestamp('created_at');
       $table->timestamp('updated_at');
     });
+    Schema::create('article_tag', function (Blueprint $table) {
+      $table->id();
+      $table->foreignId('article_id')->constrained()->cascadeOnDelete();
+      $table->foreignId('tag_id')->constrained()->cascadeOnDelete();
+    });
   }
 
   function down() {
     Schema::dropIfExists('tags');
+    Schema::dropIfExists('article_tag');
   }
 };

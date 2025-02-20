@@ -32,6 +32,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::delete('/comments', [CommentsController::class, 'destroy']);
 
   Route::post('/tags', [TagsController::class, 'create']);
+  Route::put('/tags/assign', [TagsController::class, 'assign']);
 });
 
 

@@ -14,8 +14,15 @@ class User extends Model {
   #[Column] public int $id;
   #[Column] public string $email;
   #[Column] public string $password;
+  #[Column] public array $profile;
+  #[Column] public array $languages;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
+
+  protected $casts = [
+    'profile' => 'array', // automatically converts between php assoc array and json object
+    'languages' => 'array', // automatically converts between php array and json array
+  ];
 
   function articles() {
     return $this->hasMany(Article::class);
@@ -30,6 +37,10 @@ class User extends Model {
     return $request->validate([
       'email' => [($post ? 'required' : 'sometimes'), 'email', 'unique:users,email'],
       'password' => [($post ? 'required' : 'sometimes'), 'min:8'],
+      'profile' => ['array'],
+      'languages' => ['array'],
+      // 'profile.firstName' => ['max:10'], // optionally validate sub fields
+      // 'profile.lastName' => ['max:10'], // optionally validate sub fields
     ]);
   }
 

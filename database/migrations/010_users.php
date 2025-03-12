@@ -10,6 +10,8 @@ return new class extends Migration {
       $table->id();
       $table->string('email');
       $table->string('password');
+      $table->json('profile')->nullable();
+      $table->json('languages')->nullable();
       $table->timestamp('created_at');
       $table->timestamp('updated_at');
     });

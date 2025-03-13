@@ -13,6 +13,7 @@ duration: 15 * 3h
 ```bash
 composer install # install dependencies
 php artisan migrate:fresh --seed # (re-)create database
+php artisan serve # start development server
 ```
 
 ## common issues
@@ -160,3 +161,15 @@ php artisan migrate:fresh --seed # (re-)create database
 - R: https://laravel.com/docs/11.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
 --------------------------------------------------------------------------------
+- relationships (n:m)
+- tags n:m article
+- crud tags
+- assign tags
+- filter by tags
+- T: work on your projects
+--------------------------------------------------------------------------------
+- extra topics:
+- file uploads
+- emails
+- json columns (user.profile etc.)
+- ...

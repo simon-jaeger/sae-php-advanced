@@ -36,6 +36,17 @@ class ArticlesController {
       );
     }
 
+    // order
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'asc');
+    $query->orderBy($orderBy, $orderDir);
+
+    // limit, offset
+    $limit = $request->input('limit', 1000);
+    $offset = $request->input('offset', 0);
+    $query->limit($limit);
+    $query->offset($offset);
+
     // return $query->toSql(); // for debugging
     return $query->get();
   }

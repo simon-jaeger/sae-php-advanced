@@ -1,11 +1,11 @@
 meta {
-  name: assign
+  name: destroy
   type: http
-  seq: 3
+  seq: 2
 }
 
-put {
-  url: http://localhost:8000/tags/assign
+delete {
+  url: http://localhost:8000/uploads
   body: json
   auth: none
 }
@@ -16,7 +16,6 @@ headers {
 
 body:json {
   {
-    "article_id": 8,
-    "tag_ids": [3,4,5]
+    "filename": "fall.webp"
   }
 }

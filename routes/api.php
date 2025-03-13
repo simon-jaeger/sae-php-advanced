@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 use App\Controllers\ArticlesController;
 use App\Controllers\UserController;
+use App\Controllers\UploadsController;
+use App\Controllers\MailsController;
 
 // guest endpoints
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -33,6 +35,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
   Route::post('/tags', [TagsController::class, 'create']);
   Route::put('/tags/assign', [TagsController::class, 'assign']);
+
+  Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::delete('/uploads', [UploadsController::class, 'destroy']);
+
+  Route::post('/mails/send', [MailsController::class, 'send']);
 });
 
 

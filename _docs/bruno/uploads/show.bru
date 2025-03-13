@@ -1,11 +1,11 @@
 meta {
-  name: assign
+  name: show
   type: http
   seq: 3
 }
 
-put {
-  url: http://localhost:8000/tags/assign
+get {
+  url: http://localhost:8000/media/1/fall.webp
   body: json
   auth: none
 }
@@ -16,7 +16,6 @@ headers {
 
 body:json {
   {
-    "article_id": 8,
-    "tag_ids": [3,4,5]
+    "filename": "fall.webp"
   }
 }

@@ -11,14 +11,9 @@ duration: 15 * 3h
 ## setup
 
 ```bash
-# install dependencies
-composer install
-
-# (re-)create database
-npm run seed
-
-# start server
-npm run serve
+composer install # install dependencies
+php artisan migrate:fresh --seed # (re-)create database
+php artisan serve # start development server
 ```
 
 ## common issues
@@ -66,12 +61,14 @@ npm run serve
 - Util::pickRandom($array);
 - R: https://daylerees.com/php-pandas-statics/
 --------------------------------------------------------------------------------
-- headless architecture / separation of concerns
+- headless architecture / spa
 - backend server api
 - frontend client gui
+- hello world and sum examples
 - R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
+- T: create a bmi app
 --------------------------------------------------------------------------------
 - assignments
 - R: https://canvas.sae.edu/courses/20093/assignments
@@ -89,7 +86,6 @@ npm run serve
 - http exchange (request, response, status, body, headers)
 - https://usebruno.com
 - T: implement the missing example endpoints
-- T: create a frontend for the bmi endpoint
 - T: create a frontend for the rps endpoint
 --------------------------------------------------------------------------------
 - demo project: blogging platform (medium, hashnode, ...)
@@ -173,5 +169,5 @@ npm run serve
 - extra topics:
 - file uploads
 - emails
-- admins
+- json columns (user.profile etc.)
 - ...

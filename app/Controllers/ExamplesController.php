@@ -39,23 +39,6 @@ class ExamplesController {
     ];
   }
 
-  function bmi(Request $request) {
-    $height = $request->input('height');
-    $weight = $request->input('weight');
-
-    $bmi = $weight / $height ** 2;
-    $category = 'underweight';
-    if ($bmi > 18.5) $category = 'normal';
-    if ($bmi > 25) $category = 'overweight';
-
-    return [
-      'height' => $height,
-      'weight' => $weight,
-      'bmi' => $bmi,
-      'category' => $category,
-    ];
-  }
-
   function rps(Request $request) {
     $attack = $request->input('attack');
     $defense = Arr::random(['rock', 'paper', 'scissors']);

@@ -118,6 +118,7 @@ php artisan serve # start development server
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
 - T: make your own model crudable
+- table plus: https://tableplus.com/
 --------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules

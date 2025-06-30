@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script>
+    async function load() {
+      const response = await fetch('http://localhost:8000/hello-world.php');
+      const data = await response.json() // { msg: 'hello world 42' }
+      document.getElementById('output').textContent = data.msg
+    }
+  </script>
+</head>
+
+<body style="background: #222; color: #ddd; font-family: sans-serif;">
+  <h1>headless api and spa example</h1>
+  <button onclick="load()">load</button>
+  <div id="output">...</div>
+</body>
+</html>

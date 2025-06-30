@@ -1,0 +1,18 @@
+meta {
+  name: anagram
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/examples/anagram
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "a": "evil",
+    "b": "vile"
+  }
+}

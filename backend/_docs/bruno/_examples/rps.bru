@@ -1,0 +1,17 @@
+meta {
+  name: rps
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/examples/rps
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "attack": "rock"
+  }
+}

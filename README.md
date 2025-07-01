@@ -49,7 +49,6 @@ php artisan serve # start development server
 - T: Rectangle class
 - --------------------------------------------------------------------------------
 - statics
-- Rectangle::makeSquare($size);
 - Util::pickRandom($array);
 - R: https://daylerees.com/php-pandas-statics/
 - T: add more util methods

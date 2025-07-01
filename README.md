@@ -22,8 +22,8 @@ php artisan serve # start development server
 - php might be compiled without certain modules (e.g. pdo_sqlite). if so, manually enable them in ini file.
 - your anti virus might block/delete files inside laravel. if so, whitelist the folder.
 
-## outline
-
+day 1
+--------------------------------------------------------------------------------
 - terminal and bash
 - os package manager (brew.sh / scoop.sh)
 - install php and composer
@@ -45,24 +45,32 @@ php artisan serve # start development server
 --------------------------------------------------------------------------------
 - object oriented programming
 - example Circle class
-- R: https://daylerees.com/php-pandas-classes
 - T: Rectangle class
 - --------------------------------------------------------------------------------
 - statics
 - Util::pickRandom($array);
-- R: https://daylerees.com/php-pandas-statics/
 - T: add more util methods
 --------------------------------------------------------------------------------
 - inheritance
 - extends
 - virtual methods
 - named constructors
-- R: https://daylerees.com/php-pandas-inheritance/
-- T: create another inheritance example
 --------------------------------------------------------------------------------
 - real world modeling
 - example Dice class
-- T: model other real world objects
+--------------------------------------------------------------------------------
+- R: https://daylerees.com/php-pandas-classes
+- R: https://daylerees.com/php-pandas-statics/
+- R: https://daylerees.com/php-pandas-inheritance/
+- T: create another inheritance example
+- T: model another real world object
+
+
+
+
+
+
+
 --------------------------------------------------------------------------------
 - headless architecture / spa
 - backend server api

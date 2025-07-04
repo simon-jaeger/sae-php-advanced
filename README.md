@@ -45,13 +45,7 @@ day 1
 - T: create another inheritance example
 - T: model another real world object
 
-
-
-
-
-
-
-day 2 etc.
+day 2
 --------------------------------------------------------------------------------
 - headless architecture / spa
 - backend server api
@@ -62,15 +56,25 @@ day 2 etc.
 - R: https://javascript.info/fetch
 - T: create a bmi app
 --------------------------------------------------------------------------------
+- MVC frameworks
+- view
+- controller
+- model
+- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- T: short presentations about an mvc framework (e.g. Ruby on Rails, ASP.NET, Django, Spring, Adonis, ...)
+--------------------------------------------------------------------------------
 - assignments
 - R: https://canvas.sae.edu/courses/20093/assignments
 - T: start planning your project
+
+day 3
 --------------------------------------------------------------------------------
-- laravel: what is a framework?
+- laravel: intro
 - laravel: installation
 - laravel: directory structure
 - laravel: namespaces and helpers
-- laravel: hello laravel
+- laravel: structure (laravel.mermaid)
+- laravel: hello laravel endpoint
 - R: https://laravel.com
 --------------------------------------------------------------------------------
 - router
@@ -83,17 +87,10 @@ day 2 etc.
 - demo project: blogging platform (medium, hashnode, ...)
 - models (Article.php)
 - migrations
-- T: create a model and migration for your own project
---------------------------------------------------------------------------------
-- MVC
-- Laravel, Ruby on Rails, ASP.NET, Django, AdonisJs, ...
-- view
-- router
-- controller
-- model
-- migration
-- mvc.mermaid
-- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- GET /articles -> Article::all()
+- T: create a model, migration and index endpoint for your own model
+
+day 4
 --------------------------------------------------------------------------------
 - ORM
 - object relational mapping
@@ -101,6 +98,7 @@ day 2 etc.
 - R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
 --------------------------------------------------------------------------------
 - crud
+- table plus: https://tableplus.com
 - index
 - create
 - update
@@ -110,7 +108,8 @@ day 2 etc.
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
 - T: make your own model crudable
-- table plus: https://tableplus.com/
+
+day 5
 --------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
@@ -126,6 +125,8 @@ day 2 etc.
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 - R: https://datatracker.ietf.org/doc/html/rfc6750
+
+day 6
 --------------------------------------------------------------------------------
 - relationships and erds (erd.mermaid)
 - R: https://phoenixnap.com/kb/database-relationships
@@ -136,6 +137,8 @@ day 2 etc.
 - R: https://laravel.com/docs/11.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
+
+day 7
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
@@ -149,6 +152,8 @@ day 2 etc.
 - T: add filter etc. to comments
 - R: https://laravel.com/docs/11.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
+
+day 8
 --------------------------------------------------------------------------------
 - relationships (n:m)
 - tags n:m article
@@ -156,6 +161,8 @@ day 2 etc.
 - assign tags
 - filter by tags
 - T: work on your projects
+
+day 9
 --------------------------------------------------------------------------------
 - file uploads
 - UploadsController.php
@@ -164,7 +171,12 @@ day 2 etc.
 - emails
 - EmailsController.php
 - T: send welcome email on register
+
+day 10 - 15
 --------------------------------------------------------------------------------
 - extra topics:
 - json columns (user.profile etc.)
+- admin user and impersonate
 - ...
+- T: work on your projects
+

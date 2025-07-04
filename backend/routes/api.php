@@ -36,6 +36,7 @@ Route::get('/tags', [TagsController::class, 'index']);
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/auth/logout', [AuthController::class, 'logout']);
+  Route::post('/auth/impersonate', [AuthController::class, 'impersonate']);
 
   Route::get('/user', [UserController::class, 'index']);
   Route::patch('/user', [UserController::class, 'update']);

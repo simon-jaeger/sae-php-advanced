@@ -27,7 +27,19 @@ class AuthController {
 
   function logout(Request $request) {
     $user = Auth::user();
-    $user->tokens()->delete();
+    $user->currentAccessToken()->delete();
     return $user;
+  }
+
+  function impersonate(Request $request) {
+    if (Auth::user()->id !== 1) return 'admin only';
+    $id = $request->input('id');
+    $user = User::findOrFail($id);
+    if (!$user) return abort(404, 'no such user');
+    $token = $user->createToken('bearer');
+    return [
+      'token' => $token->plainTextToken,
+      'user' => $user,
+    ];
   }
 }

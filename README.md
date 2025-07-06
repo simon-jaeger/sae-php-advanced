@@ -55,13 +55,7 @@ day 2
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
 - T: create a bmi app
---------------------------------------------------------------------------------
-- MVC frameworks
-- view
-- controller
-- model
-- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
-- T: short presentations about an mvc framework (e.g. Ruby on Rails, ASP.NET, Django, Spring, Adonis, ...)
+- T: create and present another small app
 --------------------------------------------------------------------------------
 - assignments
 - R: https://canvas.sae.edu/courses/20093/assignments
@@ -73,7 +67,6 @@ day 3
 - laravel: installation
 - laravel: directory structure
 - laravel: namespaces and helpers
-- laravel: structure (laravel.mermaid)
 - laravel: hello laravel endpoint
 - R: https://laravel.com
 --------------------------------------------------------------------------------
@@ -88,9 +81,18 @@ day 3
 - models (Article.php)
 - migrations
 - GET /articles -> Article::all()
-- T: create a model, migration and index endpoint for your own model
+- T: create a model, migration and index endpoint for your own project
 
 day 4
+--------------------------------------------------------------------------------
+- MVC review
+- views
+- router
+- controllers
+- models
+- migrations
+- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- mvc.mermaid
 --------------------------------------------------------------------------------
 - ORM
 - object relational mapping
@@ -124,7 +126,6 @@ day 5
 - authorization header
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
-- R: https://datatracker.ietf.org/doc/html/rfc6750
 
 day 6
 --------------------------------------------------------------------------------
@@ -177,6 +178,13 @@ day 10 - 15
 - extra topics:
 - json columns (user.profile etc.)
 - admin user and impersonate
+- cron jobs
+- signed urls
+- http request to 3rd party services
 - ...
+- T: short presentations about other mvc frameworks (e.g. Ruby on Rails, ASP.NET, Django, Spring, Adonis, ...)
+- T: other apps? e.g. casino with games like blackjack, roulette etc?
 - T: work on your projects
+- T: project progress presentations
+
 

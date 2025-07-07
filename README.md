@@ -55,14 +55,13 @@ day 2
 - R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - R: https://javascript.info/fetch
 - T: create a bmi app
-- T: create and present another small app
+- T: create (and present) another small app
+
+day 3
 --------------------------------------------------------------------------------
 - assignments
 - R: https://canvas.sae.edu/courses/20093/assignments
 - T: start planning your project
-
-day 3
---------------------------------------------------------------------------------
 - laravel: intro
 - laravel: installation
 - laravel: directory structure

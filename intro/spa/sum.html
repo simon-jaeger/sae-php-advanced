@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>sum</title>
+  <script>
+    const $ = (id) => document.getElementById(id)
+    async function calculate() {
+      const response = await fetch('http://localhost:8000/sum.php', {
+        method: 'POST',
+        body: new URLSearchParams({
+          a: $('a').value,
+          b: $('b').value,
+        })
+      })
+
+      const data = await response.json()
+      $('output').textContent = data.sum
+    }
+  </script>
+</head>
+
+<body style="background: #222; color: #ddd; font-family: sans-serif;">
+  <h1>sum</h1>
+  <input id="a" type="number" value="0">
+  <input id="b" type="number" value="0">
+  <button onclick="calculate()">calculate</button>
+  <span id="output">...</span>
+</body>
+</html>

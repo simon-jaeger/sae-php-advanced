@@ -59,9 +59,6 @@ day 2
 
 day 3
 --------------------------------------------------------------------------------
-- assignments
-- R: https://canvas.sae.edu/courses/20093/assignments
-- T: start planning your project
 - laravel: intro
 - laravel: installation
 - laravel: directory structure
@@ -76,15 +73,13 @@ day 3
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
 --------------------------------------------------------------------------------
-- demo project: blogging platform (medium, hashnode, ...)
-- models (Article.php)
-- migrations
-- GET /articles -> Article::all()
-- T: create a model, migration and index endpoint for your own project
+- assignments
+- R: https://canvas.sae.edu/courses/20093/assignments
+- T: start planning your project
 
 day 4
 --------------------------------------------------------------------------------
-- MVC review
+- MVC
 - views
 - router
 - controllers
@@ -93,28 +88,36 @@ day 4
 - R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
 - mvc.mermaid
 --------------------------------------------------------------------------------
+- demo project: blogging platform (medium, hashnode, ...)
+- models (Article.php)
+- migrations
+- GET /articles -> Article::all()
+- T: create a model, migration and index endpoint for your own project
+--------------------------------------------------------------------------------
 - ORM
 - object relational mapping
 - orm.md
 - R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
+
+day 5
 --------------------------------------------------------------------------------
 - crud
-- table plus: https://tableplus.com
 - index
 - create
 - update
 - destroy
+- table plus: https://tableplus.com
 - R: https://laravel.com/docs/11.x/eloquent#retrieving-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
 - R: https://laravel.com/docs/11.x/eloquent#deleting-models
 - T: make your own model crudable
-
-day 5
 --------------------------------------------------------------------------------
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
 - T: task add validation to your own model
+
+day 6
 --------------------------------------------------------------------------------
 - users
 - password hashing with casts
@@ -126,7 +129,7 @@ day 5
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 
-day 6
+day 7
 --------------------------------------------------------------------------------
 - relationships and erds (erd.mermaid)
 - R: https://phoenixnap.com/kb/database-relationships
@@ -138,7 +141,7 @@ day 6
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
 
-day 7
+day 8
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
@@ -153,7 +156,7 @@ day 7
 - R: https://laravel.com/docs/11.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
 
-day 8
+day 9
 --------------------------------------------------------------------------------
 - relationships (n:m)
 - tags n:m article
@@ -162,7 +165,7 @@ day 8
 - filter by tags
 - T: work on your projects
 
-day 9
+day 10
 --------------------------------------------------------------------------------
 - file uploads
 - UploadsController.php
@@ -172,7 +175,7 @@ day 9
 - EmailsController.php
 - T: send welcome email on register
 
-day 10 - 15
+day 11 - 15
 --------------------------------------------------------------------------------
 - extra topics:
 - json columns (user.profile etc.)

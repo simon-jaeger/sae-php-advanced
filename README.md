@@ -45,3 +45,14 @@ day 1
 - T: create another inheritance example
 - T: model another real world object
 
+day 2
+--------------------------------------------------------------------------------
+- headless architecture / spa
+- backend server api
+- frontend client gui
+- hello world and sum examples
+- R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
+- R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+- R: https://javascript.info/fetch
+- T: create a bmi app
+- T: create (and present) another small app

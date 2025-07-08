@@ -72,10 +72,6 @@ day 3
 - https://usebruno.com
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
---------------------------------------------------------------------------------
-- assignments
-- R: https://canvas.sae.edu/courses/20093/assignments
-- T: start planning your project
 
 day 4
 --------------------------------------------------------------------------------
@@ -98,6 +94,10 @@ day 4
 - object relational mapping
 - orm.md
 - R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
+--------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/20093/assignments
+- T: start planning your project
 
 day 5
 --------------------------------------------------------------------------------

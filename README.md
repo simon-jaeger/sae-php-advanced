@@ -56,3 +56,20 @@ day 2
 - R: https://javascript.info/fetch
 - T: create a bmi app
 - T: create (and present) another small app
+
+day 3
+--------------------------------------------------------------------------------
+- laravel: intro
+- laravel: installation
+- laravel: directory structure
+- laravel: namespaces and helpers
+- laravel: hello laravel endpoint
+- R: https://laravel.com
+--------------------------------------------------------------------------------
+- router
+- controllers
+- http exchange (request, response, status, body, headers)
+- https://usebruno.com
+- T: implement the missing example endpoints
+- T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
+

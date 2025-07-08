@@ -1,0 +1,18 @@
+meta {
+  name: caesar
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/examples/caesar
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "text": "abcz",
+    "shift": 3
+  }
+}

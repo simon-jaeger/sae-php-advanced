@@ -1,0 +1,17 @@
+meta {
+  name: random
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/examples/random
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "input": [1 ,2 ,3]
+  }
+}

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 class ExamplesController {
   function ping() {
@@ -19,7 +21,7 @@ class ExamplesController {
   }
 
   function random() {
-    $array = ['a','b','c'];
+    $array = ['a', 'b', 'c'];
     return Arr::random($array);
   }
 
@@ -30,7 +32,7 @@ class ExamplesController {
 
   function reverse(Request $request) {
     $text = $request->input('text');
-    return strrev($text);
+    return Str::reverse($text); // handles unicode like umlauts better than strrev()
   }
 
   function sum(Request $request) {
@@ -45,7 +47,7 @@ class ExamplesController {
 
   function palindrom(Request $request) {
     $text = $request->input('text');
-    return strrev($text) === $text ? 'yes' : 'no';
+    return Str::reverse($text) === $text ? 'yes' : 'no';
   }
 
   function anagram(Request $request) {
@@ -65,6 +67,25 @@ class ExamplesController {
       'celsius' => $celsius,
       'kelvin' => $celsius + 273.15,
       'fahrenheit' => ($celsius * 9 / 5) + 32,
+    ];
+  }
+
+  function caesar(Request $request) {
+    $text = $request->input('text');
+    $shift = $request->input('shift');
+
+    $alphabet = range('a', 'z');
+    $encrypted = '';
+
+    foreach (str_split($text) as $char) {
+      $from = array_search($char, $alphabet);
+      $to = ($from + $shift) % 26;
+      $encrypted .= $alphabet[$to];
+    }
+
+    return [
+      'original' => $text,
+      'encrypted' => $encrypted,
     ];
   }
 

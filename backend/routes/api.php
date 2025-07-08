@@ -23,6 +23,7 @@ Route::post('/examples/sum', [ExamplesController::class, 'sum']);
 Route::post('/examples/count', [ExamplesController::class, 'count']);
 Route::post('/examples/palindrom', [ExamplesController::class, 'palindrom']);
 Route::post('/examples/anagram', [ExamplesController::class, 'anagram']);
+Route::post('/examples/caesar', [ExamplesController::class, 'caesar']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 Route::post('/examples/rps', [ExamplesController::class, 'rps']);
 

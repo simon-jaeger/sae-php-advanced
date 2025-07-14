@@ -1,0 +1,17 @@
+meta {
+  name: index
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/articles
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "input": [1 ,2 ,3]
+  }
+}

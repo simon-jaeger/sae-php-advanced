@@ -88,4 +88,24 @@ class ExamplesController {
       'encrypted' => $encrypted,
     ];
   }
+
+  function rps(Request $request) {
+    $attack = $request->input('attack');
+    $defense = Arr::random(['rock', 'paper', 'scissors']);
+
+    $result = '';
+    if ($attack === $defense) $result = 'draw';
+    else if (
+      ($attack === 'rock' && $defense === 'scissors') ||
+      ($attack === 'paper' && $defense === 'rock') ||
+      ($attack === 'scissors' && $defense === 'paper')
+    ) $result = 'you win';
+    else $result = 'you lose';
+
+    return [
+      'attack' => $attack,
+      'defense' => $defense,
+      'result' => $result,
+    ];
+  }
 }

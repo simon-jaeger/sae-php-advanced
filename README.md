@@ -90,16 +90,16 @@ day 4
 - GET /articles -> Article::all()
 - T: create a model, migration and index endpoint for your own project
 --------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/21221/assignments
+- T: start planning your project
+
+day 5
+--------------------------------------------------------------------------------
 - ORM
 - object relational mapping
 - orm.md
 - R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
---------------------------------------------------------------------------------
-- assignments
-- R: https://canvas.sae.edu/courses/20093/assignments
-- T: start planning your project
-
-day 5
 --------------------------------------------------------------------------------
 - crud
 - index

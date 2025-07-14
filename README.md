@@ -73,3 +73,24 @@ day 3
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
 
+day 4
+--------------------------------------------------------------------------------
+- MVC
+- views
+- router
+- controllers
+- models
+- migrations
+- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- mvc.mermaid
+--------------------------------------------------------------------------------
+- demo project: blogging platform (medium, hashnode, ...)
+- models (Article.php)
+- migrations
+- GET /articles -> Article::all()
+- T: create a model, migration and index endpoint for your own project
+--------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/21221/assignments
+- T: start planning your project
+

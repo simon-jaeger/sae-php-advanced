@@ -12,8 +12,8 @@ class ArticlesController {
 
   function create(Request $request) {
     $article = new Article();
-    $article->title = 'foo';
-    $article->content = 'lorem ipsum';
+    $article->title = 'bar';
+    $article->content = 'dolor sit';
     $article->save();
     return $article;
   }

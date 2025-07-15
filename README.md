@@ -94,3 +94,26 @@ day 4
 - R: https://canvas.sae.edu/courses/21221/assignments
 - T: start planning your project
 
+
+day 5
+--------------------------------------------------------------------------------
+- ORM
+- object relational mapping
+- orm.md
+- R: https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/
+--------------------------------------------------------------------------------
+- crud
+- index
+- create
+- update
+- destroy
+- table plus: https://tableplus.com
+- R: https://laravel.com/docs/11.x/eloquent#retrieving-models
+- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/11.x/eloquent#deleting-models
+- T: make your own model crudable
+--------------------------------------------------------------------------------
+- validation
+- R: https://laravel.com/docs/11.x/validation#available-validation-rules
+- T: task add validation to your own model

@@ -170,23 +170,24 @@ day 10
 - file uploads
 - UploadsController.php
 - T: add image field to article
+
+day 11
 --------------------------------------------------------------------------------
 - emails
 - EmailsController.php
 - T: send welcome email on register
 
-day 11 - 15
+day 12 - 15
 --------------------------------------------------------------------------------
 - extra topics:
 - json columns (user.profile etc.)
 - admin user and impersonate
+- http requests to 3rd party services
 - cron jobs
 - signed urls
-- http request to 3rd party services
 - ...
 - T: short presentations about other mvc frameworks (e.g. Ruby on Rails, ASP.NET, Django, Spring, Adonis, ...)
 - T: other apps? e.g. casino with games like blackjack, roulette etc?
 - T: work on your projects
 - T: project progress presentations
-
 

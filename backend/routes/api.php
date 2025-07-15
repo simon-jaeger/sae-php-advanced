@@ -23,3 +23,5 @@ Route::post('/examples/rps', [ExamplesController::class, 'rps']);
 
 Route::get('/articles', [ArticlesController::class, 'index']);
 Route::post('/articles', [ArticlesController::class, 'create']);
+Route::patch('/articles', [ArticlesController::class, 'update']);
+Route::delete('/articles', [ArticlesController::class, 'destroy']);

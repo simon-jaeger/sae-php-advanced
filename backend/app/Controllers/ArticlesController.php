@@ -12,9 +12,25 @@ class ArticlesController {
 
   function create(Request $request) {
     $article = new Article();
-    $article->title = 'bar';
-    $article->content = 'dolor sit';
+    $article->title = $request->input('title');
+    $article->content = $request->input('content');
     $article->save();
+    return $article;
+  }
+
+  function update(Request $request) {
+    $id = $request->input('id');
+    $article = Article::findOrFail($id);
+    $article->title = $request->input('title');
+    $article->content = $request->input('content');
+    $article->save();
+    return $article;
+  }
+
+  function destroy(Request $request) {
+    $id = $request->input('id');
+    $article = Article::findOrFail($id);
+    $article->delete();
     return $article;
   }
 }

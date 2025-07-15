@@ -1,10 +1,10 @@
 meta {
-  name: create
+  name: destroy
   type: http
-  seq: 2
+  seq: 4
 }
 
-post {
+delete {
   url: {{baseUrl}}/articles
   body: json
   auth: none
@@ -12,7 +12,6 @@ post {
 
 body:json {
   {
-    "title": "laravel",
-    "content": "a php framework"
+    "id": 4
   }
 }

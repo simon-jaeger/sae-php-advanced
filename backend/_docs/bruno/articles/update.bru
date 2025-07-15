@@ -1,0 +1,19 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/articles
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 2,
+    "title": "changed title for id 2",
+    "content": "asdf asdf"
+  }
+}

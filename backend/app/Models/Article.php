@@ -15,8 +15,8 @@ class Article extends Model {
 
   protected $with = ['tags'];
   static $rules = [
-    'title' => ['required','min:1','max:200'],
-    'content' => ['required', 'min:1', 'max:6000'],
+    'title' => ['required_without:id','min:1','max:200'],
+    'content' => ['required_without:id', 'min:1', 'max:6000'],
   ];
 
   function tags() {

@@ -14,7 +14,7 @@ class Comment extends Model {
   #[Column] public string $updated_at;
 
   static $rules = [
-    'text' => ['required', 'min:1', 'max: 200'],
-    'article_id' => ['required', 'exists:articles,id'],
+    'text' => ['required_without:id', 'min:1', 'max: 200'],
+    'article_id' => ['required_without:id', 'exists:articles,id'],
   ];
 }

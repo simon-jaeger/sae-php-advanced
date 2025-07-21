@@ -20,8 +20,8 @@ class User extends Model {
   protected $hidden = ['password'];
   protected $casts = ['password' => 'hashed'];
   static $rules = [
-    'email' => ['required', 'email', 'unique:users,email'],
-    'password' => ['sometimes', 'min:8'],
+    'email' => ['required_without:id', 'email', 'unique:users,email'],
+    'password' => ['required_without:id', 'min:8'],
     'profile' => ['array'],
   ];
 

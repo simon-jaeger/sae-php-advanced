@@ -117,3 +117,16 @@ day 5
 - validation
 - R: https://laravel.com/docs/11.x/validation#available-validation-rules
 - T: task add validation to your own model
+
+day 6
+--------------------------------------------------------------------------------
+- users
+- password hashing with casts
+- T: add more fields to your user
+--------------------------------------------------------------------------------
+- authentication
+- api tokens
+- authorization header
+- middleware
+- R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
+

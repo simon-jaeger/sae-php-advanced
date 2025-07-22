@@ -22,4 +22,8 @@ class User extends Model {
     'email' => ['required_without:id', 'email', 'unique:users,email'],
     'password' => ['required_without:id', 'min:8'],
   ];
+
+  function articles() {
+    return $this->hasMany(Article::class);
+  }
 }

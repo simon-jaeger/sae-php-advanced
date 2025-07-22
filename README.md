@@ -130,3 +130,16 @@ day 6
 - middleware
 - R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
 
+day 7
+--------------------------------------------------------------------------------
+- relationships and erds (erd.mermaid)
+- R: https://phoenixnap.com/kb/database-relationships
+- R: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
+- T: create an erd for your own project
+--------------------------------------------------------------------------------
+- relationships (1:n)
+- articles n:1 user
+- R: https://laravel.com/docs/11.x/eloquent-relationships
+- T: add comments (n:1 article, n:1 user)
+- T: add a 1:n relationship between your own models
+

@@ -1,0 +1,21 @@
+meta {
+  name: show
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/pokemon?id=151
+  body: none
+  auth: none
+}
+
+params:query {
+  id: 151
+}
+
+body:json {
+  {
+    "input": [1 ,2 ,3]
+  }
+}

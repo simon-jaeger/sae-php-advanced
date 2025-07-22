@@ -108,14 +108,14 @@ day 5
 - update
 - destroy
 - table plus: https://tableplus.com
-- R: https://laravel.com/docs/11.x/eloquent#retrieving-models
-- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
-- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
-- R: https://laravel.com/docs/11.x/eloquent#deleting-models
+- R: https://laravel.com/docs/12.x/eloquent#retrieving-models
+- R: https://laravel.com/docs/12.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/12.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/12.x/eloquent#deleting-models
 - T: make your own model crudable
 --------------------------------------------------------------------------------
 - validation
-- R: https://laravel.com/docs/11.x/validation#available-validation-rules
+- R: https://laravel.com/docs/12.x/validation#available-validation-rules
 - T: task add validation to your own model
 
 day 6
@@ -128,7 +128,7 @@ day 6
 - api tokens
 - authorization header
 - middleware
-- R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
+- R: https://laravel.com/docs/12.x/sanctum#api-token-authentication
 
 day 7
 --------------------------------------------------------------------------------
@@ -139,7 +139,7 @@ day 7
 --------------------------------------------------------------------------------
 - relationships (1:n)
 - articles n:1 user
-- R: https://laravel.com/docs/11.x/eloquent-relationships
+- R: https://laravel.com/docs/12.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
 

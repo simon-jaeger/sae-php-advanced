@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/articles
+  url: {{baseUrl}}/comments
   body: json
   auth: none
 }
@@ -16,7 +16,7 @@ headers {
 
 body:json {
   {
-    "title": "Alpha",
-    "content": "..."
+    "text": "awesome!",
+    "article_id": 1
   }
 }

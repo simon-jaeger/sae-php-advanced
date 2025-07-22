@@ -1,11 +1,11 @@
 meta {
-  name: create
+  name: update
   type: http
-  seq: 2
+  seq: 3
 }
 
-post {
-  url: {{baseUrl}}/articles
+patch {
+  url: {{baseUrl}}/comments
   body: json
   auth: none
 }
@@ -16,7 +16,7 @@ headers {
 
 body:json {
   {
-    "title": "Alpha",
-    "content": "..."
+    "id": 21,
+    "text": "changed comment"
   }
 }

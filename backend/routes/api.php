@@ -5,6 +5,7 @@ use App\Controllers\ExamplesController;
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\UserController;
+use App\Controllers\CommentsController;
 
 // example endpoints
 Route::get('/hello', function () {
@@ -39,4 +40,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/articles', [ArticlesController::class, 'create']);
   Route::patch('/articles', [ArticlesController::class, 'update']);
   Route::delete('/articles', [ArticlesController::class, 'destroy']);
+
+  Route::get('/comments', [CommentsController::class, 'index']);
+  Route::post('/comments', [CommentsController::class, 'create']);
+  Route::patch('/comments', [CommentsController::class, 'update']);
+  Route::delete('/comments', [CommentsController::class, 'destroy']);
 });

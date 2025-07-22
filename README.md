@@ -140,15 +140,26 @@ day 7
 - articles n:1 user
 - R: https://laravel.com/docs/12.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
-- T: add a 1:n relationship between your own models
+- T: add a 1:n relationship to your project
 
 day 8
+--------------------------------------------------------------------------------
+- relationships (n:m)
+- tags n:m article
+- crud tags
+- assign tags
+- filter by tags
+- T: add a n:m relationship to your project
+
+day 9
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
 - R: https://laravel.com/docs/12.x/seeding
 - T: seed comments
 - T: seed your own models
+
+day 10
 --------------------------------------------------------------------------------
 - filter
 - order
@@ -157,33 +168,24 @@ day 8
 - R: https://laravel.com/docs/12.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
 
-day 9
---------------------------------------------------------------------------------
-- relationships (n:m)
-- tags n:m article
-- crud tags
-- assign tags
-- filter by tags
-- T: work on your projects
-
-day 10
+day 11
 --------------------------------------------------------------------------------
 - file uploads
 - UploadsController.php
 - T: add image field to article
 
-day 11
+day 12
 --------------------------------------------------------------------------------
 - emails
 - EmailsController.php
 - T: send welcome email on register
 
-day 12 - 15
+day 13 - 15
 --------------------------------------------------------------------------------
 - extra topics:
 - json columns (user.profile etc.)
 - admin user and impersonate
-- http requests to 3rd party services
+- http requests to 3rd party services (PokemonController.php, task: wrap another 3rd party service)
 - cron jobs
 - signed urls
 - ...

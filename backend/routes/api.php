@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
@@ -8,7 +9,7 @@ use App\Controllers\MailsController;
 use App\Controllers\TagsController;
 use App\Controllers\UploadsController;
 use App\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
+use App\Controllers\PokemonController;
 
 // example endpoints
 Route::get('/', function () {
@@ -33,6 +34,8 @@ Route::post('/user', [UserController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
 Route::get('/comments', [CommentsController::class, 'index']);
 Route::get('/tags', [TagsController::class, 'index']);
+
+Route::get('/pokemon', [PokemonController::class, 'show']);
 
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {

@@ -107,14 +107,14 @@ day 5
 - update
 - destroy
 - table plus: https://tableplus.com
-- R: https://laravel.com/docs/11.x/eloquent#retrieving-models
-- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
-- R: https://laravel.com/docs/11.x/eloquent#inserting-and-updating-models
-- R: https://laravel.com/docs/11.x/eloquent#deleting-models
+- R: https://laravel.com/docs/12.x/eloquent#retrieving-models
+- R: https://laravel.com/docs/12.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/12.x/eloquent#inserting-and-updating-models
+- R: https://laravel.com/docs/12.x/eloquent#deleting-models
 - T: make your own model crudable
 --------------------------------------------------------------------------------
 - validation
-- R: https://laravel.com/docs/11.x/validation#available-validation-rules
+- R: https://laravel.com/docs/12.x/validation#available-validation-rules
 - T: task add validation to your own model
 
 day 6
@@ -127,17 +127,18 @@ day 6
 - api tokens
 - authorization header
 - middleware
-- R: https://laravel.com/docs/11.x/sanctum#api-token-authentication
+- R: https://laravel.com/docs/12.x/sanctum#api-token-authentication
 
 day 7
 --------------------------------------------------------------------------------
 - relationships and erds (erd.mermaid)
 - R: https://phoenixnap.com/kb/database-relationships
+- R: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 - T: create an erd for your own project
 --------------------------------------------------------------------------------
 - relationships (1:n)
 - articles n:1 user
-- R: https://laravel.com/docs/11.x/eloquent-relationships
+- R: https://laravel.com/docs/12.x/eloquent-relationships
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
 
@@ -145,7 +146,7 @@ day 8
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
-- R: https://laravel.com/docs/11.x/seeding
+- R: https://laravel.com/docs/12.x/seeding
 - T: seed comments
 - T: seed your own models
 --------------------------------------------------------------------------------
@@ -153,7 +154,7 @@ day 8
 - order
 - limit, offset
 - T: add filter etc. to comments
-- R: https://laravel.com/docs/11.x/queries#basic-where-clauses
+- R: https://laravel.com/docs/12.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
 
 day 9

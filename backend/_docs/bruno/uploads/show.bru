@@ -1,13 +1,17 @@
 meta {
-  name: create
+  name: show
   type: http
   seq: 2
 }
 
-post {
-  url: {{baseUrl}}/articles
-  body: json
+get {
+  url: {{baseUrl}}/uploads/:id
+  body: none
   auth: none
+}
+
+params:path {
+  id: 1
 }
 
 headers {
@@ -16,7 +20,6 @@ headers {
 
 body:json {
   {
-    "title": "alpha",
-    "content": "..."
+    "input": [1 ,2 ,3]
   }
 }

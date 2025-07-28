@@ -5,11 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/comments
+  url: {{baseUrl}}/uploads
   body: none
   auth: none
 }
 
 headers {
   Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "input": [1 ,2 ,3]
+  }
 }

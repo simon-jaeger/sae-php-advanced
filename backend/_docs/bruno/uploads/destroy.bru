@@ -1,11 +1,11 @@
 meta {
-  name: create
+  name: destroy
   type: http
-  seq: 2
+  seq: 5
 }
 
-post {
-  url: {{baseUrl}}/articles
+delete {
+  url: {{baseUrl}}/uploads
   body: json
   auth: none
 }
@@ -16,7 +16,6 @@ headers {
 
 body:json {
   {
-    "title": "alpha",
-    "content": "..."
+    "id": 1
   }
 }

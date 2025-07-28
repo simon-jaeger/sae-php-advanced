@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentsController {
   function index(Request $request) {
-    return Auth::user()->comments()->get();
+    return Comment::all();
   }
 
   function create(Request $request) {

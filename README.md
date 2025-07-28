@@ -143,3 +143,16 @@ day 7
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
 
+day 8
+--------------------------------------------------------------------------------
+- relationships (n:m)
+- tags n:m article
+- crud tags
+- assign tags
+- T: add a n:m relationship to your project
+--------------------------------------------------------------------------------
+- seeding
+- https://fakerphp.github.io
+- R: https://laravel.com/docs/12.x/seeding
+- T: seed your own models
+

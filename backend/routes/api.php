@@ -34,6 +34,7 @@ Route::post('/user', [UserController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
 Route::get('/comments', [CommentsController::class, 'index']);
 Route::get('/tags', [TagsController::class, 'index']);
+Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 
 Route::get('/pokemon', [PokemonController::class, 'show']);
 
@@ -57,7 +58,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/tags', [TagsController::class, 'create']);
   Route::put('/tags/assign', [TagsController::class, 'assign']);
 
+  Route::get('/uploads', [UploadsController::class, 'index']);
   Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::patch('/uploads', [UploadsController::class, 'update']);
   Route::delete('/uploads', [UploadsController::class, 'destroy']);
 
   Route::post('/mails/send', [MailsController::class, 'send']);

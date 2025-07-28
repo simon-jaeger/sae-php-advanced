@@ -1,10 +1,10 @@
 meta {
-  name: destroy
+  name: update
   type: http
-  seq: 5
+  seq: 4
 }
 
-delete {
+patch {
   url: {{baseUrl}}/uploads
   body: json
   auth: none
@@ -16,6 +16,7 @@ headers {
 
 body:json {
   {
-    "id": 1
+    "id": 1,
+    "is_public": true
   }
 }

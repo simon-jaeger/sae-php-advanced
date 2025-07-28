@@ -1,12 +1,12 @@
 meta {
-  name: destroy
+  name: index
   type: http
-  seq: 5
+  seq: 1
 }
 
-delete {
+get {
   url: {{baseUrl}}/uploads
-  body: json
+  body: none
   auth: none
 }
 
@@ -16,6 +16,6 @@ headers {
 
 body:json {
   {
-    "id": 1
+    "input": [1 ,2 ,3]
   }
 }

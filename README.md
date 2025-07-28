@@ -177,10 +177,14 @@ day 10
 
 day 11
 --------------------------------------------------------------------------------
-- NOTE: rename folder public/uploads, conflicts with endpoints
+- NOTE: move public/uploads to storage/app/private
+- NOTE: change filesystems.php to use local
+- NOTE: change auth.php guard to sanctum
+- NOTE: remove default content type in app.php
 - file uploads
 - Uploads: basic crud
 - Uploads: file write/read
+- route params
 - T: add uploads to your project
 
 day 12

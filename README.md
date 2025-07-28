@@ -177,7 +177,7 @@ day 10
 
 day 11
 --------------------------------------------------------------------------------
-- NOTE: delete folder public/uploads, conflicts with endpoints
+- NOTE: rename folder public/uploads, conflicts with endpoints
 - file uploads
 - Uploads: basic crud
 - Uploads: file write/read

@@ -177,8 +177,10 @@ day 10
 
 day 11
 --------------------------------------------------------------------------------
+- NOTE: delete folder public/uploads, conflicts with endpoints
 - file uploads
-- UploadsController.php
+- Uploads: basic crud
+- Uploads: file write/read
 - T: add uploads to your project
 
 day 12

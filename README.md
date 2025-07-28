@@ -148,37 +148,44 @@ day 8
 - tags n:m article
 - crud tags
 - assign tags
-- filter by tags
 - T: add a n:m relationship to your project
-
-day 9
 --------------------------------------------------------------------------------
 - seeding
 - https://fakerphp.github.io
 - R: https://laravel.com/docs/12.x/seeding
-- T: seed comments
 - T: seed your own models
+
+day 9
+--------------------------------------------------------------------------------
+- filter by column values
+- filter by tags
+- order
+- limit, offset
+- R: https://laravel.com/docs/12.x/queries#basic-where-clauses
+- T: add filter etc. to your own entities
+- T: prepare for progress presentations
 
 day 10
 --------------------------------------------------------------------------------
-- filter
-- order
-- limit, offset
-- T: add filter etc. to comments
-- R: https://laravel.com/docs/12.x/queries#basic-where-clauses
-- T: add filter etc. to your own entities
+- progress presentations (5-10min)
+- database and structure
+- endpoints in bruno
+- auth system
+- crud features
+- unique/special features
+- questions and discussion with class
 
 day 11
 --------------------------------------------------------------------------------
 - file uploads
 - UploadsController.php
-- T: add image field to article
+- T: add uploads to your project
 
 day 12
 --------------------------------------------------------------------------------
 - emails
 - EmailsController.php
-- T: send welcome email on register
+- T: send emails in your project (e.g. welcome on user create)
 
 day 13 - 15
 --------------------------------------------------------------------------------

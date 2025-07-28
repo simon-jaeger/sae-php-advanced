@@ -6,6 +6,7 @@ use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\UserController;
 use App\Controllers\CommentsController;
+use App\Controllers\TagsController;
 
 // example endpoints
 Route::get('/hello', function () {
@@ -45,4 +46,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/comments', [CommentsController::class, 'create']);
   Route::patch('/comments', [CommentsController::class, 'update']);
   Route::delete('/comments', [CommentsController::class, 'destroy']);
+
+  Route::get('/tags', [TagsController::class, 'index']);
+  Route::post('/tags', [TagsController::class, 'create']);
+  Route::put('/tags/assign', [TagsController::class, 'assign']);
 });

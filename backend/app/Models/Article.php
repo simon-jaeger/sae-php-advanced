@@ -13,8 +13,14 @@ class Article extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
+  protected $with = ['tags'];
+
   static $rules = [
     'title' => ['required_without:id', 'min:1', 'max:99'],
     'content' => ['required_without:id', 'min:1', 'max:9999'],
   ];
+
+  function tags() {
+    return $this->belongsToMany(Tag::class);
+  }
 }

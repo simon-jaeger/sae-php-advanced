@@ -8,22 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticlesController {
   function index(Request $request) {
-    $query = Article::query();
-
-    // filter by id
     $id = $request->input('id');
-    if ($id) return $query->where('id', $id)->firstOrFail();
-
-    // filter by user
     $userId = $request->input('user_id');
-    if ($userId) $query->where('user_id', $userId);
-
-    // filter by title
     $title = $request->input('title');
-    if ($title) $query->where('title', 'like', "%$title%");
-
-    // filter by tags
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'asc');
+    $limit = $request->input('limit', 1000);
+    $offset = $request->input('offset', 0);
     $tagIds = $request->input('tag_ids');
+
+    $query = Article::query();
+    if ($id) return $query->where('id', $id)->firstOrFail();
+    if ($userId) $query->where('user_id', $userId);
+    if ($title) $query->where('title', 'like', "%$title%");
     if ($tagIds) {
       $tagIds = explode(',', $tagIds);
       // $query->has('tags'); // articles that have tags
@@ -36,19 +33,26 @@ class ArticlesController {
       );
     }
 
-    // order
-    $orderBy = $request->input('order_by', 'created_at');
-    $orderDir = $request->input('order_dir', 'asc');
     $query->orderBy($orderBy, $orderDir);
-
-    // limit, offset
-    $limit = $request->input('limit', 1000);
-    $offset = $request->input('offset', 0);
     $query->limit($limit);
     $query->offset($offset);
 
     // return $query->toSql(); // for debugging
     return $query->get();
+  }
+
+  function search(Request $request) {
+    $title = $request->input('title');
+    return Article::select('id', 'title')
+      ->get()
+      ->map(fn($a) => [
+        'id' => $a->id,
+        'title' => $a->title,
+        'distance' => levenshtein($title, $a->title),
+        'similarity' => similar_text($title, $a->title),
+      ])
+      ->sortBy('distance')
+      ->values();
   }
 
   function create(Request $request) {

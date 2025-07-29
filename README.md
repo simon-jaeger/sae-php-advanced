@@ -158,24 +158,14 @@ day 8
 day 9
 --------------------------------------------------------------------------------
 - filter by column values
-- filter by tags
 - order
 - limit, offset
+- fuzzy search
+- filter by tags
 - R: https://laravel.com/docs/12.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities
-- T: prepare for progress presentations
 
 day 10
---------------------------------------------------------------------------------
-- progress presentations (5-10min)
-- database and structure
-- endpoints in bruno
-- auth system
-- crud features
-- unique/special features
-- questions and discussion with class
-
-day 11
 --------------------------------------------------------------------------------
 - NOTE: move public/uploads to storage/app/private
 - NOTE: change filesystems.php to use local
@@ -187,13 +177,24 @@ day 11
 - route params
 - T: add uploads to your project
 
-day 12
+day 11
 --------------------------------------------------------------------------------
 - emails
 - EmailsController.php
 - T: send emails in your project (e.g. welcome on user create)
+- T: prepare for progress presentations
 
-day 13 - 15
+day 12 - 13
+--------------------------------------------------------------------------------
+- progress presentations (5-10min)
+- database and structure
+- endpoints in bruno
+- auth system
+- crud features
+- unique/special features
+- questions and discussion with class
+
+day 14 - 15
 --------------------------------------------------------------------------------
 - extra topics:
 - json columns (user.profile etc.)

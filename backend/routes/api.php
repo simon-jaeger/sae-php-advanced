@@ -32,6 +32,7 @@ Route::post('/examples/rps', [ExamplesController::class, 'rps']);
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/user', [UserController::class, 'create']);
 Route::get('/articles', [ArticlesController::class, 'index']);
+Route::get('/articles/search', [ArticlesController::class, 'search']);
 Route::get('/comments', [CommentsController::class, 'index']);
 Route::get('/tags', [TagsController::class, 'index']);
 Route::get('/uploads/{id}', [UploadsController::class, 'show']);

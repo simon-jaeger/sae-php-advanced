@@ -161,6 +161,7 @@ day 9
 - filter by column values
 - order
 - limit, offset
+- fuzzy search
 - filter by tags
 - R: https://laravel.com/docs/12.x/queries#basic-where-clauses
 - T: add filter etc. to your own entities

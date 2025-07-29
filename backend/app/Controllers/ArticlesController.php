@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 
 class ArticlesController {
   function index(Request $request) {

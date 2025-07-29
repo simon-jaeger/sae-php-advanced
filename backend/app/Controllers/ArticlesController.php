@@ -8,7 +8,26 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticlesController {
   function index(Request $request) {
-    return Article::all();
+
+    $id = $request->input('id');
+    $userId = $request->input('user_id');
+    $title = $request->input('title');
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'asc');
+    $limit = $request->input('limit', 1000);
+    $offset = $request->input('offset', 0);
+    $tagIds = $request->input('tag_ids');
+
+    $query = Article::query();
+    if ($id) return $query->where('id', $id)->firstOrFail();
+    if ($userId) $query->where('user_id', $userId);
+    if ($title) $query->where('title', 'like', "%$title%");
+    $query->orderBy($orderBy, $orderDir);
+    $query->limit($limit);
+    $query->offset($offset);
+
+    // return $query->toSql(); // for debugging
+    return $query->get();
   }
 
   function create(Request $request) {

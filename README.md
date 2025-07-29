@@ -156,3 +156,13 @@ day 8
 - R: https://laravel.com/docs/12.x/seeding
 - T: seed your own models
 
+day 9
+--------------------------------------------------------------------------------
+- filter by column values
+- order
+- limit, offset
+- filter by tags
+- R: https://laravel.com/docs/12.x/queries#basic-where-clauses
+- T: add filter etc. to your own entities
+- T: prepare for progress presentations
+

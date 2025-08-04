@@ -16,9 +16,6 @@ class MailsController {
     $mail = new WelcomeMail($user);
     // return $mail->render(); // for testing
     Mail::send($mail);
-    return [
-      'to' => $mail->to,
-      'subject' => $mail->subject,
-    ];
+    return $mail->to;
   }
 }

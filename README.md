@@ -172,14 +172,17 @@ day 10
 - Uploads: file write/read
 - route params
 - T: add uploads to your project
-
-day 11
 --------------------------------------------------------------------------------
 - emails
 - Mailables (app/mails/WelcomeMail.php)
 - EmailsController.php
 - ethereal
 - T: send emails in your project (e.g. welcome on user create)
+
+day 11
+--------------------------------------------------------------------------------
+- admin user and impersonate
+- json columns (user.profile etc.)
 - T: prepare for progress presentations
 
 day 12
@@ -194,19 +197,17 @@ day 12
 
 day 13
 --------------------------------------------------------------------------------
-- admin user and impersonate
-- json columns (user.profile etc.)
+- http requests to 3rd party services 
+- PokemonController.php
+- T: wrap another 3rd party service
 - T: prepare for advanced topic presentations
 
 day 14
 --------------------------------------------------------------------------------
-- advanced topic presentations (5-10min)
+- advanced topic presentations (5-10min) with handout (1 page)
 - show an advanced (laravel/backend) feature of your choice
 
 day 15
 --------------------------------------------------------------------------------
-- http requests to 3rd party services 
-- PokemonController.php
-- T: wrap another 3rd party service
 - T: work on your projects
 

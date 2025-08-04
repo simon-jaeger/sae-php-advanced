@@ -7,6 +7,7 @@ use App\Controllers\AuthController;
 use App\Controllers\UserController;
 use App\Controllers\CommentsController;
 use App\Controllers\TagsController;
+use App\Controllers\UploadsController;
 
 // example endpoints
 Route::get('/hello', function () {
@@ -32,6 +33,7 @@ Route::get('/articles', [ArticlesController::class, 'index']);
 Route::get('/articles/search', [ArticlesController::class, 'search']);
 Route::get('/comments', [CommentsController::class, 'index']);
 Route::get('/tags', [TagsController::class, 'index']);
+Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -51,4 +53,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
   Route::post('/tags', [TagsController::class, 'create']);
   Route::put('/tags/assign', [TagsController::class, 'assign']);
+
+  Route::get('/uploads', [UploadsController::class, 'index']);
+  Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::patch('/uploads', [UploadsController::class, 'update']);
+  Route::delete('/uploads', [UploadsController::class, 'destroy']);
 });

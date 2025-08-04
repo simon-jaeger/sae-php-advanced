@@ -23,7 +23,6 @@ class DefaultHeaders {
     $request->headers->set('X-Requested-With', 'XMLHttpRequest');
     $request->headers->set('Content-Type', 'application/json');
     $response = $next($request);
-    $response->headers->set('Content-Type', 'text');
     return $response;
   }
 }

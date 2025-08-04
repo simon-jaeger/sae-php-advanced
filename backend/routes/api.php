@@ -8,6 +8,7 @@ use App\Controllers\UserController;
 use App\Controllers\CommentsController;
 use App\Controllers\TagsController;
 use App\Controllers\UploadsController;
+use App\Controllers\MailsController;
 
 // example endpoints
 Route::get('/hello', function () {
@@ -58,4 +59,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/uploads', [UploadsController::class, 'create']);
   Route::patch('/uploads', [UploadsController::class, 'update']);
   Route::delete('/uploads', [UploadsController::class, 'destroy']);
+
+  Route::post('/mails/send', [MailsController::class, 'send']);
 });

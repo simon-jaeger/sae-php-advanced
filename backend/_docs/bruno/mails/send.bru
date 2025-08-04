@@ -1,0 +1,15 @@
+meta {
+  name: send
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/mails/send
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

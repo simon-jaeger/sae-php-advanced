@@ -167,3 +167,16 @@ day 9
 - T: add filter etc. to your own entities
 - T: prepare for progress presentations
 
+day 10
+--------------------------------------------------------------------------------
+- file uploads
+- Uploads: basic crud
+- Uploads: file write/read
+- route params
+- T: add uploads to your project
+--------------------------------------------------------------------------------
+- emails
+- Mailables (app/mails/WelcomeMail.php)
+- EmailsController.php
+- ethereal
+- T: send emails in your project (e.g. welcome on user create)

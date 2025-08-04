@@ -167,10 +167,6 @@ day 9
 
 day 10
 --------------------------------------------------------------------------------
-- NOTE: move public/uploads to storage/app/private
-- NOTE: change filesystems.php to use local
-- NOTE: change auth.php guard to sanctum
-- NOTE: remove default content type in app.php
 - file uploads
 - Uploads: basic crud
 - Uploads: file write/read
@@ -180,11 +176,13 @@ day 10
 day 11
 --------------------------------------------------------------------------------
 - emails
+- Mailables (app/mails/WelcomeMail.php)
 - EmailsController.php
+- ethereal
 - T: send emails in your project (e.g. welcome on user create)
 - T: prepare for progress presentations
 
-day 12 - 13
+day 12
 --------------------------------------------------------------------------------
 - progress presentations (5-10min)
 - database and structure
@@ -194,17 +192,21 @@ day 12 - 13
 - unique/special features
 - questions and discussion with class
 
-day 14 - 15
+day 13
 --------------------------------------------------------------------------------
-- extra topics:
-- json columns (user.profile etc.)
 - admin user and impersonate
-- http requests to 3rd party services (PokemonController.php, task: wrap another 3rd party service)
-- cron jobs
-- signed urls
-- ...
-- T: short presentations about other mvc frameworks (e.g. Ruby on Rails, ASP.NET, Django, Spring, Adonis, ...)
-- T: other apps? e.g. casino with games like blackjack, roulette etc?
+- json columns (user.profile etc.)
+- T: prepare for advanced topic presentations
+
+day 14
+--------------------------------------------------------------------------------
+- advanced topic presentations (5-10min)
+- show an advanced (laravel/backend) feature of your choice
+
+day 15
+--------------------------------------------------------------------------------
+- http requests to 3rd party services 
+- PokemonController.php
+- T: wrap another 3rd party service
 - T: work on your projects
-- T: project progress presentations
 

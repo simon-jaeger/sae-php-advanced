@@ -180,3 +180,10 @@ day 10
 - EmailsController.php
 - ethereal
 - T: send emails in your project (e.g. welcome on user create)
+
+day 11
+--------------------------------------------------------------------------------
+- admin user and impersonate
+- json columns (user.profile etc.)
+- T: prepare for progress presentations
+

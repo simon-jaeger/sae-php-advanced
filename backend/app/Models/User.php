@@ -12,15 +12,22 @@ class User extends Model {
   #[Column] public int $id;
   #[Column] public string $email;
   #[Column] public string $password;
+  #[Column] public bool $is_admin;
+  #[Column] public array $profile;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
   protected $hidden = ['password'];
-  protected $casts = ['password' => 'hashed'];
+  protected $casts = [
+    'password' => 'hashed',
+    'is_admin' => 'boolean',
+    'profile' => 'array'
+  ];
 
   static $rules = [
     'email' => ['required_without:id', 'email', 'unique:users,email'],
     'password' => ['required_without:id', 'min:8'],
+    'profile' => ['array'],
   ];
 
   function articles() {

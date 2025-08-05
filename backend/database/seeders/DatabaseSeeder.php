@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder {
     User::create([
       'email' => 'alpha@mailinator.com',
       'password' => 'password',
+      'is_admin' => true,
     ]);
 
     User::create([

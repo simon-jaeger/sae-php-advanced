@@ -1,0 +1,21 @@
+meta {
+  name: pokemon
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/http/pokemon
+  body: json
+  auth: none
+}
+
+params:query {
+  ~ids: 1,2,3
+}
+
+body:json {
+  {
+    "ids": [150,151]
+  }
+}

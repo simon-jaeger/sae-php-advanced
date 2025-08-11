@@ -1,0 +1,17 @@
+meta {
+  name: prompt
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/ai/prompt
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "prompt": "what color do you get if you mix red and blue"
+  }
+}

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\WelcomeMail;
+use App\Mails\WelcomeMail;
 
 // basic mailing example
 // uses https://ethereal.email/ during local development (see also config/mail.php)

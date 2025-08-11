@@ -187,3 +187,29 @@ day 11
 - json columns (user.profile etc.)
 - T: prepare for progress presentations
 
+day 12
+--------------------------------------------------------------------------------
+- progress presentations (5-10min)
+- database and structure
+- endpoints in bruno
+- auth system
+- crud features
+- unique/special features
+- questions and discussion with class
+
+day 13
+--------------------------------------------------------------------------------
+- http requests to 3rd party services 
+- HttpController.php
+- T: wrap another 3rd party service
+--------------------------------------------------------------------------------
+- local llms with ollama
+- install gemma3:1b
+- AiController.php
+- T: create another ai endpoint
+
+day 14/15
+--------------------------------------------------------------------------------
+- puffer and questions
+- T: work on your projects
+

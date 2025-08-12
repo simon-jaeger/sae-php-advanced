@@ -11,6 +11,7 @@ use App\Controllers\UploadsController;
 use App\Controllers\MailsController;
 use App\Controllers\HttpController;
 use App\Controllers\AiController;
+use App\Controllers\AvatarsController;
 
 // example endpoints
 Route::get('/hello', function () {
@@ -40,6 +41,7 @@ Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 Route::get('/http/github', [HttpController::class, 'github']);
 Route::get('/http/pokemon', [HttpController::class, 'pokemon']);
 Route::post('/ai/prompt', [AiController::class, 'prompt']);
+Route::get('/avatars/{id}', [AvatarsController::class, 'show']);
 
 // user endpoints
 Route::middleware(['auth:sanctum'])->group(function () {

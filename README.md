@@ -208,7 +208,13 @@ day 13
 - AiController.php
 - T: create another ai endpoint
 
-day 14/15
+day 14
+--------------------------------------------------------------------------------
+- dynamic image generation (svg)
+- AvatarsController.php
+- T: create another image generation endpoint
+
+day 15
 --------------------------------------------------------------------------------
 - puffer and questions
 - T: work on your projects

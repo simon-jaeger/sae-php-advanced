@@ -20,5 +20,25 @@ class ScrapeController {
   }
 
   function sae(Request $request) {
+    $response = Http::get('https://infoscreen.sae.ch');
+    $html = $response->body();
+    $crawler = new Crawler($html);
+    $title = $crawler->filter('.titelUnterrichte')->text();
+    $lessons = $crawler->filter('.unterrichtsBox')->each(function (Crawler $x) {
+      $class = $x->filter('.unterrichtsBox_Klasse')->text();
+      $timeAndLocation = $x->filter('.unterrichtsBox_Uhrzeit')->text();
+      $lessonAndTeacher = $x->filter('.unterrichtsBox_UnterrichtUndDozent')->text();
+      return [
+        'class' => $class,
+        'time' => explode(' · ', $timeAndLocation)[0],
+        'location' => explode(' · ', $timeAndLocation)[1],
+        'lesson' => explode(' · ', $lessonAndTeacher)[0],
+        'teacher' => explode(' · ', $lessonAndTeacher)[1],
+      ];
+    });
+    return [
+      'title' => $title,
+      'lessons' => $lessons,
+    ];
   }
 }

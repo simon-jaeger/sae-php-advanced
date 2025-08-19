@@ -1,0 +1,15 @@
+meta {
+  name: create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/ttt
+  body: json
+  auth: none
+}
+
+headers {
+  ~Authorization: Bearer {{token}}
+}

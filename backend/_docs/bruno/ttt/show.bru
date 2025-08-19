@@ -1,0 +1,21 @@
+meta {
+  name: show
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/ttt
+  body: json
+  auth: none
+}
+
+headers {
+  ~Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "id": "80538d2e-7b31-4965-922f-69b402748bfe"
+  }
+}

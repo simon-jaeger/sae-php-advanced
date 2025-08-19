@@ -213,9 +213,15 @@ day 14
 - dynamic image generation (svg)
 - AvatarsController.php
 - T: create another image generation endpoint
+--------------------------------------------------------------------------------
+- web scraping
+- composer require symfony/dom-crawler
+- https://symfony.com/doc/current/components/dom_crawler.html 
+- T: scrape infoscreen.sae.ch and transform the extracted data into json
 
 day 15
 --------------------------------------------------------------------------------
+- T: tic-tac-toe
 - puffer and questions
 - T: work on your projects
 

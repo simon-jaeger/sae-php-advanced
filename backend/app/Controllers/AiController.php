@@ -5,8 +5,6 @@ namespace App\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-// https://github.com/ollama/ollama/blob/main/docs/api.md
-
 class AiController {
   function prompt(Request $request) {
     $prompt = $request->input('prompt');

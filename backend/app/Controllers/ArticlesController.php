@@ -56,7 +56,7 @@ class ArticlesController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(Article::$rules);
+    $payload = $request->validate(Article::rules());
     // $article = Article::create($payload);
     $article = Auth::user()->articles()->create($payload);
     return $article;
@@ -66,7 +66,7 @@ class ArticlesController {
     $id = $request->input('id');
     // $article = Article::findOrFail($id);
     $article = Auth::user()->articles()->findOrFail($id);
-    $payload = $request->validate(Article::$rules);
+    $payload = $request->validate(Article::rules(true));
     $article->update($payload);
     return $article;
   }

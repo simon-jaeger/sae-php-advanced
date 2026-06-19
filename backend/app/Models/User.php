@@ -18,17 +18,20 @@ class User extends Model {
   #[Column] public string $updated_at;
 
   protected $hidden = ['password'];
+
   protected $casts = [
     'password' => 'hashed',
     'is_admin' => 'boolean',
     'profile' => 'array'
   ];
 
-  static $rules = [
-    'email' => ['required_without:id', 'email', 'unique:users,email'],
-    'password' => ['required_without:id', 'min:8'],
-    'profile' => ['array'],
-  ];
+  static function rules($update = false) {
+    return [
+      'email' => [$update ? 'sometimes' : 'required', 'email', 'unique:users,email'],
+      'password' => [$update ? 'sometimes' : 'required', 'min:8'],
+      'profile' => ['array'],
+    ];
+  }
 
   function articles() {
     return $this->hasMany(Article::class);

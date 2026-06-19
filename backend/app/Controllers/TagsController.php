@@ -12,7 +12,7 @@ class TagsController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(Tag::$rules);
+    $payload = $request->validate(Tag::rules());
     return Tag::create($payload);
   }
 

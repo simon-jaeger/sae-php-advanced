@@ -14,8 +14,10 @@ class Upload extends Model {
 
   protected $casts = ['is_public' => 'boolean'];
 
-  static $rules = [
-    'file' => ['file', 'max: 5000'], // max: 5000 -> max 5mb
-    'is_public' => ['boolean'],
-  ];
+  static function rules($update = false) {
+    return [
+      'file' => ['file', 'max: 5000'], // max: 5000 -> max 5mb
+      'is_public' => ['boolean'],
+    ];
+  }
 }

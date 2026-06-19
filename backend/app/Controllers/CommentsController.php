@@ -12,14 +12,14 @@ class CommentsController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(Comment::$rules);
+    $payload = $request->validate(Comment::rules());
     $comment = Auth::user()->comments()->create($payload);
     return $comment;
   }
 
   function update(Request $request) {
     $id = $request->input('id');
-    $payload = $request->validate(Comment::$rules);
+    $payload = $request->validate(Comment::rules(true));
     $comment = Auth::user()->comments()->findOrFail($id);
     $comment->update($payload);
     return $comment;

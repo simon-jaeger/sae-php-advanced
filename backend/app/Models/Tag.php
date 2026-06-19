@@ -11,7 +11,9 @@ class Tag extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  static $rules = [
-    'name' => ['required_without:id', 'min:1', 'max: 99', 'unique:tags,name'],
-  ];
+  static function rules($update = false) {
+    return [
+      'name' => [$update ? 'sometimes' : 'required', 'min:1', 'max: 99', 'unique:tags,name'],
+    ];
+  }
 }

@@ -23,4 +23,4 @@ $d20 = new Dice(20);
 
 $d6->roll();
 $d20->roll();
-print($d6->value + $d20->value);
+print($d6->value . "\n" . $d20->value);

@@ -7,6 +7,4 @@ class Util {
   }
 }
 
-print(Util::pickRandom([1, 2, 3]));
-
-print(Util::pickRandom(['red','green','blue']));
+print(Util::pickRandom([1, 2, 3])); // 1,2 or 3

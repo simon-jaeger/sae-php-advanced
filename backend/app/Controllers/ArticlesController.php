@@ -41,6 +41,30 @@ class ArticlesController {
     return $query->get();
   }
 
+  function create(Request $request) {
+    $payload = $request->validate(Article::$rules);
+    // $article = Article::create($payload);
+    $article = Auth::user()->articles()->create($payload);
+    return $article;
+  }
+
+  function update(Request $request) {
+    $id = $request->input('id');
+    // $article = Article::findOrFail($id);
+    $article = Auth::user()->articles()->findOrFail($id);
+    $payload = $request->validate(Article::$rules);
+    $article->update($payload);
+    return $article;
+  }
+
+  function destroy(Request $request) {
+    $id = $request->input('id');
+    // $article = Article::findOrFail($id);
+    $article = Auth::user()->articles()->findOrFail($id);
+    $article->delete();
+    return $article;
+  }
+
   function search(Request $request) {
     $title = $request->input('title');
     return Article::select('id', 'title')
@@ -53,29 +77,5 @@ class ArticlesController {
       ])
       ->sortBy('distance')
       ->values();
-  }
-
-  function create(Request $request) {
-    $payload = $request->validate(Article::rules());
-    // $article = Article::create($payload);
-    $article = Auth::user()->articles()->create($payload);
-    return $article;
-  }
-
-  function update(Request $request) {
-    $id = $request->input('id');
-    // $article = Article::findOrFail($id);
-    $article = Auth::user()->articles()->findOrFail($id);
-    $payload = $request->validate(Article::rules(true));
-    $article->update($payload);
-    return $article;
-  }
-
-  function destroy(Request $request) {
-    $id = $request->input('id');
-    // $article = Article::findOrFail($id);
-    $article = Auth::user()->articles()->findOrFail($id);
-    $article->delete();
-    return $article;
   }
 }

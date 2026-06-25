@@ -13,10 +13,8 @@ class Comment extends Model {
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  static function rules($update = false) {
-    return [
-      'text' => [$update ? 'sometimes' : 'required', 'min:1', 'max: 200'],
-      'article_id' => [$update ? 'sometimes' : 'required', 'exists:articles,id'],
-    ];
-  }
+  static $rules = [
+    'text' => ['min:1', 'max:200'],
+    'article_id' => ['exists:articles,id'],
+  ];
 }

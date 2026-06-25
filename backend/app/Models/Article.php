@@ -15,12 +15,10 @@ class Article extends Model {
 
   protected $with = ['tags'];
 
-  static function rules($update = false) {
-    return [
-      'title' => [$update ? 'sometimes' : 'required', 'min:1', 'max:99'],
-      'content' => [$update ? 'sometimes' : 'required', 'min:1', 'max:9999'],
-    ];
-  }
+  static $rules = [
+    'title' => ['min:1', 'max:99'],
+    'content' => ['min:1', 'max:9999'],
+  ];
 
   function tags() {
     return $this->belongsToMany(Tag::class);

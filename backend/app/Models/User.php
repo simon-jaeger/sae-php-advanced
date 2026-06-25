@@ -25,13 +25,11 @@ class User extends Model {
     'profile' => 'array'
   ];
 
-  static function rules($update = false) {
-    return [
-      'email' => [$update ? 'sometimes' : 'required', 'email', 'unique:users,email'],
-      'password' => [$update ? 'sometimes' : 'required', 'min:8'],
-      'profile' => ['array'],
-    ];
-  }
+  static $rules = [
+    'email' => ['email'],
+    'password' => ['min:8'],
+    'profile' => ['array'],
+  ];
 
   function articles() {
     return $this->hasMany(Article::class);

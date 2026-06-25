@@ -12,14 +12,14 @@ class UserController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(User::rules());
+    $payload = $request->validate(User::$rules);
     $user = User::create($payload);
     return $user;
   }
 
   function update(Request $request) {
     $user = Auth::user();
-    $payload = $request->validate(User::rules(true));
+    $payload = $request->validate(User::$rules);
     $user->update($payload);
     return $user;
   }

@@ -8,4 +8,8 @@ use Bootstrap\Column;
 class Example extends Model {
   #[Column] public int $id;
   #[Column] public string $name;
+
+  protected $hidden = [];
+  protected $casts = [];
+  static $rules = [];
 }

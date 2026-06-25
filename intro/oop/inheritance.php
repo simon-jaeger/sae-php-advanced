@@ -72,4 +72,3 @@ print($square->height . "\n"); // 4
 
 $rect = new Rectangle(10, 20);
 var_dump(Rectangle::largest($square, $rect)); // $rect
-

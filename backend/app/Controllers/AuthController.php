@@ -35,7 +35,6 @@ class AuthController {
     if (!Auth::user()->is_admin) return abort(401, 'admin only');
     $id = $request->input('id');
     $user = User::findOrFail($id);
-    if (!$user) return abort(404, 'no such user');
     $token = $user->createToken('bearer');
     return [
       'token' => $token->plainTextToken,

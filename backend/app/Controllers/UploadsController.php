@@ -25,7 +25,7 @@ class UploadsController {
   }
 
   function create(Request $request) {
-    $payload = $request->validate(Upload::rules());
+    $payload = $request->validate(Upload::$rules);
     $upload = Auth::user()->uploads()->make();
     $upload->path = Storage::putFile('uploads', $payload['file']);
     $upload->save();
@@ -35,7 +35,7 @@ class UploadsController {
   function update(Request $request) {
     // NOTE: file uploads in php only work for POST requests!
     $id = $request->input('id');
-    $payload = $request->validate(Upload::rules(true));
+    $payload = $request->validate(Upload::$rules);
     $upload = Auth::user()->uploads()->findOrFail($id);
     $upload->update($payload);
     return $upload;

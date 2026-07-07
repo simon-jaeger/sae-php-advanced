@@ -4,6 +4,9 @@ duration: 15 * 3h
 
 day 1
 --------------------------------------------------------------------------------
+- introductions
+- showcase projects from last modul (focus on technology)
+--------------------------------------------------------------------------------
 - terminal and bash
 - os package manager (brew.sh / scoop.sh)
 - install php and composer
@@ -28,13 +31,15 @@ day 1
 - T: Rectangle class
 - --------------------------------------------------------------------------------
 - statics
+- Rectangle::makeSquare(4);
+- Rectangle::largest($a, $b);
 - Util::pickRandom($array);
 - T: add more util methods
 --------------------------------------------------------------------------------
 - inheritance
 - extends
 - virtual methods
-- named constructors
+- polymorphism
 --------------------------------------------------------------------------------
 - real world modeling
 - example Dice class

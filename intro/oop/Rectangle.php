@@ -44,6 +44,6 @@ print($rect->circumference()); // 14
 if ($rect->isSquare()) print('yes');
 else print('no'); // no
 
-$square = Rectangle::makeSquare(2);
+$square = Rectangle::makeSquare(5);
 
 print_r(Rectangle::largest($rect, $square)); // $square

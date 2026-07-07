@@ -4,11 +4,16 @@ class Shape {
   public float $x = 0;
   public float $y = 0;
 
-  function position() {
-    return $this->x . '/' . $this->y;
+  // virtual method, to be implemented in child class
+  function area() {
   }
 
-  function area() { // virtual method, to be implemented in child class
+  // polymorphic utility method
+  static function largest(Shape $a, Shape $b) {
+    $areaA = $a->area();
+    $areaB = $b->area();
+    if ($areaA > $areaB) return $a;
+    else return $b;
   }
 }
 
@@ -21,10 +26,6 @@ class Circle extends Shape {
 
   function area() {
     return $this->radius ** 2 * pi();
-  }
-
-  function diameter() {
-    return $this->radius * 2;
   }
 }
 
@@ -40,35 +41,12 @@ class Rectangle extends Shape {
   function area() {
     return $this->width * $this->height;
   }
-
-  static function makeSquare($size) { // named constructor
-    return new Rectangle($size, $size);
-  }
-
-  static function largest(Rectangle $a, Rectangle $b) {
-    $areaA = $a->area();
-    $areaB = $b->area();
-    if ($areaA > $areaB) return $a;
-    else return $b;
-  }
 }
 
 $circle = new Circle(3);
-$circle->x = 1;
-$circle->y = 2;
-
-var_dump([
-  $circle->x, // inherited, all shapes have x
-  $circle->y, // inhertited, all shapes have y
-  $circle->radius, // not inherited, only circles have radius
-  $circle->position(), // inherited, all shapes can get their position
-  $circle->area(), // override of virtual method in parent class
-  $circle->diameter() // not inherited, only circles can calculate their diameter
+$rect = new Rectangle(6, 6);
+print_r([
+  $circle->area(), // 28.27...
+  $rect->area(), // 36
 ]);
-
-$square = Rectangle::makeSquare(4);
-print($square->width . "\n"); // 4
-print($square->height . "\n"); // 4
-
-$rect = new Rectangle(10, 20);
-var_dump(Rectangle::largest($square, $rect)); // $rect
+print_r(Shape::largest($circle, $rect)); // $rect

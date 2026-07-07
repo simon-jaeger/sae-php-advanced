@@ -4,6 +4,9 @@ duration: 15 * 3h
 
 day 1
 --------------------------------------------------------------------------------
+- introductions
+- showcase projects from last modul (focus on technology)
+--------------------------------------------------------------------------------
 - terminal and bash
 - os package manager (brew.sh / scoop.sh)
 - install php and composer
@@ -28,20 +31,5 @@ day 1
 - T: Rectangle class
 - --------------------------------------------------------------------------------
 - statics
-- Util::pickRandom($array);
-- T: add more util methods
---------------------------------------------------------------------------------
-- inheritance
-- extends
-- virtual methods
-- named constructors
---------------------------------------------------------------------------------
-- real world modeling
-- example Dice class
---------------------------------------------------------------------------------
-- R: https://daylerees.com/php-pandas-classes
-- R: https://daylerees.com/php-pandas-statics/
-- R: https://daylerees.com/php-pandas-inheritance/
-- T: create another inheritance example
-- T: model another real world object
-
+- Rectangle::makeSquare(4);
+- Rectangle::largest($a, $b);

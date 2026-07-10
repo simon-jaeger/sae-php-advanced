@@ -35,22 +35,23 @@ day 1
 - Rectangle::largest($a, $b);
 - Util::pickRandom($array);
 - T: add more util methods
+
+day 2
 --------------------------------------------------------------------------------
 - inheritance
 - extends
 - virtual methods
 - polymorphism
---------------------------------------------------------------------------------
-- real world modeling
-- example Dice class
---------------------------------------------------------------------------------
 - R: https://daylerees.com/php-pandas-classes
 - R: https://daylerees.com/php-pandas-statics/
 - R: https://daylerees.com/php-pandas-inheritance/
 - T: create another inheritance example
-- T: model another real world object
+--------------------------------------------------------------------------------
+- real world modeling
+- shopping cart example
+- T: model another real world scenario
 
-day 2
+day 3
 --------------------------------------------------------------------------------
 - headless architecture / spa
 - backend server api
@@ -62,7 +63,7 @@ day 2
 - T: create a bmi app
 - T: create (and present) another small app
 
-day 3
+day 4
 --------------------------------------------------------------------------------
 - laravel: intro
 - laravel: installation
@@ -78,7 +79,7 @@ day 3
 - T: implement the missing example endpoints
 - T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
 
-day 4
+day 5
 --------------------------------------------------------------------------------
 - MVC
 - views
@@ -100,7 +101,7 @@ day 4
 - T: start planning your project
 
 
-day 5
+day 6
 --------------------------------------------------------------------------------
 - ORM
 - object relational mapping
@@ -123,7 +124,7 @@ day 5
 - R: https://laravel.com/docs/12.x/validation#available-validation-rules
 - T: task add validation to your own model
 
-day 6
+day 7
 --------------------------------------------------------------------------------
 - users
 - password hashing with casts
@@ -135,7 +136,7 @@ day 6
 - middleware
 - R: https://laravel.com/docs/12.x/sanctum#api-token-authentication
 
-day 7
+day 8
 --------------------------------------------------------------------------------
 - relationships and erds (erd.mermaid)
 - R: https://phoenixnap.com/kb/database-relationships
@@ -148,7 +149,7 @@ day 7
 - T: add comments (n:1 article, n:1 user)
 - T: add a 1:n relationship between your own models
 
-day 8
+day 9
 --------------------------------------------------------------------------------
 - relationships (n:m)
 - tags n:m article
@@ -161,7 +162,7 @@ day 8
 - R: https://laravel.com/docs/12.x/seeding
 - T: seed your own models
 
-day 9
+day 10
 --------------------------------------------------------------------------------
 - filter by column values
 - order
@@ -172,7 +173,7 @@ day 9
 - T: add filter etc. to your own entities
 - T: prepare for progress presentations
 
-day 10
+day 11
 --------------------------------------------------------------------------------
 - file uploads
 - Uploads: basic crud
@@ -186,13 +187,13 @@ day 10
 - ethereal
 - T: send emails in your project (e.g. welcome on user create)
 
-day 11
+day 12
 --------------------------------------------------------------------------------
 - admin user and impersonate
 - json columns (user.profile etc.)
 - T: prepare for progress presentations
 
-day 12
+day 13
 --------------------------------------------------------------------------------
 - progress presentations (5-10min)
 - database and structure
@@ -202,7 +203,7 @@ day 12
 - unique/special features
 - questions and discussion with class
 
-day 13
+day 14
 --------------------------------------------------------------------------------
 - http requests to 3rd party services 
 - HttpController.php
@@ -213,7 +214,7 @@ day 13
 - AiController.php
 - T: create another ai endpoint
 
-day 14
+day 15
 --------------------------------------------------------------------------------
 - dynamic image generation (svg)
 - AvatarsController.php
@@ -224,7 +225,7 @@ day 14
 - https://symfony.com/doc/current/components/dom_crawler.html 
 - T: scrape infoscreen.sae.ch and transform the extracted data into json
 
-day 15
+extra
 --------------------------------------------------------------------------------
 - T: tic-tac-toe
 - puffer and questions

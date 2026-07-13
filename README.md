@@ -209,21 +209,26 @@ day 14
 - HttpController.php
 - T: wrap another 3rd party service
 --------------------------------------------------------------------------------
-- local llms with ollama
-- install gemma3:1b
-- AiController.php
-- T: create another ai endpoint
-
-day 15
---------------------------------------------------------------------------------
-- dynamic image generation (svg)
-- AvatarsController.php
-- T: create another image generation endpoint
---------------------------------------------------------------------------------
 - web scraping
 - composer require symfony/dom-crawler
 - https://symfony.com/doc/current/components/dom_crawler.html 
 - T: scrape infoscreen.sae.ch and transform the extracted data into json
+--------------------------------------------------------------------------------
+- dynamic image generation (svg)
+- AvatarsController.php
+- T: create another image generation endpoint
+
+day 15
+--------------------------------------------------------------------------------
+- ollama: signup and download
+- ollama pull gemma4:cloud
+- composer require laravel/ai
+- configuration
+- ask
+- chat
+- tools
+- mcp
+- ...
 
 extra
 --------------------------------------------------------------------------------

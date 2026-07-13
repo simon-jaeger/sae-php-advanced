@@ -10,7 +10,7 @@ return new class extends Migration {
       $table->id();
       $table->string('email');
       $table->string('password');
-      $table->boolean('is_admin')->default(false);
+      $table->integer('role')->default(0);
       $table->json('profile')->nullable();
       $table->timestamp('created_at');
       $table->timestamp('updated_at');

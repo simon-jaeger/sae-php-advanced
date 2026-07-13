@@ -32,7 +32,7 @@ class AuthController {
   }
 
   function impersonate(Request $request) {
-    if (!Auth::user()->is_admin) return abort(401, 'admin only');
+    if (!Auth::user()->isAdmin()) return abort(401, 'admin only');
     $id = $request->input('id');
     $user = User::findOrFail($id);
     $token = $user->createToken('bearer');

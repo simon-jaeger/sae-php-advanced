@@ -12,7 +12,7 @@ class User extends Model {
   #[Column] public int $id;
   #[Column] public string $email;
   #[Column] public string $password;
-  #[Column] public bool $is_admin;
+  #[Column] public int $role;
   #[Column] public array $profile;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
@@ -21,7 +21,6 @@ class User extends Model {
 
   protected $casts = [
     'password' => 'hashed',
-    'is_admin' => 'boolean',
     'profile' => 'array'
   ];
 
@@ -41,5 +40,9 @@ class User extends Model {
 
   function uploads() {
     return $this->hasMany(Upload::class);
+  }
+
+  function isAdmin() {
+    return $this->role === 1;
   }
 }

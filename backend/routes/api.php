@@ -72,6 +72,7 @@ Route::post('/mails/send', [MailsController::class, 'send']);
 Route::get('/http/github', [HttpController::class, 'github']);
 Route::get('/http/pokemon', [HttpController::class, 'pokemon']);
 Route::post('/ai/prompt', [AiController::class, 'prompt']);
+Route::post('/ai/ask', [AiController::class, 'ask']);
 Route::get('/avatars/{id}', [AvatarsController::class, 'show']);
 Route::get('/scrape/cern', [ScrapeController::class, 'cern']);
 Route::get('/scrape/sae', [ScrapeController::class, 'sae']);

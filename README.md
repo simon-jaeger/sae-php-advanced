@@ -33,3 +33,18 @@ day 1
 - statics
 - Rectangle::makeSquare(4);
 - Rectangle::largest($a, $b);
+
+day 2
+--------------------------------------------------------------------------------
+- inheritance
+- extends
+- virtual methods
+- polymorphism
+- R: https://daylerees.com/php-pandas-classes
+- R: https://daylerees.com/php-pandas-statics/
+- R: https://daylerees.com/php-pandas-inheritance/
+- T: create another inheritance example
+--------------------------------------------------------------------------------
+- real world modeling
+- shopping cart example
+- T: model another real world scenario

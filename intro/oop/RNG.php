@@ -6,4 +6,3 @@ class RNG {
     return $array[$index];
   }
 }
-

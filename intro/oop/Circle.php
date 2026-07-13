@@ -22,8 +22,8 @@ class Circle {
 
 $circle = new Circle(4);
 print_r([
-  $circle->radius,
-  $circle->diameter(),
-  $circle->circumference(),
-  $circle->area(),
+  $circle->radius, // 4
+  $circle->diameter(), // 8
+  $circle->circumference(), // 25.13...
+  $circle->area(), // 50.26...
 ]);

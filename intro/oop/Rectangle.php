@@ -30,7 +30,7 @@ class Rectangle {
     return new Rectangle($size, $size);
   }
 
-  // shared utility methods
+  // shared utility method
   static function largest(Rectangle $a, Rectangle $b) {
     $areaA = $a->area();
     $areaB = $b->area();

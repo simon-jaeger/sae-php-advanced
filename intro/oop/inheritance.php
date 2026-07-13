@@ -19,7 +19,7 @@ class Shape {
 }
 
 class Circle extends Shape {
-  public float $radius = 0;
+  public float $radius;
 
   function __construct($radius) {
     $this->radius = $radius;
@@ -50,8 +50,8 @@ $circle = new Circle(3);
 $rect = new Rectangle(6, 6);
 
 print_r([
-  $circle->area(),
-  $rect->area(),
+  $circle->area(), // 28.27...
+  $rect->area(), // 36
 ]);
 
 print_r(Shape::largest($circle, $rect)); // $rect

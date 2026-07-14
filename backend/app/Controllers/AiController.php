@@ -3,27 +3,23 @@
 namespace App\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
+use App\Ai\Agent;
 use function Laravel\Ai\{agent};
 
 class AiController {
-  function prompt(Request $request) {
-    $prompt = $request->input('prompt');
-    $response = Http::post('http://localhost:11434/api/generate', [
-      'model' => 'gemma4:e2b',
-      'prompt' => $prompt,
-      'stream' => false,
-    ]);
-    $data = $response->json();
-    return $data;
-  }
-
   function ask(Request $request) {
     $question = $request->input('question');
     $response = agent()->prompt($question);
-    return [
-      'answer' => $response->text,
-    ];
+    return ['answer' => $response->text];
   }
 
+  function prompt(Request $request) {
+    // set_time_limit(60);
+    $input = $request->input('input');
+    $response = Agent::make()->prompt($input);
+    return [
+      'text' => $response->text,
+      'tool' => $response->toolResults,
+    ];
+  }
 }

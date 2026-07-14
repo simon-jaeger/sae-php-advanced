@@ -12,7 +12,7 @@ class Agent implements Agentic, Conversational, HasTools {
   use Promptable;
 
   function instructions(): string {
-    return 'You are an ai agent.';
+    return 'you are an ai agent';
   }
 
   function tools(): array {

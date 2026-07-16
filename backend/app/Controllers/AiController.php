@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ai\Agent;
-use Illuminate\Support\Facades\Auth;
 use Laravel\Mcp\Client;
 use function Laravel\Ai\{agent};
 

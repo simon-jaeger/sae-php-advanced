@@ -48,6 +48,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/uploads', [UploadsController::class, 'create']);
   Route::patch('/uploads', [UploadsController::class, 'update']);
   Route::delete('/uploads', [UploadsController::class, 'destroy']);
+
+  Route::post('/ai/ask', [AiController::class, 'ask']);
+  Route::post('/ai/prompt', [AiController::class, 'prompt']);
+  Route::post('/ai/mcp', [AiController::class, 'mcp']);
 });
 
 // example endpoints
@@ -66,10 +70,6 @@ Route::post('/examples/anagram', [ExamplesController::class, 'anagram']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 Route::post('/examples/caesar', [ExamplesController::class, 'caesar']);
 Route::post('/examples/rps', [ExamplesController::class, 'rps']);
-
-// ai endpoints
-Route::post('/ai/ask', [AiController::class, 'ask']);
-Route::post('/ai/prompt', [AiController::class, 'prompt']);
 
 // extra endpoints
 Route::post('/mails/send', [MailsController::class, 'send']);

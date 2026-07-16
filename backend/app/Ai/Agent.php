@@ -3,12 +3,12 @@
 namespace App\Ai;
 
 use App\Ai\Tools\RngTool;
+use App\Ai\Tools\UserTool;
 use Laravel\Ai\Contracts\Agent as Agentic;
-use Laravel\Ai\Contracts\Conversational;
 use Laravel\Ai\Contracts\HasTools;
 use Laravel\Ai\Promptable;
 
-class Agent implements Agentic, Conversational, HasTools {
+class Agent implements Agentic, HasTools {
   use Promptable;
 
   function instructions(): string {
@@ -17,11 +17,8 @@ class Agent implements Agentic, Conversational, HasTools {
 
   function tools(): array {
     return [
-      new RngTool()
+      new RngTool(),
+      new UserTool(),
     ];
-  }
-
-  function messages(): array {
-    return [];
   }
 }

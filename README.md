@@ -222,13 +222,12 @@ day 15
 --------------------------------------------------------------------------------
 - ollama: signup and download
 - ollama pull gemma4:cloud
-- composer require laravel/ai
-- configuration
-- ask
-- chat
-- tools
-- mcp
-- ...
+- anonymous agents
+- custom agents
+- custom tools
+- third party agents (mcp)
+- T: configure and add more tools to your agent
+- T: use another third party agent
 
 extra
 --------------------------------------------------------------------------------

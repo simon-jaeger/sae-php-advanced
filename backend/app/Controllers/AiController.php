@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ai\Agent;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Mcp\Client;
 use function Laravel\Ai\{agent};
 
 class AiController {
@@ -14,12 +16,19 @@ class AiController {
   }
 
   function prompt(Request $request) {
-    // set_time_limit(60);
     $input = $request->input('input');
     $response = Agent::make()->prompt($input);
     return [
       'text' => $response->text,
       'tool' => $response->toolResults,
     ];
+  }
+
+  function mcp(Request $request) {
+    $client = Client::web('https://mcp.deepwiki.com/mcp');
+    return $client->callTool('ask_question', [
+      'repoName' => 'laravel/laravel',
+      'question' => 'what programming language does laravel use?',
+    ]);
   }
 }

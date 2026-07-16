@@ -5,20 +5,18 @@ namespace App\Ai\Tools;
 use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Tools\Request;
+use Illuminate\Support\Facades\Auth;
 
-class RngTool implements Tool {
+class UserTool implements Tool {
   function description(): string {
-    return 'this tool may be used to generate random numbers';
+    return 'this tool may be used to get information about the user';
   }
 
   function schema(JsonSchema $schema): array {
-    return [
-      'min' => $schema->integer()->min(0)->required(),
-      'max' => $schema->integer()->required(),
-    ];
+    return [];
   }
 
   function handle(Request $request): string {
-    return strval(random_int($request['min'], $request['max']));
+    return Auth::user();
   }
 }

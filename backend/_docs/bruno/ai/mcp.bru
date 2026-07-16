@@ -1,11 +1,11 @@
 meta {
-  name: prompt
+  name: mcp
   type: http
-  seq: 2
+  seq: 4
 }
 
 post {
-  url: {{baseUrl}}/ai/prompt
+  url: {{baseUrl}}/ai/mcp
   body: json
   auth: none
 }
@@ -16,6 +16,6 @@ headers {
 
 body:json {
   {
-    "input": "generate a random number between 0 and 99"
+    "input": ""
   }
 }

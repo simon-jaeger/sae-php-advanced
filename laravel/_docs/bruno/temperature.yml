@@ -1,0 +1,20 @@
+info:
+  name: temperature
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/temperature"
+  body:
+    type: json
+    data: |-
+      {
+        "celsius": 0
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

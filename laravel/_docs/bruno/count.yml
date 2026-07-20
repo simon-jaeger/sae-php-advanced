@@ -1,0 +1,20 @@
+info:
+  name: count
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/count"
+  body:
+    type: json
+    data: |-
+      {
+        "text": "lorem ipsum dolor"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

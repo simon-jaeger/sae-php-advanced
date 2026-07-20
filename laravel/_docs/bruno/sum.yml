@@ -1,0 +1,22 @@
+info:
+  name: sum
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/sum"
+  body:
+    type: json
+    data: |-
+      {
+        "a": 3,
+        "b": 6
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

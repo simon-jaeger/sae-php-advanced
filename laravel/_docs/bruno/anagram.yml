@@ -1,0 +1,21 @@
+info:
+  name: anagram
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/anagram"
+  body:
+    type: json
+    data: |-
+      {
+        "a": "evil",
+        "b": "vile"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

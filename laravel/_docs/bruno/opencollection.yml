@@ -1,0 +1,10 @@
+opencollection: 1.0.0
+
+info:
+  name: sae_php
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

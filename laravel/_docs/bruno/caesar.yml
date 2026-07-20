@@ -1,0 +1,21 @@
+info:
+  name: caesar
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/caesar"
+  body:
+    type: json
+    data: |-
+      {
+        "text": "abcz",
+        "shift": 3
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

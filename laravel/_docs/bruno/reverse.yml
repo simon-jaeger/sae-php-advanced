@@ -1,0 +1,20 @@
+info:
+  name: reverse
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/reverse"
+  body:
+    type: json
+    data: |-
+      {
+        "text": "hellö"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

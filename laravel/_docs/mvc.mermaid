@@ -7,7 +7,7 @@ sequenceDiagram
     participant MG as Migration
     V ->> R: GET /articles
     R ->> C: ArticlesController->index()
-    C ->> M: Articles::all()
+    C ->> M: Article::all()
     M ->> D: SELECT * FROM articles
     D ->> M: Rows
     M ->> C: Objects

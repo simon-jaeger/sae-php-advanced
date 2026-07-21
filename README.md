@@ -48,3 +48,53 @@ day 2
 - real world modeling
 - shopping cart example
 - T: model another real world scenario
+
+day 3
+--------------------------------------------------------------------------------
+- headless architecture / spa
+- backend server api
+- frontend client gui
+- hello world and sum examples
+- R: https://www.nylas.com/api-guide/types-of-apis/http-apis/
+- R: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+- R: https://javascript.info/fetch
+- T: create a bmi app
+- T: create (and present) another small app
+
+day 4
+--------------------------------------------------------------------------------
+- laravel: intro
+- laravel: installation
+- laravel: directory structure
+- laravel: namespaces and helpers
+- laravel: hello laravel endpoint
+- R: https://laravel.com
+--------------------------------------------------------------------------------
+- router
+- controllers
+- http exchange (request, response, status, body, headers)
+- https://usebruno.com
+- T: implement the missing example endpoints
+- T: create a frontend for the rps endpoint (JSON.stringify instead of URLSearchParams)
+
+day 5
+--------------------------------------------------------------------------------
+- MVC
+- views
+- router
+- controllers
+- models
+- migrations
+- R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- mvc.mermaid
+--------------------------------------------------------------------------------
+- demo project: blogging platform (medium, hashnode, ...)
+- models (Article.php)
+- migrations
+- GET /articles -> Article::all()
+- T: create a model, migration and index endpoint for your own project
+--------------------------------------------------------------------------------
+- assignments
+- R: https://canvas.sae.edu/courses/21221/assignments
+- T: start planning your project
+

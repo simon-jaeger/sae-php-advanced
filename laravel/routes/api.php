@@ -1,7 +1,10 @@
 <?php
 
+use App\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
+
+Route::get('/articles', [ArticlesController::class, "index"]);
 
 Route::get('/examples/hello', [ExamplesController::class, "hello"]);
 Route::get('/examples/about', [ExamplesController::class, "about"]);
@@ -15,3 +18,4 @@ Route::post('/examples/palindrom', [ExamplesController::class, 'palindrom']);
 Route::post('/examples/anagram', [ExamplesController::class, 'anagram']);
 Route::post('/examples/temperature', [ExamplesController::class, 'temperature']);
 Route::post('/examples/caesar', [ExamplesController::class, 'caesar']);
+Route::post('/examples/rps', [ExamplesController::class, 'rps']);

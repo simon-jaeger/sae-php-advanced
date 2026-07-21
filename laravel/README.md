@@ -19,6 +19,6 @@ php artisan serve # start development server
 ## common issues
 
 - php installed via xampp might cause issues. if that happens, install it with homebrew/scoop instead.
-- php might be compiled without certain modules (e.g. pdo_sqlite). if so, manually enable them in ini file.
+- php might be compiled without certain modules (e.g. pdo_sqlite). if so, manually enable them in ini file. you might need to copy php.ini-development to php.ini (find location with php --ini)
 - your anti virus might block/delete files inside laravel. if so, whitelist the folder.
 

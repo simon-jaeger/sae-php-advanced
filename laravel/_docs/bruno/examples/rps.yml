@@ -1,0 +1,20 @@
+info:
+  name: rps
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{baseUrl}}/examples/rps"
+  body:
+    type: json
+    data: |-
+      {
+        "attack": "rock"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

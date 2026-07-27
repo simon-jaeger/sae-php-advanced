@@ -94,8 +94,26 @@ day 5
 - migrations
 - GET /articles -> Article::all()
 - T: create a model, migration and index endpoint for your own project
+
+day 6
+--------------------------------------------------------------------------------
+- crud
+- index
+- create
+- update
+- destroy
+- R: https://laravel.com/docs/13.x/eloquent
+- T: make your own model crudable
+--------------------------------------------------------------------------------
+- ORM
+- object relational mapping
+- orm.md
+--------------------------------------------------------------------------------
+- validation
+- R: https://laravel.com/docs/13.x/validation#available-validation-rules
+- T: task add validation to your own model
 --------------------------------------------------------------------------------
 - assignments
-- R: https://canvas.sae.edu/courses/21221/assignments
+- R: https://canvas.sae.edu/courses/23729
 - T: start planning your project
 

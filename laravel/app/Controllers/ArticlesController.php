@@ -12,19 +12,16 @@ class ArticlesController {
   }
 
   function create(Request $request) {
-    $article = Article::create([
-      'title' => $request->input("title"),
-      'content' => $request->input("content"),
-    ]);
+    $payload = $request->validate(Article::$rules);
+    $article = Article::create($payload);
     return $article;
   }
 
   function update(Request $request) {
+    $payload = $request->validate(Article::$rules);
     $id = $request->input("id");
     $article = Article::findOrFail($id);
-    $article->title = $request->input("title");
-    $article->content = $request->input("content");
-    $article->save();
+    $article->update($payload);
     return $article;
   }
 

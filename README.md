@@ -85,6 +85,7 @@ day 5
 - controllers
 - models
 - migrations
+- table plus: https://tableplus.com
 - R: https://developer.mozilla.org/en-US/docs/Glossary/MVC
 - mvc.mermaid
 --------------------------------------------------------------------------------

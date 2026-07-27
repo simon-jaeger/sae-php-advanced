@@ -4,8 +4,13 @@ use App\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 
+// crud endpoints
 Route::get('/articles', [ArticlesController::class, "index"]);
+Route::post('/articles', [ArticlesController::class, "create"]);
+Route::patch('/articles', [ArticlesController::class, "update"]);
+Route::delete('/articles', [ArticlesController::class, "destroy"]);
 
+// example endpoints
 Route::get('/examples/hello', [ExamplesController::class, "hello"]);
 Route::get('/examples/about', [ExamplesController::class, "about"]);
 Route::get('/examples/random', [ExamplesController::class, "random"]);

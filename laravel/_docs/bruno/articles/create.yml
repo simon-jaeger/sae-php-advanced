@@ -1,0 +1,22 @@
+info:
+  name: create
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/articles"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "my fourth article",
+        "content": "..."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

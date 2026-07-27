@@ -117,3 +117,15 @@ day 6
 - R: https://canvas.sae.edu/courses/23729
 - T: start planning your project
 
+day 7
+--------------------------------------------------------------------------------
+- users
+- password hashing with casts
+- T: add more fields to your user
+--------------------------------------------------------------------------------
+- authentication
+- api tokens
+- authorization header
+- middleware
+- R: https://laravel.com/docs/12.x/sanctum#api-token-authentication
+

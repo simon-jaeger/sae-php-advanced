@@ -6,21 +6,17 @@ use App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 
-// crud endpoints
-Route::get('/articles', [ArticlesController::class, "index"]);
-Route::post('/articles', [ArticlesController::class, "create"]);
-Route::patch('/articles', [ArticlesController::class, "update"]);
-Route::delete('/articles', [ArticlesController::class, "destroy"]);
-
 Route::post('/user', [UserController::class, "create"]);
-
 Route::post('/auth/login', [AuthController::class, "login"]);
+Route::get('/articles', [ArticlesController::class, "index"]);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
   Route::post('/auth/logout', [AuthController::class, "logout"]);
+  Route::post('/articles', [ArticlesController::class, "create"]);
+  Route::patch('/articles', [ArticlesController::class, "update"]);
+  Route::delete('/articles', [ArticlesController::class, "destroy"]);
 });
-
 
 // example endpoints
 Route::get('/examples/hello', [ExamplesController::class, "hello"]);

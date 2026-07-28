@@ -6,11 +6,14 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/articles"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   body:
     type: json
     data: |-
       {
-        "title": "another",
+        "title": "one",
         "content": "..."
       }
   auth: inherit

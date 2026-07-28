@@ -6,11 +6,14 @@ info:
 http:
   method: DELETE
   url: "{{baseUrl}}/articles"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   body:
     type: json
     data: |-
       {
-        "id": 4
+        "id": 3
       }
   auth: inherit
 

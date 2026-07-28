@@ -27,4 +27,8 @@ class User extends Model {
       'password' => [$requiredIfNew, "min:8"],
     ]);
   }
+
+  function articles() {
+    return $this->hasMany(Article::class);
+  }
 }

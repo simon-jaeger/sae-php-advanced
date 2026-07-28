@@ -6,12 +6,15 @@ info:
 http:
   method: PATCH
   url: "{{baseUrl}}/articles"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
   body:
     type: json
     data: |-
       {
-        "id": 6,
-        "title": "another",
+        "id": 1,
+        "title": "one_b",
         "content": "..."
       }
   auth: inherit

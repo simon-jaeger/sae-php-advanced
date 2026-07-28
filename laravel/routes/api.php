@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\ArticlesController;
+use App\Controllers\AuthController;
 use App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
@@ -11,8 +12,15 @@ Route::post('/articles', [ArticlesController::class, "create"]);
 Route::patch('/articles', [ArticlesController::class, "update"]);
 Route::delete('/articles', [ArticlesController::class, "destroy"]);
 
-Route::get('/user', [UserController::class, "index"]);
 Route::post('/user', [UserController::class, "create"]);
+
+Route::post('/auth/login', [AuthController::class, "login"]);
+
+Route::middleware(['auth:sanctum'])->group(function () {
+  Route::get('/user', [UserController::class, "index"]);
+  Route::post('/auth/logout', [AuthController::class, "logout"]);
+});
+
 
 // example endpoints
 Route::get('/examples/hello', [ExamplesController::class, "hello"]);

@@ -4,10 +4,11 @@ namespace App\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController {
   function index() {
-    return User::first();
+    return Auth::user();
   }
 
   function create(Request $request) {

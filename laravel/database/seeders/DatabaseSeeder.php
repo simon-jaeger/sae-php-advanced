@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-// faker: https://fakerphp.github.io/formatters/text-and-paragraphs/
+// faker: https://fakerphp.github.io
 
 use App\Models\Article;
 use App\Models\Comment;
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder {
     }
 
     // tags
-    ////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
     for ($i = 0; $i < 10; $i++) {
       Tag::create(['name' => fake()->word()]);
     }

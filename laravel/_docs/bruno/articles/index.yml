@@ -8,15 +8,15 @@ http:
   url: "{{baseUrl}}/articles"
   params:
     - name: title
-      value: foo
+      value: culpa
       type: query
       disabled: true
     - name: id
-      value: "1"
+      value: "14"
       type: query
       disabled: true
     - name: user_id
-      value: "1"
+      value: "3"
       type: query
       disabled: true
     - name: order_by
@@ -24,19 +24,19 @@ http:
       type: query
       disabled: true
     - name: order_dir
-      value: desc
+      value: asc
       type: query
       disabled: true
     - name: limit
-      value: "2"
+      value: "3"
       type: query
       disabled: true
     - name: offset
-      value: "2"
+      value: "9"
       type: query
       disabled: true
     - name: tag_ids
-      value: 1,2,3
+      value: 2,3
       type: query
       disabled: true
   auth: inherit

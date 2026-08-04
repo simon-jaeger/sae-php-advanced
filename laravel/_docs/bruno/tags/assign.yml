@@ -14,7 +14,7 @@ http:
     data: |-
       {
         "article_id": 1,
-        "tag_ids": [1,2]
+        "tag_ids": [1,2,3]
       }
 
 settings:

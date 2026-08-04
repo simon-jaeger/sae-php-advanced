@@ -6,6 +6,39 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/articles"
+  params:
+    - name: title
+      value: foo
+      type: query
+      disabled: true
+    - name: id
+      value: "1"
+      type: query
+      disabled: true
+    - name: user_id
+      value: "1"
+      type: query
+      disabled: true
+    - name: order_by
+      value: title
+      type: query
+      disabled: true
+    - name: order_dir
+      value: desc
+      type: query
+      disabled: true
+    - name: limit
+      value: "2"
+      type: query
+      disabled: true
+    - name: offset
+      value: "2"
+      type: query
+      disabled: true
+    - name: tag_ids
+      value: 1,2,3
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

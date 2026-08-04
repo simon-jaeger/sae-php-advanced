@@ -7,9 +7,37 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ArticlesController {
-  function index() {
-    $articles = Article::all();
-    return $articles;
+  function index(Request $request) {
+    $id = $request->input('id');
+    $userId = $request->input('user_id');
+    $title = $request->input('title');
+    $orderBy = $request->input('order_by', 'created_at');
+    $orderDir = $request->input('order_dir', 'asc');
+    $limit = $request->input('limit', 1000);
+    $offset = $request->input('offset', 0);
+    $tagIds = $request->input('tag_ids');
+
+    $query = Article::query();
+    if ($id) return $query->where('id', $id)->firstOrFail();
+    if ($userId) $query->where('user_id', $userId);
+    if ($title) $query->where('title', 'like', "%$title%");
+    if ($tagIds) {
+      $tagIds = explode(',', $tagIds);
+      // $query->has('tags'); // articles that have tags
+      // $query->has('tags', '>=', count($tagIds)); // articles that have at least that many tags
+      $query->whereHas(
+        'tags',
+        fn($q) => $q->whereIn('tags.id', $tagIds), // only tags with ids that are part of the search array
+        '>=',
+        count($tagIds)
+      );
+    }
+    $query->orderBy($orderBy, $orderDir);
+    $query->limit($limit);
+    $query->offset($offset);
+
+//    return $query->toSql();
+    return $query->get();
   }
 
   function create(Request $request) {

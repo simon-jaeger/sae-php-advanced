@@ -43,6 +43,7 @@
     "seed": "touch ./database/database.sqlite && php artisan migrate:fresh --seed",
     "clear_cache": "php artisan optimize:clear",
     "dump_autoload": "composer dump-autoload",
+    "docker": "docker run --name laravel -p 8000:8080 -v ./:/var/www/html serversideup/php:8.5-fpm-apache",
     "ide-helper": [
       "php artisan ide-helper:generate"
     ],

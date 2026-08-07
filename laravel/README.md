@@ -4,8 +4,8 @@
 
 ## dependencies
 
-- php 8.4+
-- composer 2.8+
+- php 8.5+
+- composer 2.10+
 
 ## setup
 

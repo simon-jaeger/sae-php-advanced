@@ -16,10 +16,7 @@ http:
         type: file
         value:
           - /Users/simon/home/google-drive/media/images/seasons/fall.webp
-          - /Users/simon/home/google-drive/media/images/seasons/winter.webp
-          - /Users/simon/home/google-drive/media/images/seasons/spring.webp
-          - /Users/simon/home/google-drive/media/images/seasons/summer.webp
-        contentType: multipart/mixed
+        contentType: image/webp
 
 settings:
   encodeUrl: true

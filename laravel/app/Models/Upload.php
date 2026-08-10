@@ -18,7 +18,7 @@ class Upload extends Model {
 
   static function validate(Request $request) {
     return $request->validate([
-      'file' => ['file', 'max:5000'], // max:5000 -> max 5mb
+      'file' => ['file', 'mimes:jpg,png,webp,svg', 'max:5000'], // max:5000 -> max 5mb
       'is_public' => ['boolean'],
     ]);
   }

@@ -166,3 +166,63 @@ day 9
 - other mvc frameworks (django, asp.net, spring boot, adonisjs, ...)
 - T: research then present one of those frameworks
 
+day10 
+--------------------------------------------------------------------------------
+- file uploads
+- Uploads: basic crud
+- Uploads: putFile, delete
+- route params
+- Uploads: response
+- T: add uploads to your project
+
+day 11
+--------------------------------------------------------------------------------
+- emails
+- Mailables (app/mails/WelcomeMail.php)
+- EmailsController.php
+- ethereal
+- T: send emails in your project (e.g. welcome on user create)
+--------------------------------------------------------------------------------
+- admin user and impersonate
+- json columns (user.profile etc.)
+
+day 12
+--------------------------------------------------------------------------------
+- http requests to 3rd party services 
+- HttpController.php
+- T: wrap another 3rd party service
+--------------------------------------------------------------------------------
+- web scraping
+- composer require symfony/dom-crawler
+- https://symfony.com/doc/current/components/dom_crawler.html 
+- T: scrape infoscreen.sae.ch and transform the extracted data into json
+
+day 13
+--------------------------------------------------------------------------------
+- dynamic image generation (svg)
+- AvatarsController.php
+- T: create another image generation endpoint
+--------------------------------------------------------------------------------
+- T: prepare for progress presentations
+
+day 14
+--------------------------------------------------------------------------------
+- progress presentations (5-10min)
+- database and structure
+- endpoints in bruno
+- auth system
+- crud features
+- unique/special features
+- questions and discussion with class
+
+day 15
+--------------------------------------------------------------------------------
+- ollama: signup and download
+- ollama pull gemma4:cloud
+- anonymous agents
+- custom agents
+- custom tools
+- third party agents (mcp)
+- T: configure and add more tools to your laravel agent
+- T: use another third party agent via mcp
+

@@ -11,7 +11,7 @@ http:
       value: Bearer {{token}}
   params:
     - name: id
-      value: "1"
+      value: "2"
       type: path
 
 settings:

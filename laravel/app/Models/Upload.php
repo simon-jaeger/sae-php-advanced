@@ -10,7 +10,7 @@ class Upload extends Model {
   #[Column] public int $id;
   #[Column] public string $path;
   #[Column] public string $is_public;
-  #[Column] public string $user_id;
+  #[Column] public int $user_id;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 

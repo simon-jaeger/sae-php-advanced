@@ -4,6 +4,7 @@ use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
 use App\Controllers\TagsController;
+use App\Controllers\UploadsController;
 use App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
@@ -12,6 +13,8 @@ Route::post('/user', [UserController::class, "create"]);
 Route::post('/auth/login', [AuthController::class, "login"]);
 Route::get('/articles', [ArticlesController::class, "index"]);
 Route::get('/comments', [CommentsController::class, 'index']);
+
+Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
@@ -25,6 +28,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/tags', [TagsController::class, 'index']);
   Route::post('/tags', [TagsController::class, 'create']);
   Route::put('/tags/assign', [TagsController::class, 'assign']);
+
+  Route::get('/uploads', [UploadsController::class, 'index']);
+  Route::post('/uploads', [UploadsController::class, 'create']);
+  Route::patch('/uploads', [UploadsController::class, 'update']);
+  Route::delete('/uploads', [UploadsController::class, 'destroy']);
 });
 
 // example endpoints

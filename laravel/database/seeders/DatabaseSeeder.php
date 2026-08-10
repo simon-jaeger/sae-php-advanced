@@ -31,21 +31,21 @@ class DatabaseSeeder extends Seeder {
 
     // articles
     ////////////////////////////////////////////////////////////////////////////
-    for ($i = 0; $i < 30; $i++) {
+    for ($i = 0; $i < 20; $i++) {
       Article::create([
         'title' => fake()->word(),
         'content' => fake()->sentence(),
-//        'user_id' => random_int(1, 3),
         'user_id' => 1,
+        // 'user_id' => random_int(1, 3),
       ]);
     }
 
     // comments
     ////////////////////////////////////////////////////////////////////////////
-    for ($i = 0; $i < 10; $i++) {
+    for ($i = 0; $i < 20; $i++) {
       Comment::create([
         'text' => fake()->sentence(),
-        'article_id' => random_int(1, 10),
+        'article_id' => random_int(1, 5),
         'user_id' => random_int(1, 3),
       ]);
     }

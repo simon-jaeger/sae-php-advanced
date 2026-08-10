@@ -8,7 +8,16 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentsController {
   function index(Request $request) {
-    return Comment::all();
+    $userId = $request->input('user_id');
+    $articleId = $request->input('article_id');
+    $text = $request->input("text");
+
+    $query = Comment::query();
+    if ($userId) $query->where('user_id', $userId);
+    if ($articleId) $query->where('article_id', $articleId);
+    if ($text) $query->where("text", "like", "%$text%");
+
+    return $query->get();
   }
 
   function create(Request $request) {

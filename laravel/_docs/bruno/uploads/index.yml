@@ -5,19 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/comments"
+  url: "{{baseUrl}}/uploads"
   headers:
     - name: Authorization
       value: Bearer {{token}}
-  params:
-    - name: user_id
-      value: "1"
-      type: query
-      disabled: true
-    - name: article_id
-      value: "3"
-      type: query
-      disabled: true
 
 settings:
   encodeUrl: true

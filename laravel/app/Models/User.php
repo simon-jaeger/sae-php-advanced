@@ -35,4 +35,8 @@ class User extends Model {
   function comments() {
     return $this->hasMany(Comment::class);
   }
+
+  function uploads() {
+    return $this->hasMany(Upload::class);
+  }
 }

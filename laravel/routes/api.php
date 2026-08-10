@@ -19,12 +19,15 @@ Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
   Route::post('/auth/logout', [AuthController::class, "logout"]);
+
   Route::post('/articles', [ArticlesController::class, "create"]);
   Route::patch('/articles', [ArticlesController::class, "update"]);
   Route::delete('/articles', [ArticlesController::class, "destroy"]);
+
   Route::post('/comments', [CommentsController::class, 'create']);
   Route::patch('/comments', [CommentsController::class, 'update']);
   Route::delete('/comments', [CommentsController::class, 'destroy']);
+
   Route::get('/tags', [TagsController::class, 'index']);
   Route::post('/tags', [TagsController::class, 'create']);
   Route::put('/tags/assign', [TagsController::class, 'assign']);

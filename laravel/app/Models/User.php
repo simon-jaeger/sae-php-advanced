@@ -13,6 +13,7 @@ class User extends Model {
 
   #[Column] public int $id;
   #[Column] public string $email;
+  #[Column] public string $name;
   #[Column] public string $password;
   #[Column] public bool $is_admin;
   #[Column] public string $created_at;
@@ -29,6 +30,7 @@ class User extends Model {
     $requiredIfNew = $request->isMethod("POST") ? "required" : "sometimes";
     return $request->validate([
       'email' => [$requiredIfNew, "email"],
+      'name' => [$requiredIfNew, "max:99"],
       'password' => [$requiredIfNew, "min:8"],
     ]);
   }

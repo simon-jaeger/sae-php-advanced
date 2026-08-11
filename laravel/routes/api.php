@@ -21,6 +21,7 @@ Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
+  Route::patch('/user', [UserController::class, "update"]);
   Route::post('/auth/logout', [AuthController::class, "logout"]);
   Route::post('/auth/impersonate', [AuthController::class, 'impersonate']);
 

@@ -15,11 +15,10 @@ class WelcomeMail extends Mailable {
   function build() {
     return $this
       ->to($this->user->email)
-      ->subject('Welcome')
+      ->subject('welcome')
       ->html(
-        '<h1>Welcome</h1>' .
-        '<p>Glad to have you on board.</p>' .
-        '<p>' . $this->user->email . '</p>'
+        "<h1>welcome {$this->user->name}</h1>" .
+        '<p>enjoy your stay!</p>'
       );
   }
 }

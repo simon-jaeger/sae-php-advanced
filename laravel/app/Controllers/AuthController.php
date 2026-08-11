@@ -30,4 +30,15 @@ class AuthController {
     $user->currentAccessToken()->delete();
     return $user;
   }
+
+  function impersonate(Request $request) {
+    if (!Auth::user()->is_admin) return abort(401, 'admin only');
+    $user_id = $request->input('user_id');
+    $user = User::findOrFail($user_id);
+    $token = $user->createToken('bearer');
+    return [
+      'token' => $token->plainTextToken,
+      'user' => $user,
+    ];
+  }
 }

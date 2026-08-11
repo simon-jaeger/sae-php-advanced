@@ -14,11 +14,16 @@ class User extends Model {
   #[Column] public int $id;
   #[Column] public string $email;
   #[Column] public string $password;
+  #[Column] public bool $is_admin;
   #[Column] public string $created_at;
   #[Column] public string $updated_at;
 
-  protected $casts = ['password' => 'hashed'];
   protected $hidden = ['password'];
+
+  protected $casts = [
+    'password' => 'hashed',
+    'is_admin' => 'bool',
+  ];
 
   static function validate(Request $request) {
     $requiredIfNew = $request->isMethod("POST") ? "required" : "sometimes";

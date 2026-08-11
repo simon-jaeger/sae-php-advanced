@@ -3,12 +3,15 @@
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
+use App\Controllers\MailsController;
 use App\Controllers\TagsController;
 use App\Controllers\UploadsController;
 use App\Controllers\UserController;
+use App\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use App\Controllers\ExamplesController;
 
+Route::get('/users', [UsersController::class, "index"]);
 Route::post('/user', [UserController::class, "create"]);
 Route::post('/auth/login', [AuthController::class, "login"]);
 Route::get('/articles', [ArticlesController::class, "index"]);
@@ -19,6 +22,7 @@ Route::get('/uploads/{id}', [UploadsController::class, 'show']);
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
   Route::post('/auth/logout', [AuthController::class, "logout"]);
+  Route::post('/auth/impersonate', [AuthController::class, 'impersonate']);
 
   Route::post('/articles', [ArticlesController::class, "create"]);
   Route::patch('/articles', [ArticlesController::class, "update"]);
@@ -36,6 +40,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::post('/uploads', [UploadsController::class, 'create']);
   Route::patch('/uploads', [UploadsController::class, 'update']);
   Route::delete('/uploads', [UploadsController::class, 'destroy']);
+
+  Route::post('/mails/newsletter', [MailsController::class, 'newsletter']);
 });
 
 // example endpoints

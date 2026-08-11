@@ -1,21 +1,14 @@
 info:
-  name: create
+  name: index
   type: http
-  seq: 2
+  seq: 1
 
 http:
-  method: POST
-  url: "{{baseUrl}}/articles"
+  method: GET
+  url: "{{baseUrl}}/users"
   headers:
     - name: Authorization
       value: Bearer {{token}}
-  body:
-    type: json
-    data: |-
-      {
-        "title": "foobar",
-        "content": "..."
-      }
   auth: inherit
 
 settings:

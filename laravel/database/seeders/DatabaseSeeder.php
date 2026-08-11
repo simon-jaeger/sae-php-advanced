@@ -16,16 +16,20 @@ class DatabaseSeeder extends Seeder {
     ////////////////////////////////////////////////////////////////////////////
     User::create([
       'email' => 'alpha@mailinator.com',
+      'name' => 'alpha',
       'password' => 'password',
+      'is_admin' => true,
     ]);
 
     User::create([
       'email' => 'bravo@mailinator.com',
+      'name' => 'bravo',
       'password' => 'password',
     ]);
 
     User::create([
       'email' => 'charlie@mailinator.com',
+      'name' => 'charlie',
       'password' => 'password',
     ]);
 

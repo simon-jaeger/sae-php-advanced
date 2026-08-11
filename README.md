@@ -177,14 +177,16 @@ day10
 
 day 11
 --------------------------------------------------------------------------------
+- admin user 
+- admin only endpoints
+- impersonate
+--------------------------------------------------------------------------------
 - emails
-- Mailables (app/mails/WelcomeMail.php)
+- Mailables (app/mails/NewsletterMail.php)
 - EmailsController.php
 - ethereal
-- T: send emails in your project (e.g. welcome on user create)
---------------------------------------------------------------------------------
-- admin user and impersonate
-- json columns (user.profile etc.)
+- T: send a welcome email on user create
+- T: send emails in your project
 
 day 12
 --------------------------------------------------------------------------------
@@ -203,17 +205,19 @@ day 13
 - AvatarsController.php
 - T: create another image generation endpoint
 --------------------------------------------------------------------------------
-- T: prepare for progress presentations
+- T: prepare for progress presentations (5-10min)
 
 day 14
 --------------------------------------------------------------------------------
-- progress presentations (5-10min)
+- prepare for progress presentations
+- hold progress presentations
 - database and structure
 - endpoints in bruno
 - auth system
 - crud features
 - unique/special features
 - questions and discussion with class
+- T: work on your project
 
 day 15
 --------------------------------------------------------------------------------
@@ -225,4 +229,4 @@ day 15
 - third party agents (mcp)
 - T: configure and add more tools to your laravel agent
 - T: use another third party agent via mcp
-
+- T: work on your project

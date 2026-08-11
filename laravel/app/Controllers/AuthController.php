@@ -41,4 +41,17 @@ class AuthController {
       'user' => $user,
     ];
   }
+  
+  function google(Request $request) {
+    $googleUser = Socialite::driver('google')->stateless()->user();
+    $user = User::firstOrCreate(
+      ['google_id' => $googleUser->getId()],
+      ['email' => $googleUser->getEmail(), 'name' => $googleUser->getName()],
+    );
+    $token = $user->createToken('bearer');
+    return [
+      'token' => $token->plainTextToken,
+      'user' => $user,
+    ];
+  }
 }

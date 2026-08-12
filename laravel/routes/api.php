@@ -14,7 +14,6 @@ use App\Controllers\ExamplesController;
 Route::get('/users', [UsersController::class, "index"]);
 Route::post('/user', [UserController::class, "create"]);
 Route::post('/auth/login', [AuthController::class, "login"]);
-Route::post('/auth/google', [AuthController::class, "google"]);
 Route::get('/articles', [ArticlesController::class, "index"]);
 Route::get('/comments', [CommentsController::class, 'index']);
 

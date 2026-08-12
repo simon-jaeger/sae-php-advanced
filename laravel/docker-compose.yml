@@ -1,0 +1,14 @@
+name: sae-laravel
+services:
+  php:
+    image: serversideup/php:8.5-fpm-apache
+    ports:
+      - 8000:8080
+    volumes:
+      - ./:/var/www/html
+      - vendor:/var/www/html/vendor
+    post_start:
+      - command: chown -R www-data:www-data /var/www/html/vendor
+        user: root
+volumes:
+  vendor:

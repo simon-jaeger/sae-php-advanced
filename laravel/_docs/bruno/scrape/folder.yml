@@ -1,0 +1,7 @@
+info:
+  name: scrape
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

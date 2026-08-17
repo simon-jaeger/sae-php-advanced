@@ -195,7 +195,6 @@ day 12
 - T: wrap another 3rd party service
 --------------------------------------------------------------------------------
 - web scraping
-- composer require symfony/dom-crawler
 - https://symfony.com/doc/current/components/dom_crawler.html 
 - T: scrape infoscreen.sae.ch and transform the extracted data into json
 

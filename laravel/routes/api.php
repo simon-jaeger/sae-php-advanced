@@ -3,7 +3,9 @@
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
+use App\Controllers\HttpController;
 use App\Controllers\MailsController;
+use App\Controllers\ScrapeController;
 use App\Controllers\TagsController;
 use App\Controllers\UploadsController;
 use App\Controllers\UserController;
@@ -18,6 +20,12 @@ Route::get('/articles', [ArticlesController::class, "index"]);
 Route::get('/comments', [CommentsController::class, 'index']);
 
 Route::get('/uploads/{id}', [UploadsController::class, 'show']);
+
+Route::get('/http/github', [HttpController::class, 'github']);
+Route::get('/http/pokemon', [HttpController::class, 'pokemon']);
+
+Route::get('/scrape/cern', [ScrapeController::class, 'cern']);
+Route::get('/scrape/sae', [ScrapeController::class, 'sae']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);

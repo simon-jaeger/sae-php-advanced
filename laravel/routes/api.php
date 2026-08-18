@@ -31,7 +31,6 @@ Route::get('/scrape/sae', [ScrapeController::class, 'sae']);
 Route::post('/ai/chat', [AiController::class, 'chat']);
 Route::post('/ai/summarize', [AiController::class, 'summarize']);
 
-
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);
   Route::patch('/user', [UserController::class, "update"]);

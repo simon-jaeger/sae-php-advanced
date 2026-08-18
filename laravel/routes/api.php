@@ -30,6 +30,7 @@ Route::get('/scrape/sae', [ScrapeController::class, 'sae']);
 
 Route::post('/ai/chat', [AiController::class, 'chat']);
 Route::post('/ai/summarize', [AiController::class, 'summarize']);
+Route::post('/ai/nsfw', [AiController::class, 'nsfw']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);

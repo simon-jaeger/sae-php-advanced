@@ -200,29 +200,30 @@ day 12
 
 day 13
 --------------------------------------------------------------------------------
-- dynamic image generation (svg)
-- AvatarsController.php
-- T: create another image generation endpoint
+- full review and quiz of laravel
+--------------------------------------------------------------------------------
+- ollama: signup and download
+- ollama pull gemma4:cloud
+- POST ai/chat
+- POST ai/summarize
+- T: add an ai feature to your own app
 --------------------------------------------------------------------------------
 - T: prepare for progress presentations (5-10min)
-
-day 14
---------------------------------------------------------------------------------
-- prepare for progress presentations
-- hold progress presentations
 - database and structure
 - endpoints in bruno
 - auth system
 - crud features
 - unique/special features
 - questions and discussion with class
+
+day 14
+--------------------------------------------------------------------------------
+- prepare for progress presentations
+- hold progress presentations
 - T: work on your project
 
 day 15
 --------------------------------------------------------------------------------
-- ollama: signup and download
-- ollama pull gemma4:cloud
-- anonymous agents
 - custom agents
 - custom tools
 - third party agents (mcp)

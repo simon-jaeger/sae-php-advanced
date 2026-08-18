@@ -1,0 +1,20 @@
+info:
+  name: chat
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/ai/chat"
+  body:
+    type: json
+    data: |-
+      {
+        "msg": "what year was php invented?"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\AiController;
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Controllers\CommentsController;
@@ -26,6 +27,10 @@ Route::get('/http/pokemon', [HttpController::class, 'pokemon']);
 
 Route::get('/scrape/cern', [ScrapeController::class, 'cern']);
 Route::get('/scrape/sae', [ScrapeController::class, 'sae']);
+
+Route::post('/ai/chat', [AiController::class, 'chat']);
+Route::post('/ai/summarize', [AiController::class, 'summarize']);
+
 
 Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/user', [UserController::class, "index"]);

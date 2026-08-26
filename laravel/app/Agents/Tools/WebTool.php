@@ -13,7 +13,7 @@ class WebTool implements Tool {
   }
 
   function schema(JsonSchema $schema): array {
-    return ['url' => $schema->string()->required(),];
+    return ['url' => $schema->string()->required()];
   }
 
   function handle(Request $request): string {

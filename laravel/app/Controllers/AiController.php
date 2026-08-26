@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Article;
 use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Illuminate\Http\Request;
+use Laravel\Mcp\Client;
 use function Laravel\Ai\{agent};
 
 class AiController {
@@ -39,6 +40,17 @@ class AiController {
     return [
       'nsfw' => $response['nsfw'],
       'usage' => $response->usage,
+    ];
+  }
+
+  function mcp(Request $request) {
+    $client = Client::web('https://mcp.deepwiki.com/mcp');
+    $response = $client->callTool('ask_question', [
+      'repoName' => 'laravel/laravel',
+      'question' => 'what programming language does laravel use?',
+    ]);
+    return [
+      'text' => $response->text(),
     ];
   }
 }

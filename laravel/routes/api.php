@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\AgentsController;
 use App\Controllers\AiController;
 use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
@@ -56,6 +57,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
   Route::delete('/uploads', [UploadsController::class, 'destroy']);
 
   Route::post('/mails/newsletter', [MailsController::class, 'newsletter']);
+
+  Route::post('/agents/support', [AgentsController::class, 'support']);
+  Route::post('/agents/translate', [AgentsController::class, 'translate']);
+  Route::post('/agents/conversation', [AgentsController::class, 'conversation']);
 });
 
 // example endpoints

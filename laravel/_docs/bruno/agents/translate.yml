@@ -1,0 +1,23 @@
+info:
+  name: translate
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/agents/translate"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+  body:
+    type: json
+    data: |-
+      {
+        "text": "My favorite color is red."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

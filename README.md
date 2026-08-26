@@ -224,9 +224,12 @@ day 14
 
 day 15
 --------------------------------------------------------------------------------
-- custom agents
-- custom tools
+- custom agents and tools
+- SupportAgent.php
+- TranslatorAgent.php
+- ConversationAgent.php
 - third party agents (mcp)
-- T: configure and add more tools to your laravel agent
+- T: add at least one other agent and tool
 - T: use another third party agent via mcp
 - T: work on your project
+

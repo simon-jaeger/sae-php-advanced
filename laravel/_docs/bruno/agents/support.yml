@@ -1,0 +1,25 @@
+info:
+  name: support
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/agents/support"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+  body:
+    type: json
+    data: |-
+      {
+        "msg": "who are you?"
+        // "msg": "what is my email?"
+        // "msg": "welche unterrichte finden heute an der sae statt? https://infoscreen.sae.ch"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -44,11 +44,12 @@ class AiController {
   }
 
   function mcp(Request $request) {
-    $client = Client::web('https://mcp.deepwiki.com/mcp');
-    $response = $client->callTool('ask_question', [
-      'repoName' => 'laravel/laravel',
-      'question' => 'what programming language does laravel use?',
-    ]);
+    $url = $request->input('url');
+    $tool = $request->input('tool');
+    $args = $request->input('args');
+    $client = Client::web($url); // ->withToken($apiKey)
+    if (!$tool) return $client->tools();
+    $response = $client->callTool($tool, $args);
     return [
       'text' => $response->text(),
     ];

@@ -2,6 +2,7 @@
 
 namespace App\Agents;
 
+use App\Agents\Tools\ArticlesTool;
 use App\Agents\Tools\WebTool;
 use App\Models\User;
 use Laravel\Ai\Contracts\Agent;
@@ -25,6 +26,6 @@ class SupportAgent implements Agent, HasTools {
   }
 
   function tools(): array {
-    return [new WebTool()];
+    return [new ArticlesTool(), new WebTool()];
   }
 }

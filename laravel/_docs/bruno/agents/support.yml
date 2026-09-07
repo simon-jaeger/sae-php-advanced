@@ -13,9 +13,10 @@ http:
     type: json
     data: |-
       {
-        "msg": "who are you?"
+        // "msg": "who are you?"
         // "msg": "what is my email?"
-        // "msg": "welche unterrichte finden heute an der sae statt? https://infoscreen.sae.ch"
+        "msg": "what is the title of article 22?",
+        // "msg": "what are today's lessons at sae? https://infoscreen.sae.ch",
       }
 
 settings:
@@ -23,3 +24,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

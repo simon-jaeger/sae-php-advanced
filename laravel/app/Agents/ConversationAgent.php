@@ -40,6 +40,6 @@ class ConversationAgent implements Agent, Conversational {
       ['role' => 'user', 'content' => $userMsg],
       ['role' => 'assistant', 'content' => $assistantMsg],
     );
-    Storage::put($path, json_encode($history));
+    Storage::put($path, json_encode($history, JSON_PRETTY_PRINT));
   }
 }

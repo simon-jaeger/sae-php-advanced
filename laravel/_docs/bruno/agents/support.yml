@@ -15,8 +15,8 @@ http:
       {
         // "msg": "who are you?"
         // "msg": "what is my email?"
-        "msg": "what is the title of article 22?",
-        // "msg": "what are today's lessons at sae? https://infoscreen.sae.ch",
+        "msg": "what is the title of article 22?"
+        // "msg": "what are today's lessons at sae? https://infoscreen.sae.ch"
       }
 
 settings:

@@ -12,7 +12,7 @@ class AgentsController {
   function support(Request $request) {
     $user = Auth::user();
     $msg = $request->input('msg');
-    $agent = SupportAgent::make($user);
+    $agent = new SupportAgent($user);
     $response = $agent->prompt($msg);
     return [
       'text' => $response->text,
@@ -22,7 +22,7 @@ class AgentsController {
 
   function translate(Request $request) {
     $text = $request->input('text');
-    $agent = TranslatorAgent::make();
+    $agent = new TranslatorAgent();
     $response = $agent->prompt($text);
     return [
       'output' => $response->structured,
@@ -33,7 +33,7 @@ class AgentsController {
   function conversation(Request $request) {
     $user = Auth::user();
     $msg = $request->input('msg');
-    $agent = ConversationAgent::make($user);
+    $agent = new ConversationAgent($user);
     $response = $agent->prompt($msg);
     $agent->remember($msg, $response->text);
     return [
